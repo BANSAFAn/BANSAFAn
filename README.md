@@ -1,1 +1,1 @@
-https://img.shields.io/github/gist/stars/hz?style=social
+<https://img.shields.io/badge/Priv-Baner-red>

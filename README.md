@@ -1,3 +1,8 @@
+<div id="header" align="center">
+  <img src="https://i.pinimg.com/originals/ae/5e/ff/ae5eff9a4bc186727ec737402a422ee1.gif" width="100"/>
+</div>
+Jump Up
+
 <img src="https://komarev.com/ghpvc/?username=your-github-username&style=flat-square&color=red" alt=""/>
 <div>
   <a href="https://www.youtube.com/channel/UCUdk5CZfmvSIu9wmI-gx2wQ">
@@ -20,5 +25,9 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" title="NodeJS" alt="NodeJS" width="40" height="40"/>&nbsp;
 </div>
 -
+
+<div align="center">
+  <img src="https://th.bing.com/th/id/R.595e39dee06a1e9f5544025708bb4c5a?rik=uPxR%2fefeby9Nmg&pid=ImgRaw&r=0" width="600" height="300"/>
+</div>
 
 

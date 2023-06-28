@@ -28,7 +28,7 @@ Jump Up
   <img src="https://th.bing.com/th/id/R.595e39dee06a1e9f5544025708bb4c5a?rik=uPxR%2fefeby9Nmg&pid=ImgRaw&r=0" width="600" height="300"/>
 </div>
 
-(https://github.com/Soham52/Soham52/blob/output/github-contribution-grid-snake.svg#gh-light-mode-only)
+![GitHub Snake Light](https://github.com/Soham52/Soham52/blob/output/github-contribution-grid-snake.svg#gh-light-mode-only)
 
-(https://github.com/Soham52/Soham52/blob/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
+![GitHub Snake dark](https://github.com/Soham52/Soham52/blob/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
 

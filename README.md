@@ -1,6 +1,4 @@
-<div id="header" align="center">
-  <img src="https://i.pinimg.com/originals/ae/5e/ff/ae5eff9a4bc186727ec737402a422ee1.gif" width="100"/>
-</div>
+# HAYOY!!  <img src="Images/Wave_Hand.gif" width="30px">
 Jump Up
 
 <img src="https://komarev.com/ghpvc/?username=your-github-username&style=flat-square&color=red" alt=""/>

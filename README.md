@@ -9,7 +9,7 @@ Jump Up
   <a href="https://discord.gg/u4HrkebjZW">
     <img src="https://img.shields.io/badge/Discord-purple?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"/>
   </a>
-<noscript><a href="https://liberapay.com/Baner/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/L3L1MSQ2W)
 </div>
 
 

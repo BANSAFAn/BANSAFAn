@@ -23,6 +23,7 @@ Jump Up
   <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
   <img src="https://logodix.com/logo/1625680.png" title="PHP" alt="PHP" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original-wordmark.svg" title="NodeJS" alt="NodeJS" width="40" height="40"/>&nbsp;
+  <img src="https://essenceofchaos.github.io/images/typescript.png" title="TypeScript" alt="TypeScript" width="40" height="40"/>&nbsp;
 </div>
 -
 

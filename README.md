@@ -35,3 +35,13 @@ Jump Up
 
 ![GitHub Snake dark](https://github.com/Soham52/Soham52/blob/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
 
+
+<table>
+  <tr>
+    <td>
+      <img height="195px" align="right" alt="webDev's Github Languages" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=FilimonovAlexey&layout=compact&theme=vision-friendly-dark" />
+    </td>
+  </tr>
+</table>
+
+

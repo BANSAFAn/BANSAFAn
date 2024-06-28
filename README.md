@@ -1,4 +1,4 @@
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=BANSAFAn&theme=onedark)](https://github.com/BANSAFAn)
+[![langs](https://github-readme-stats.vercel.app/api/top-langs/?username=BANSAFAn&theme=onedark)](https://github.com/BANSAFAn)
 
 # Nyaw
 

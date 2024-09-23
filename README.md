@@ -1,6 +1,1 @@
-# My Profiles
-
-![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=BANSAFAn&theme=solarized_dark)
-
-
-
+![Baneronetwo Stats](https://github-readme-stats.vercel.app/api?username=BANSAFAn&show_icons=true&theme=transparent)

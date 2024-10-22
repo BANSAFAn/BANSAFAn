@@ -7,7 +7,7 @@
 
 - 💬 Ask me about **translation !**
 
-- 📫 How to contact me **baneronetwo@memeware.net**
+- 📫 How to contact me **ban.gogas.0996@gmail.com[**
 
 - 📄 Learn about my experience [https://baneronetwo.netlify.app/](https://baneronetwo.netlify.app/)
 

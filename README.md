@@ -9,7 +9,7 @@
 
 - 📫 How to contact me **ban.gogas.0996@gmail.com**
 
-- 📄 Learn about my experience [https://baneronetwo.netlify.app/](https://baneronetwo.netlify.app/)
+- 📄 Learn about my experience [https://baneronetwo.netlify.app/]([https://baneronetwo.netlify.app/](https://banerone2.vercel.app/))
 
 - ⚡ Interesting fact: **I'm a youtuber who didn't want to get involved in improving translations, etc.**
 

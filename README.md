@@ -1,9 +1,9 @@
 <h1 align="center">Helloli BanerOneTwo</h1>
 <h3 align="center">A passionate interface developer from the Meow of the world !</h3>
 
-- 🤝 I support the community [LiveOne](nyam.com)
+- 🤝 I support the community [LiveOne](https://web-site-nya.vercel.app/)
 
-- 📝 I regularly write articles on [https://baneronetwo.netlify.app/](https://baneronetwo.netlify.app/)
+- 📝 I regularly write articles on [https://banerone2.vercel.app/](https://banerone2.vercel.app/)
 
 - 💬 Ask me about **translation !**
 

@@ -3,8 +3,11 @@ name: Generate Snake Animation
 on:
   schedule:
     - cron: "0 0 * * *" 
-  push:
-  workflow_dispatch:
+  push: 
+  workflow_dispatch: 
+
+permissions:
+  contents: write 
 
 jobs:
   generate:
@@ -14,7 +17,7 @@ jobs:
       - uses: Platane/snk@v3
         with:
           github_user_name: BANSAFAn
-          outputs: snake.svg 
+          outputs: snake.svg # Сохраняем в корень
       - name: Commit snake SVG
         run: |
           git config user.name "github-actions"

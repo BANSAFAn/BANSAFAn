@@ -15,9 +15,6 @@
 ### Top Languages
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=BANSAFAn&layout=compact&theme=dracula&hide_border=true)
 
-### Coding Time
-![WakaTime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=BANSAFAn&layout=compact&theme=dracula&hide_border=true)
-
 
 ---
 

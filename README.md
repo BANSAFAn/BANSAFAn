@@ -16,7 +16,7 @@
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=BANSAFAn&layout=compact&theme=dracula&hide_border=true)
 
 ## Contribution Snake
-![Snake Animation](https://github.com/BANSAFAn/BANSAFAn/blob/main/dist/github-contribution-grid-snake-dark.svg)
+![Snake Animation](https://github.com/BANSAFAn/BANSAFAn/blob/main/snake.svg)
 ---
 
 ## Dynamic Stats

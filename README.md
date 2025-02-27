@@ -18,8 +18,6 @@
 ### Coding Time
 ![WakaTime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=BANSAFAn&layout=compact&theme=dracula&hide_border=true)
 
-### Streak
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=BANSAFAn&theme=dracula&hide_border=true)
 
 ---
 

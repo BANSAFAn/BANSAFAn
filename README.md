@@ -2,7 +2,7 @@
 
 # 👋 Hey! I am Vladimir Banov
 
-[![Website](https://img.shields.io/badge/Website-banerone2.vercel.app-blue?style=for-the-badge&logo=vercel)](https://banerone2.vercel.app/)
+[![Website](https://img.shields.io/badge/Website-baneronetwo.vercel.app-blue?style=for-the-badge&logo=vercel)](https://baneronetwo.vercel.app/)
 [![Email](https://img.shields.io/badge/Email-baneronetwo@memeware.net-red?style=for-the-badge&logo=gmail)](mailto:baneronetwo@memeware.net)
 
 </div>

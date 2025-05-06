@@ -1,40 +1,42 @@
 <div align="center">
 
-# 👋 Hey! I'm Vladimir Banov
+# 👋 Hey there! I'm Vladimir Banov
 
-[![Website](https://img.shields.io/badge/Webhttps://baneronetwo.vercel.app/-blue?style=for-the-badge&logo=vercel)](https://baneronetwo.vercel.app/)
-[![Email](https://img.shields.io/badge/Email-baneronetwo@memeware.net-red?style=for-the-badge&logo=gmail)](mailto:baneronetwo@memeware.net)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@Baneronetwo)
+[![Website](https://img.shields.io/badge/Website-baneronetwo.vercel.app-blue?style=for-the-badge&logo=vercel)](https://baneronetwo.vercel.app/)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/banliveone)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://rebrand.ly/liveone)
 [![GitHub](https://img.shields.io/badge/GitHub-BANSAFAn-181717?style=for-the-badge&logo=github)](https://github.com/BANSAFAn)
 
-### 🌐 Language Versions
-[![English](https://img.shields.io/badge/English-Current-blue?style=flat-square)](README.md)
-[![Russian](https://img.shields.io/badge/Russian-Русский-success?style=flat-square)](README.ru.md)
-[![Ukrainian](https://img.shields.io/badge/Ukrainian-Українська-yellow?style=flat-square)](README.uk.md)
-[![German](https://img.shields.io/badge/German-Deutsch-orange?style=flat-square)](README.de.md)
-[![Chinese](https://img.shields.io/badge/Chinese-简体中文-red?style=flat-square)](README.zh-CN.md)
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7F7F7&center=true&vCenter=true&width=435&lines=Full-Stack+Developer;Open+Source+Enthusiast;Always+Learning+New+Things" alt="Typing SVG" />
 
 </div>
 
 ---
 
-## 👨‍💻 About Me
+## 🚀 About Me
 
-- 🌍 Based in **Kamenskoye, Ukraine**
+- 🌍 Based in **Kamianske, Ukraine**
 - 💻 Passionate about **Rust**, **TypeScript**, **Vue** and modern web technologies
-- 🚀 Constantly learning and exploring new tech stacks
+- 🔭 Constantly exploring and learning new tech stacks
 - 🎯 Committed to writing clean, efficient, and maintainable code
 - 🌱 Currently expanding my knowledge in cloud technologies and microservices
 
 ---
 
-## 🛠️ Technologies & Tools
+## 🛠️ Tech Stack
 
 <div align="center">
 
 ### Languages
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
+![Swift](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)
 
 ### Frontend
 ![Vue](https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)
@@ -55,44 +57,47 @@
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BANSAFAn&layout=compact&theme=radical&hide_border=true" alt="Top Languages" />
-<img src="https://github-readme-stats.vercel.app/api?username=BANSAFAn&show_icons=true&theme=radical&hide_border=true" alt="GitHub Stats" />
+<img src="https://github-readme-stats.vercel.app/api?username=BANSAFAn&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" />
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=BANSAFAn&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BANSAFAn&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
 
 </div>
 
 ---
 
-## 🐍 Contribution Graph
+## 🏆 GitHub Trophies
 
 <div align="center">
 
-![Snake Animation](https://github.com/BANSAFAn/BANSAFAn/blob/output/github-snake-dark.svg)
+![Trophy](https://github-profile-trophy.vercel.app/?username=BANSAFAn&theme=nord&column=7&no-frame=true&margin-w=15)
 
 </div>
 
 ---
 
-## 📈 Activity Overview
+## 📈 Contribution Graph
 
 <div align="center">
 
-[![Recent Activity](https://github-readme-activity-graph.vercel.app/graph?username=BANSAFAn&theme=tokyo-night&hide_border=true&area=true)](https://github.com/BANSAFAn)
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=BANSAFAn&theme=tokyo-night&hide_border=true)](https://github.com/BANSAFAn)
 
 </div>
 
 ---
 
-## 🏆 GitHub Achievements
+## 🐍 Contribution Snake
 
 <div align="center">
 
-![Trophy](https://github-profile-trophy.vercel.app/?username=BANSAFAn&theme=nord&no-frame=true&column=7&margin-w=15)
+![Snake animation](https://github.com/BANSAFAn/BANSAFAn/blob/output/github-contribution-grid-snake-dark.svg)
 
 </div>
 
 ---
 
-## 💭 Daily Inspiration
+## 💡 Random Dev Quote
 
 <div align="center">
 
@@ -102,13 +107,27 @@
 
 ---
 
-
-
+## 📌 Pinned Repositories
 
 <div align="center">
 
-### 👀 Profile Visits
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=BANSAFAn&repo=BANSAFAn&theme=tokyonight&hide_border=true)](https://github.com/BANSAFAn/BANSAFAn)
 
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=BANSAFAn.BANSAFAn)
+</div>
+
+---
+
+<div align="center">
+
+### 👀 Profile Views
+
+<img src="https://komarev.com/ghpvc/?username=BANSAFAn&style=flat-square&color=blue" alt="Profile Views"/>
+
+### 🤝 Connect With Me
+
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@Baneronetwo)
+[![Website](https://img.shields.io/badge/Website-baneronetwo.vercel.app-blue?style=for-the-badge&logo=vercel)](https://baneronetwo.vercel.app/)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/banliveone)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://rebrand.ly/liveone)
 
 </div>

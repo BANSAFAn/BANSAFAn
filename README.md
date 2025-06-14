@@ -85,15 +85,6 @@
 
 </div>
 
----
-
-## 🐍 Contribution Snake
-
-<div align="center">
-
-![Snake animation](https://github.com/BANSAFAn/BANSAFAn/blob/output/github-contribution-grid-snake-dark.svg)
-
-</div>
 
 ---
 

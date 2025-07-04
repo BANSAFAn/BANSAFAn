@@ -21,7 +21,7 @@ jobs:
         
       - name: Generate animated banner
         run: |
-          echo '{"columns":70,"rows":10,"command":"echo \'BANSAFAn\' | figlet | lolcat -a -d 50","frameDelay":100}' > config.json
+          echo '{"columns":70,"rows":10,"command":"echo BANSAFAn | figlet | lolcat -a -d 50","frameDelay":100}' > config.json
           svg-term --in config.json --out banner.svg --window --profile=ubuntu
           
       - name: Push to repository

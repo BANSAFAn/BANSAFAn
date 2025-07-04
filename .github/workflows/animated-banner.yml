@@ -1,0 +1,32 @@
+name: Animated Banner Generator
+
+on:
+  schedule:
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+
+jobs:
+  generate-banner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          
+      - name: Install dependencies
+        run: npm install -g svg-term
+        
+      - name: Generate animated banner
+        run: |
+          echo '{"columns":70,"rows":10,"command":"echo \'BANSAFAn\' | figlet | lolcat -a -d 50","frameDelay":100}' > config.json
+          svg-term --in config.json --out banner.svg --window --profile=ubuntu
+          
+      - name: Push to repository
+        uses: EndBug/add-and-commit@v7
+        with:
+          add: 'banner.svg'
+          message: 'Update animated banner'
+          default_author: github_actions

@@ -11,15 +11,10 @@ jobs:
     name: generate-github-profile-3d-contrib
     steps:
       - uses: actions/checkout@v3
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
-          MAX_REPOS: 250
       - name: Create setting.json
         run: |
           echo '{
-            "type": "rainbow",
+            "type": "blue_green",
             "displayHeight": 500,
             "displayWidth": 900,
             "isBlockStyle": true

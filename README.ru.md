@@ -1,12 +1,15 @@
 <div id="header" align="center">
-  <img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=Владимир%20Банов&fontSize=90" />
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7F7F7&center=true&vCenter=true&width=435&lines=Full-Stack+разработчик;Энтузиаст+Open+Source;Всегда+изучаю+новое;Любитель+Rust+и+TypeScript;Строю+будущее;Решаю+проблемы+с+помощью+кода;Создаю+удивительные+впечатления" alt="Typing SVG" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Владимир%20Банов&fontSize=90&animation=fadeIn&fontAlignY=38&descAlignY=51&desc=Full-Stack%20разработчик%20%7C%20Энтузиаст%20Open%20Source&descAlign=62"/>
   <p align="center">
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.md">Английский</a> •
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.zh-CN.md">Китайский</a> •
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.de.md">Немецкий</a> •
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.uk.md">Украинский</a>
   </p>
+</div>
+
+<div align="center">
+  <img src="https://github.com/BANSAFAn/BANSAFAn/blob/main/profile-3d-contrib/profile-customize.svg" alt="3D Contribution Graph"/>
 </div>
 
 <div align="center">
@@ -29,14 +32,97 @@
 ### 📊 Статистика GitHub:
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=BANSAFAn&show_icons=true&theme=dark&hide_border=true&count_private=true" alt="Статистика GitHub"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=BANSAFAn&theme=dark&hide_border=true" alt="Статистика коммитов GitHub"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BANSAFAn&layout=compact&theme=dark&hide_border=true" alt="Основные языки"/>
+  <img src="metrics.svg" alt="Metrics"/>
+</div>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/BANSAFAn/BANSAFAn/output/github-snake.svg" alt="Snake Animation"/>
 </div>
 
 ---
 
-### 💻 Стек технологий:
+### 💻 Ключевые навыки:
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="96">
+        <a href="#">
+          <img src="https://skillicons.dev/icons?i=go" width="48" height="48" alt="Go" />
+        </a>
+        <br>Go
+      </td>
+      <td align="center" width="96">
+        <a href="#">
+          <img src="https://skillicons.dev/icons?i=rust" width="48" height="48" alt="Rust" />
+        </a>
+        <br>Rust
+      </td>
+      <td align="center" width="96">
+        <a href="#">
+          <img src="https://skillicons.dev/icons?i=ts" width="48" height="48" alt="TypeScript" />
+        </a>
+        <br>TypeScript
+      </td>
+      <td align="center" width="96">
+        <a href="#">
+          <img src="https://skillicons.dev/icons?i=js" width="48" height="48" alt="JavaScript" />
+        </a>
+        <br>JavaScript
+      </td>
+      <td align="center" width="96">
+        <a href="#">
+          <img src="https://skillicons.dev/icons?i=vue" width="48" height="48" alt="Vue" />
+        </a>
+        <br>Vue
+      </td>
+      <td align="center" width="96">
+        <a href="#">
+          <img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React" />
+        </a>
+        <br>React
+      </td>
+      <td align="center" width="96">
+        <a href="#">
+          <img src="https://skillicons.dev/icons?i=html" width="48" height="48" alt="HTML" />
+        </a>
+        <br>HTML
+      </td>
+      <td align="center" width="96">
+        <a href="#">
+          <img src="https://skillicons.dev/icons?i=css" width="48" height="48" alt="CSS" />
+        </a>
+        <br>CSS
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="96">
+        <a href="#">
+          <img src="https://skillicons.dev/icons?i=git" width="48" height="48" alt="Git" />
+        </a>
+        <br>Git
+      </td>
+      <td align="center" width="96">
+        <a href="#">
+          <img src="https://skillicons.dev/icons?i=docker" width="48" height="48" alt="Docker" />
+        </a>
+        <br>Docker
+      </td>
+      <td align="center" width="96">
+        <a href="#">
+          <img src="https://skillicons.dev/icons?i=aws" width="48" height="48" alt="AWS" />
+        </a>
+        <br>AWS
+      </td>
+      <td align="center" width="96">
+        <a href="#">
+          <img src="https://skillicons.dev/icons?i=githubactions" width="48" height="48" alt="GitHub Actions" />
+        </a>
+        <br>Actions
+      </td>
+    </tr>
+  </table>
+</div>
 
 <div align="center">
   <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust"/>
@@ -66,19 +152,19 @@
 
 <div align="center">
   <a href="https://www.youtube.com/@Baneronetwo" target="_blank">
-    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
+    <img src="https://img.shields.io/badge/-YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
   </a>
   <a href="https://baneronetwo.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="Веб-сайт"/>
+    <img src="https://img.shields.io/badge/-Website-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="Веб-сайт"/>
   </a>
   <a href="https://t.me/banliveone" target="_blank">
-    <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/>
+    <img src="https://img.shields.io/badge/-Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/>
   </a>
   <a href="https://rebrand.ly/liveone" target="_blank">
-    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"/>
+    <img src="https://img.shields.io/badge/-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"/>
   </a>
   <a href="mailto:ban.gogas.0996@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
+    <img src="https://img.shields.io/badge/-Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
   </a>
 </div>
 
@@ -89,6 +175,24 @@
 <div align="center">
   <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 </div>
+
+
+---
+
+### 📝 Последние посты в блоге:
+
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
+
+---
+
+### 🏆 Трофеи GitHub:
+
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=BANSAFAn&theme=radical&no-frame=true&no-bg=true&margin-w=4" alt="Трофеи GitHub"/>
+</div>
+
+---
 
 <div align="center">
   <img src="https://profile-counter.glitch.me/BANSAFAn/count.svg" alt="Просмотры профиля"/>

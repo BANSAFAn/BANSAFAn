@@ -25,6 +25,10 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           MAX_REPOS: 250
           SETTING_JSON: setting.json
+      - name: Create directory and move file
+        run: |
+          mkdir -p profile-3d-contrib
+          mv profile-customize.svg profile-3d-contrib/
       - name: Commit & Push
         run: |
           git config user.name github-actions

@@ -1,4 +1,4 @@
-name: Generate MultiSnake
+name: Generate Snake Animation
 
 on:
   schedule:
@@ -11,21 +11,20 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      # Checkout repository
       - name: 📥 Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      # Generate Snake animation
-      - name: 🐍 Generate MultiSource Snake animation
-        uses: Platane/snk@v3
+      - name: 🐍 Generate Snake animation
+        uses: Platane/snk/svg-only@v3
         with:
-          github_user_name: BANSAFAn
+          github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
             dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
-      - name: 🚀 Push GitHub Snake animation to the output branch
-        uses: crazy-max/ghaction-github-pages@v2.5.0
+
+      - name: 🚀 Push generated files to the output branch
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist

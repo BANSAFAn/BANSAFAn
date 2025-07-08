@@ -10,21 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     name: generate-github-profile-3d-contrib
     steps:
-      - uses: actions/checkout@v3
-      - name: Create setting.json
-        run: |
-          echo '{
-            "type": "blue_green",
-            "displayHeight": 500,
-            "displayWidth": 900,
-            "isBlockStyle": true
-          }' > setting.json
+      - uses: actions/checkout@v4
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
           MAX_REPOS: 250
-          SETTING_JSON: setting.json
       - name: Create directory and move file
         run: |
           mkdir -p profile-3d-contrib

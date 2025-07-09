@@ -44,87 +44,6 @@
 ### 💻 核心技能：
 
 <div align="center">
-  <table>
-    <tr>
-      <td align="center" width="96">
-        <a href="#">
-          <img src="https://skillicons.dev/icons?i=go" width="48" height="48" alt="Go" />
-        </a>
-        <br>Go
-      </td>
-      <td align="center" width="96">
-        <a href="#">
-          <img src="https://skillicons.dev/icons?i=rust" width="48" height="48" alt="Rust" />
-        </a>
-        <br>Rust
-      </td>
-      <td align="center" width="96">
-        <a href="#">
-          <img src="https://skillicons.dev/icons?i=ts" width="48" height="48" alt="TypeScript" />
-        </a>
-        <br>TypeScript
-      </td>
-      <td align="center" width="96">
-        <a href="#">
-          <img src="https://skillicons.dev/icons?i=js" width="48" height="48" alt="JavaScript" />
-        </a>
-        <br>JavaScript
-      </td>
-      <td align="center" width="96">
-        <a href="#">
-          <img src="https://skillicons.dev/icons?i=vue" width="48" height="48" alt="Vue" />
-        </a>
-        <br>Vue
-      </td>
-      <td align="center" width="96">
-        <a href="#">
-          <img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React" />
-        </a>
-        <br>React
-      </td>
-      <td align="center" width="96">
-        <a href="#">
-          <img src="https://skillicons.dev/icons?i=html" width="48" height="48" alt="HTML" />
-        </a>
-        <br>HTML
-      </td>
-      <td align="center" width="96">
-        <a href="#">
-          <img src="https://skillicons.dev/icons?i=css" width="48" height="48" alt="CSS" />
-        </a>
-        <br>CSS
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="96">
-        <a href="#">
-          <img src="https://skillicons.dev/icons?i=git" width="48" height="48" alt="Git" />
-        </a>
-        <br>Git
-      </td>
-      <td align="center" width="96">
-        <a href="#">
-          <img src="https://skillicons.dev/icons?i=docker" width="48" height="48" alt="Docker" />
-        </a>
-        <br>Docker
-      </td>
-      <td align="center" width="96">
-        <a href="#">
-          <img src="https://skillicons.dev/icons?i=aws" width="48" height="48" alt="AWS" />
-        </a>
-        <br>AWS
-      </td>
-      <td align="center" width="96">
-        <a href="#">
-          <img src="https://skillicons.dev/icons?i=githubactions" width="48" height="48" alt="GitHub Actions" />
-        </a>
-        <br>Actions
-      </td>
-    </tr>
-  </table>
-</div>
-
-<div align="center">
   <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust"/>
   <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go"/>
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
@@ -168,12 +87,14 @@
   </a>
 </div>
 
+---
 
-
-
+### ❤️ 赞助
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+  <a href="https://www.youtube.com/channel/UClMebl5oW-tB2eQ-g_00e_A/join" target="_blank">
+    <img src="https://img.shields.io/badge/Sponsor-FF0000?style=for-the-badge&logo=YouTube&logoColor=white" alt="在YouTube上赞助"/>
+  </a>
 </div>
 
 

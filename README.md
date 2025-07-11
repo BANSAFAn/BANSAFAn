@@ -59,6 +59,9 @@
   <a href="https://rebrand.ly/liveone" target="_blank">
     <img src="https://img.shields.io/badge/-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"/>
   </a>
+  <a href="mailto:ban.gogas.0996@gmail.com">
+    <img src="https://img.shields.io/badge/-Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
+  </a>
 </div>
 
 ---
@@ -66,6 +69,9 @@
 ### ❤️ Sponsor
 
 <div align="center">
+  <a href="https://www.buymeacoffee.com/baneronetwo" target="_blank">
+    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee"/>
+  </a>
   <a href="https://www.youtube.com/channel/UClMebl5oW-tB2eQ-g_00e_A/join" target="_blank">
     <img src="https://img.shields.io/badge/Sponsor-FF0000?style=for-the-badge&logo=YouTube&logoColor=white" alt="Sponsor on YouTube"/>
   </a>
@@ -86,6 +92,19 @@
 <div align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=BANSAFAn&theme=radical&no-frame=true&no-bg=true&margin-w=4" alt="GitHub Trophies"/>
 </div>
+
+---
+
+
+---
+
+### 🛠️ Tools:
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=vscode,visualstudio,neovim,github,figma,postman" />
+  </a>
+</p>
 
 ---
 

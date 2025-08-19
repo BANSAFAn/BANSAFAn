@@ -33,9 +33,8 @@
 ### 💻 Технологии и инструменты:
 
 <div align="center">
-  #### Языки программирования:
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=rust,go,ts,js,python,cpp,cs,ruby,swift" />
+    <img src="https://skillicons.dev/icons?i=rust,go,ts,js,cpp,cs,ruby,swift" />
   </a>
   
   #### Фронтенд:
@@ -60,12 +59,7 @@
 
 ---
 
-### 🐍 Змея вклада:
-<div align="center">
-  <img src="https://raw.githubusercontent.com/BANSAFAn/BANSAFAn/output/github-contribution-grid-snake-dark.svg" alt="Змея вклада" />
-</div>
 
----
 
 ### 🏆 Трофеи GitHub:
 <div align="center">

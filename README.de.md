@@ -32,10 +32,9 @@ Hallo! Ich bin Vladimir, ein einfacher Programmierer aus der Ukraine, der einfac
 
 ### 💻 Technologien & Tools:
 
-#### Programmiersprachen:
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=rust,go,ts,js,python,cpp,cs,ruby,swift" />
+    <img src="https://skillicons.dev/icons?i=rust,go,ts,js,cpp,cs,ruby,swift" />
   </a>
 </p>
 
@@ -64,12 +63,7 @@ Hallo! Ich bin Vladimir, ein einfacher Programmierer aus der Ukraine, der einfac
 
 ---
 
-### 🐍 Contribution Snake:
-<div align="center">
-  <img src="https://raw.githubusercontent.com/BANSAFAn/BANSAFAn/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake"/>
-</div>
 
----
 
 ### 🏆 GitHub Trophies:
 <div align="center">

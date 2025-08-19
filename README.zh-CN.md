@@ -1,5 +1,5 @@
 <div id="header" align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Vladimir%20Banov&fontSize=90&animation=fadeIn&fontAlignY=38&descAlignY=51&desc=全栈开发人员%20%7C%20开源爱好者&descAlign=62"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Vladimir%20Banov&fontSize=90&fontAlignY=38&descAlignY=51&desc=简单的程序员%20%7C%20开源爱好者&descAlign=62"/>
   <p align="center">
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.md">英语</a> •
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.ru.md">俄语</a> •
@@ -10,12 +10,14 @@
 
 ### 👨‍💻 关于我：
 
-- 🔭 我目前正在**提高我的后端开发技能**
-- 🌱 我目前正在学习**Rust和Go**
-- 👯 我希望在**开源项目**上进行合作
-- 💬 向我询问**任何与Web开发相关的问题**
-- 📫 如何联系我：**ban.gogas.0996@gmail.com**
-- ⚡ 有趣的事实：**我可以在2分钟内解决魔方！**
+你好！我是Vladimir，一个来自乌克兰的简单程序员，只是喜欢边喝茶吃薯片边编码。
+- 🔭 目前正在构建Web应用程序。
+- 🌱 正在学习Rust和Go。
+- 👯 开放在开源项目中合作。
+- 💬 问我关于Web开发或编码挑战的问题。
+- 📫 联系我：**ban.gogas.0996@gmail.com**
+- ⚡ 有趣的事实：我曾在黑客马拉松上在24小时内编码了一个完整的应用程序！ :)
+- 兴趣：区块链、游戏、旅行。
 
 ---
 
@@ -69,9 +71,6 @@
 ### ❤️ 赞助
 
 <div align="center">
-  <a href="https://www.buymeacoffee.com/baneronetwo" target="_blank">
-    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="请我喝杯咖啡"/>
-  </a>
   <a href="https://www.youtube.com/channel/UClMebl5oW-tB2eQ-g_00e_A/join" target="_blank">
     <img src="https://img.shields.io/badge/Sponsor-FF0000?style=for-the-badge&logo=YouTube&logoColor=white" alt="在YouTube上赞助"/>
   </a>

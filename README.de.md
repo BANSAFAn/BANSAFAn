@@ -1,9 +1,5 @@
 <div id="header" align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=Vladimir%20Banov&fontSize=90&animation=fadeIn&fontAlignY=38&fontColor=auto&descAlignY=51&desc=Full-Stack%20Entwickler%20%7C%20KI-Enthusiast%20%7C%20Open%20Source%20Mitwirkender&descAlign=62"/>
-  
-  <div align="center">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&duration=3000&pause=1000&color=F75C7E&center=true&vCenter=true&width=435&lines=Willkommen+auf+meinem+GitHub!;Full-Stack+Entwickler;KI-Enthusiast;Open+Source+Mitwirkender;Immer+neue+Dinge+lernen" alt="Typing SVG" />
-  </div>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=Vladimir%20Banov&fontSize=90&fontAlignY=38&fontColor=auto&descAlignY=51&desc=Einfacher%20Programmierer%20%7C%20Open%20Source%20Mitwirkender&descAlign=62"/>
   
   <p align="center">
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.md">
@@ -23,16 +19,14 @@
 
 ### 👨‍💻 Über mich:
 
-<div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=4000&pause=1000&color=00FF00&center=true&vCenter=true&multiline=true&width=500&height=150&lines=Hallo!+Ich+bin+Vladimir,+ein+leidenschaftlicher;Full-Stack-Entwickler+aus+der+Ukraine.;🔭+Baue+innovative+Web-Apps;und+erforsche+KI-Integrationen.;🌱+Lerne+fortgeschrittenes+Rust+und+Go.;👯+Offen+für+Kollaborationen+in+Web3+und+ML.;💬+Frag+mich+zu+Webentwicklung+oder+Rust.;📫+ban.gogas.0996@gmail.com;⚡+Fun+Fact:+App+in+24h+Hackathon+gecodet!;Interessen:+KI,+Blockchain,+Gaming,+Reisen." alt="Über mich Typing" />
-</div>
-
-#### Ungewöhnliches Feature: Zufälliger Coding-Tipp
-<div align="center">
-  <img src="https://api.microlink.io?url=https%3A%2F%2Fwhatthecommit.com%2F&overlay.background=linear-gradient(135deg%2C%20%2300b7f8%2C%20%231f1f1f)&overlay.text=Zufälliger+Coding-Tipp" alt="Random Tip" style="border-radius:15px; box-shadow:0 0 20px rgba(0,255,0,0.5); animation: pulse 2s infinite;"/>
-</div>
-
-<style>@keyframes pulse {0% {transform: scale(1);} 50% {transform: scale(1.05);} 100% {transform: scale(1);}}</style>
+Hallo! Ich bin Vladimir, ein einfacher Programmierer aus der Ukraine, der einfach gerne mit Tee und Chips codet.
+- 🔭 Baue derzeit Web-Apps.
+- 🌱 Lerne Rust und Go.
+- 👯 Offen für Kollaborationen in Open-Source-Projekten.
+- 💬 Frag mich zu Webentwicklung oder Coding-Herausforderungen.
+- 📫 Kontaktiere mich: **ban.gogas.0996@gmail.com**
+- ⚡ Fun Fact: Habe mal eine komplette App in 24 Stunden auf einem Hackathon gecodet! :)
+- Interessen: Blockchain, Gaming, Reisen.
 
 ---
 
@@ -114,9 +108,6 @@
 
 ### ❤️ Unterstütze mich:
 <div align="center">
-  <a href="https://www.buymeacoffee.com/baneronetwo" target="_blank">
-    <img src="https://img.shields.io/badge/Kauf%20mir%20einen%20Kaffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Kauf mir einen Kaffee"/>
-  </a>
   <a href="https://www.youtube.com/channel/UClMebl5oW-tB2eQ-g_00e_A/join" target="_blank">
     <img src="https://img.shields.io/badge/Sponsor-FF0000?style=for-the-badge&logo=YouTube&logoColor=white" alt="Auf YouTube sponsern"/>
   </a>

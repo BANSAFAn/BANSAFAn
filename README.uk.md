@@ -1,5 +1,5 @@
 <div id="header" align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Володимир%20Шамін&fontSize=90&animation=fadeIn&fontAlignY=38&descAlignY=51&desc=Full-Stack%20розробник%20%7C%20Ентузіаст%20Open%20Source&descAlign=62"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Володимир%20Банов&fontSize=90&animation=twinkling&fontAlignY=38&descAlignY=51&desc=Full-Stack%20Розробник%20%7C%20Ентузіаст%20ШІ%20%7C%20Учасник%20Open%20Source&descAlign=62"/>
   <p align="center">
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.md">Англійська</a> •
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.ru.md">Російська</a> •
@@ -10,48 +10,79 @@
 
 ### 👨‍💻 Про мене:
 
-- 🔭 Я зараз працюю над **покращенням своїх навичок у бекенд-розробці**
-- 🌱 Я зараз вивчаю **Rust та Go**
-- 👯 Я хочу співпрацювати у **проектах з відкритим кодом**
-- 💬 Запитайте мене про **будь-що, пов'язане з веб-розробкою**
-- 📫 Як зі мною зв'язатися: **ban.gogas.0996@gmail.com**
-- ⚡ Цікавий факт: **Я можу зібрати кубик Рубіка менш ніж за 2 хвилини!**
+Привіт! Я Володимир, пристрасний full-stack розробник з України. 
+- 🔭 Зараз будую інноваційні веб-додатки та вивчаю інтеграції ШІ.
+- 🌱 Вивчаю просунутий Rust для системного програмування та Go для ефективних бекендів.
+- 👯 Відкритий для співпраці в захоплюючих open-source проектах, особливо в web3 та машинному навчанні.
+- 💬 Запитуйте мене про веб-розробку, екосистему Rust або мої улюблені coding-челенджі.
+- 📫 Зв'язатися зі мною: **ban.gogas.0996@gmail.com**
+- ⚡ Цікавий факт: Одного разу я закодив повний додаток за 24 години на хакатоні! :)
+- Інтереси: ШІ, Блокчейн, Геймінг, Подорожі.
 
 ---
 
-### 📊 Статистика GitHub:
+### 💻 Технології та інструменти:
 
-<div align="center">
-  <img src="metrics.svg" alt="Metrics"/>
-</div>
-
----
-
-### 💻 Ключові навички:
-
+#### Мови програмування:
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=rust,go,ts,js,vue,react,html,css,git,docker,aws,githubactions" />
+    <img src="https://skillicons.dev/icons?i=rust,go,ts,js,python,cpp,cs,ruby,swift" />
+  </a>
+</p>
+
+#### Фронтенд:
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=vue,react,html,css,bootstrap,tailwind" />
+  </a>
+</p>
+
+#### Бекенд та інструменти:
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=node,express,docker,git,aws,githubactions,postman" />
   </a>
 </p>
 
 ---
 
-### 📊 Статистика WakaTime:
+### 📊 Статистика GitHub:
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=BANSAFAn&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="Статистика GitHub"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=BANSAFAn&theme=tokyonight&hide_border=true" alt="Серія GitHub"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BANSAFAn&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact" alt="Топ мов"/>
+</div>
 
-<!-- WAKATIME:START -->
-<!-- WAKATIME:END -->
+---
+
+### 🐍 Змія внесків:
+<div align="center">
+  <img src="https://raw.githubusercontent.com/BANSAFAn/BANSAFAn/output/github-contribution-grid-snake-dark.svg" alt="Змія внесків"/>
+</div>
+
+---
+
+### 🏆 Трофеї GitHub:
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=BANSAFAn&theme=radical&no-frame=true&no-bg=true&margin-w=4" alt="Трофеї GitHub"/>
+</div>
+
+---
+
+### 📝 Випадкова цитата розробника:
+<div align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Випадкова цитата розробника"/>
+</div>
 
 ---
 
 ### 🤝 Зв'яжіться зі мною:
-
 <div align="center">
   <a href="https://www.youtube.com/@Baneronetwo" target="_blank">
     <img src="https://img.shields.io/badge/-YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
   </a>
   <a href="https://baneronetwo.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/badge/-Website-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="Веб-сайт"/>
+    <img src="https://img.shields.io/badge/-Веб-сайт-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="Веб-сайт"/>
   </a>
   <a href="https://t.me/banliveone" target="_blank">
     <img src="https://img.shields.io/badge/-Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/>
@@ -66,51 +97,18 @@
 
 ---
 
-### ❤️ Спонсорувати
-
+### ❤️ Підтримайте мене:
 <div align="center">
   <a href="https://www.buymeacoffee.com/baneronetwo" target="_blank">
-    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Купити мені каву"/>
+    <img src="https://img.shields.io/badge/Купити%20мені%20каву-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Купити мені каву"/>
   </a>
   <a href="https://www.youtube.com/channel/UClMebl5oW-tB2eQ-g_00e_A/join" target="_blank">
-    <img src="https://img.shields.io/badge/Sponsor-FF0000?style=for-the-badge&logo=YouTube&logoColor=white" alt="Спонсорувати на YouTube"/>
+    <img src="https://img.shields.io/badge/Спонсорувати-FF0000?style=for-the-badge&logo=YouTube&logoColor=white" alt="Спонсорувати на YouTube"/>
   </a>
 </div>
-
-
-
----
-
-### 📝 Останні дописи в блозі:
-
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
-
----
-
-### 🏆 Трофеї GitHub:
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=BANSAFAn&theme=radical&no-frame=true&no-bg=true&margin-w=4" alt="GitHub Trophies"/>
-</div>
-
----
-
-
----
-
-### 🛠️ Інструменти:
-
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=vscode,visualstudio,neovim,github,figma,postman" />
-  </a>
-</p>
 
 ---
 
 <div align="center">
-  <img src="https://profile-counter.glitch.me/BANSAFAn/count.svg" alt="Перегляди профілю"/>
-  <img src="https://img.shields.io/github/followers/BANSAFAn?label=Підписники&style=social&logo=github" alt="Підписники"/>
-  <img src="https://img.shields.io/github/stars/BANSAFAn?label=Зірки&style=social&logo=github" alt="Зірки"/>
+  <img src="https://komarev.com/ghpvc/?username=BANSAFAn&style=flat-square&color=blue" alt="Перегляди профілю"/>
 </div>

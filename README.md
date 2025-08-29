@@ -34,7 +34,7 @@ Hi! I'm Vladimir, a simple programmer from Ukraine who loves coding with tea and
 
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=rust,go,ts,js,cpp,cs,ruby,swift" />
+    <img src="https://skillicons.dev/icons?i=rust,go,ts,js,cs,ruby" />
   </a>
   
   #### Frontend:
@@ -44,7 +44,7 @@ Hi! I'm Vladimir, a simple programmer from Ukraine who loves coding with tea and
   
   #### Backend & Tools:
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=node,express,docker,git,aws,githubactions,postman" />
+    <img src="https://skillicons.dev/icons?i=node,docker,git,aws,githubactions,postman" />
   </a>
 </div>
 

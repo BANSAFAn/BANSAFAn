@@ -3,25 +3,45 @@
   
   <p align="center">
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.md">
-      <img src="https://img.shields.io/badge/Sprache-Englisch-blue?style=for-the-badge&logo=googletranslate&logoColor=white&labelColor=2b3038&color=2781c6&logoWidth=20" alt="English"/>
+      <img src="https://img.shields.io/badge/Sprache-Englisch-blue?style=for-the-badge&logo=googletranslate&logoColor=white&labelColor=2b3038&color=2781c6&logoWidth=20" alt="Englisch"/>
     </a>
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.ru.md">
-      <img src="https://img.shields.io/badge/Sprache-Russisch-blue?style=for-the-badge&logo=googletranslate&logoColor=white&labelColor=2b3038&color=d83931&logoWidth=20" alt="Russian"/>
+      <img src="https://img.shields.io/badge/Sprache-Russisch-blue?style=for-the-badge&logo=googletranslate&logoColor=white&labelColor=2b3038&color=d83931&logoWidth=20" alt="Russisch"/>
     </a>
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.zh-CN.md">
-      <img src="https://img.shields.io/badge/Sprache-Chinesisch-blue?style=for-the-badge&logo=googletranslate&logoColor=white&labelColor=2b3038&color=f7d448&logoWidth=20" alt="Chinese"/>
+      <img src="https://img.shields.io/badge/Sprache-Chinesisch-blue?style=for-the-badge&logo=googletranslate&logoColor=white&labelColor=2b3038&color=f7d448&logoWidth=20" alt="Chinesisch"/>
     </a>
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.uk.md">
-      <img src="https://img.shields.io/badge/Sprache-Ukrainisch-blue?style=for-the-badge&logo=googletranslate&logoColor=white&labelColor=2b3038&color=ffd700&logoWidth=20" alt="Ukrainian"/>
+      <img src="https://img.shields.io/badge/Sprache-Ukrainisch-blue?style=for-the-badge&logo=googletranslate&logoColor=white&labelColor=2b3038&color=ffd700&logoWidth=20" alt="Ukrainisch"/>
     </a>
   </p>
 </div>
 
 ### 👨‍💻 Über mich:
 
-Hallo! Ich bin Vladimir, ein einfacher Programmierer aus der Ukraine, der einfach gerne mit Tee und Chips codet.
+<style>
+.typing {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+</style>
+
+<div class="typing">Hallo! Ich bin Vladimir, ein einfacher Programmierer aus der Ukraine, der gerne mit Tee und Chips codet.</div>
 - 🔭 Baue derzeit Web-Apps.
-- 🌱 Lerne Rust und Go.
 - 👯 Offen für Kollaborationen in Open-Source-Projekten.
 - 💬 Frag mich zu Webentwicklung oder Coding-Herausforderungen.
 - 📫 Kontaktiere mich: **ban.gogas.0996@gmail.com**
@@ -30,71 +50,52 @@ Hallo! Ich bin Vladimir, ein einfacher Programmierer aus der Ukraine, der einfac
 
 ---
 
-### 💻 Technologien & Tools:
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=rust,go,ts,js,cpp,cs,ruby,swift" />
-  </a>
-</p>
 
-#### Frontend:
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=vue,react,html,css,bootstrap,tailwind" />
-  </a>
-</p>
-
-#### Backend & Tools:
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=node,express,docker,git,aws,githubactions,postman" />
-  </a>
-</p>
-
----
-
-### 📊 GitHub Stats:
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=BANSAFAn&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=BANSAFAn&theme=tokyonight&hide_border=true" alt="GitHub Streak"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BANSAFAn&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&layout=compact" alt="Top Languages"/>
-</div>
+### 🔍 Ein ungewöhnliches interaktives Rätsel:
+<details>
+  <summary>Klicke, um das Rätsel zu enthüllen!</summary>
+  <p>Was hat Schlüssel, kann aber keine Schlösser öffnen?</p>
+  <details>
+    <summary>Hinweis</summary>
+    Es ist etwas, das Programmierer jeden Tag benutzen!
+  </details>
+  <details>
+    <summary>Antwort</summary>
+    Eine Tastatur! 😄
+  </details>
+</details>
 
 ---
 
 
 
-### 🏆 GitHub Trophies:
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=BANSAFAn&theme=radical&no-frame=true&no-bg=true&margin-w=4" alt="GitHub Trophies"/>
-</div>
 
----
 
-### 📝 Random Dev Quote:
-<div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Random Dev Quote"/>
-</div>
 
----
+
+
+
+
+
+
 
 ### 🤝 Verbinde dich mit mir:
 <div align="center">
   <a href="https://www.youtube.com/@Baneronetwo" target="_blank">
-    <img src="https://img.shields.io/badge/-YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"/>
+    <img src="https://img.shields.io/badge/-YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
   </a>
   <a href="https://baneronetwo.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/badge/-Webseite-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="Webseite"/>
+    <img src="https://img.shields.io/badge/-Webseite-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="Webseite" />
   </a>
   <a href="https://t.me/banliveone" target="_blank">
-    <img src="https://img.shields.io/badge/-Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"/>
+    <img src="https://img.shields.io/badge/-Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram" />
   </a>
   <a href="https://rebrand.ly/liveone" target="_blank">
-    <img src="https://img.shields.io/badge/-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"/>
+    <img src="https://img.shields.io/badge/-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
   </a>
   <a href="mailto:ban.gogas.0996@gmail.com">
-    <img src="https://img.shields.io/badge/-Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/>
+    <img src="https://img.shields.io/badge/-Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
   </a>
 </div>
 
@@ -103,12 +104,6 @@ Hallo! Ich bin Vladimir, ein einfacher Programmierer aus der Ukraine, der einfac
 ### ❤️ Unterstütze mich:
 <div align="center">
   <a href="https://www.youtube.com/channel/UClMebl5oW-tB2eQ-g_00e_A/join" target="_blank">
-    <img src="https://img.shields.io/badge/Sponsor-FF0000?style=for-the-badge&logo=YouTube&logoColor=white" alt="Auf YouTube sponsern"/>
+    <img src="https://img.shields.io/badge/Sponsor-FF0000?style=for-the-badge&logo=YouTube&logoColor=white" alt="Auf YouTube sponsern" />
   </a>
-</div>
-
----
-
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=BANSAFAn&style=flat-square&color=blue" alt="Profilaufrufe"/>
 </div>

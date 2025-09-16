@@ -19,9 +19,29 @@
 
 ### 👨‍💻 About Me:
 
-Hi! I'm Vladimir, a simple programmer from Ukraine who loves coding with tea and chips.
+<style>
+.typing {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+</style>
+
+<div class="typing">Hi! I'm Vladimir, a simple programmer from Ukraine who loves coding with tea and chips.</div>
 - 🔭 Currently building web apps.
-- 🌱 Learning Rust and Go.
 - 👯 Open to collaborations on open-source projects.
 - 💬 Ask me about web development or coding challenges.
 - 📫 Reach me at: **ban.gogas.0996@gmail.com**
@@ -30,25 +50,30 @@ Hi! I'm Vladimir, a simple programmer from Ukraine who loves coding with tea and
 
 ---
 
-### 💻 Technologies & Tools:
+### 🔍 Unusual Interactive Puzzle:
+<details>
+  <summary>Click to reveal the puzzle!</summary>
+  <p>What has keys but can't open locks?</p>
+  <details>
+    <summary>Hint</summary>
+    It's something programmers use every day!
+  </details>
+  <details>
+    <summary>Answer</summary>
+    A keyboard! 😄
+  </details>
+</details>
 
+---
+
+### 🐍 Contribution Snake:
 <div align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=rust,go,ts,js,cpp,cs,ruby,swift" />
-  </a>
-  
-  #### Frontend:
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=vue,react,html,css,bootstrap,tailwind" />
-  </a>
-  
-  #### Backend & Tools:
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=node,express,docker,git,aws,githubactions,postman" />
-  </a>
+  <img src="https://github.com/BANSAFAn/BANSAFAn/blob/output/github-contribution-grid-snake.svg" alt="Snake animation" />
 </div>
 
 ---
+
+
 
 ### 📊 GitHub Stats:
 <div align="center">

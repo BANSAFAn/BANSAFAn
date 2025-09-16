@@ -69,6 +69,19 @@
 ### 🐍 Contribution Snake:
 <div align="center">
   <img src="https://github.com/BANSAFAn/BANSAFAn/blob/output/github-contribution-grid-snake.svg" alt="Snake animation" />
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=rust,go,ts,js,cs,ruby" />
+  </a>
+  
+  #### Frontend:
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=vue,react,html,css,bootstrap,tailwind" />
+  </a>
+  
+  #### Backend & Tools:
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=node,docker,git,aws,githubactions,postman" />
+  </a>
 </div>
 
 ---
@@ -132,4 +145,4 @@
 
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=BANSAFAn&style=flat-square&color=blue" alt="Profile Views"/>
-</div>
+</div></div>

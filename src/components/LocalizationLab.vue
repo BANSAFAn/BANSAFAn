@@ -25,7 +25,7 @@
         </div>
 
         <span class="apple-pill border border-cyan-500/20 bg-cyan-500/10 text-cyan-600 dark:text-cyan-400">
-          5 напрямків
+          {{ languages.length }} напрямків
         </span>
       </div>
 
@@ -145,6 +145,14 @@ const languages: LanguageItem[] = [
     level: '本地化与内容',
     quote: '致力于打造高效、响应迅速且美观的前端与后端数字产品体验。',
     scope: 'Interface Strings / i18n',
+  },
+  {
+    code: 'BE',
+    name: 'Беларуская',
+    flag: 'be',
+    level: 'Поўная адаптацыя',
+    quote: 'Якасная вэб-распрацоўка, эрганамічныя інтэрфейсы і адкрытыя лічбавыя сістэмы.',
+    scope: 'Full UI / i18n Strings',
   },
   {
     code: 'RU',

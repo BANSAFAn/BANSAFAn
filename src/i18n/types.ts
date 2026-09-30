@@ -1,4 +1,4 @@
-export type Locale = 'uk' | 'en' | 'de' | 'zh' | 'ru';
+export type Locale = 'uk' | 'en' | 'de' | 'zh' | 'ru' | 'be';
 
 export interface LocaleInfo {
   code: Locale;
@@ -9,6 +9,7 @@ export interface LocaleInfo {
 
 export const availableLocales: LocaleInfo[] = [
   { code: 'uk', label: 'UK', nativeName: 'Українська', flag: '🇺🇦' },
+  { code: 'be', label: 'BE', nativeName: 'Беларуская', flag: '🇧🇾' },
   { code: 'en', label: 'EN', nativeName: 'English', flag: '🇬🇧' },
   { code: 'de', label: 'DE', nativeName: 'Deutsch', flag: '🇩🇪' },
   { code: 'zh', label: 'ZH', nativeName: '简体中文', flag: '🇨🇳' },

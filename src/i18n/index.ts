@@ -6,9 +6,11 @@ import en from './locales/en';
 import de from './locales/de';
 import zh from './locales/zh';
 import ru from './locales/ru';
+import be from './locales/be';
 
 const dictionaries: Record<Locale, any> = {
   uk,
+  be,
   en,
   de,
   zh,
@@ -21,11 +23,12 @@ function getInitialLocale(): Locale {
   if (typeof window !== 'undefined') {
     try {
       const stored = localStorage.getItem(STORAGE_KEY) as Locale;
-      if (stored && ['uk', 'en', 'de', 'zh', 'ru'].includes(stored)) {
+      if (stored && ['uk', 'be', 'en', 'de', 'zh', 'ru'].includes(stored)) {
         return stored;
       }
       const navLang = navigator.language.toLowerCase();
       if (navLang.startsWith('uk')) return 'uk';
+      if (navLang.startsWith('be')) return 'be';
       if (navLang.startsWith('ru')) return 'ru';
       if (navLang.startsWith('de')) return 'de';
       if (navLang.startsWith('zh')) return 'zh';
@@ -40,7 +43,7 @@ function getInitialLocale(): Locale {
 export const currentLocale = ref<Locale>(getInitialLocale());
 
 export function setLocale(locale: Locale) {
-  if (!['uk', 'en', 'de', 'zh', 'ru'].includes(locale)) return;
+  if (!['uk', 'be', 'en', 'de', 'zh', 'ru'].includes(locale)) return;
   currentLocale.value = locale;
 
   if (typeof window !== 'undefined') {

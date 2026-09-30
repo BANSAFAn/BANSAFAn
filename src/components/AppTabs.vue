@@ -77,6 +77,9 @@
               </svg>
             </button>
           </div>
+
+          <!-- Apple Voice Player (Voice Narration by Language) -->
+          <AppleVoicePlayer class="w-full mb-8" />
         </div>
 
         <!-- Mac Studio Code Window -->
@@ -222,6 +225,7 @@ import TechMatrix from './TechMatrix.vue';
 import LocalizationLab from './LocalizationLab.vue';
 import YouTubeShowcase from './YouTubeShowcase.vue';
 import AppleCardSupport from './AppleCardSupport.vue';
+import AppleVoicePlayer from './AppleVoicePlayer.vue';
 import { activeTab, setTab, tabsList, isValidTab, type TabId } from '../stores/tabs';
 import { t } from '../i18n';
 

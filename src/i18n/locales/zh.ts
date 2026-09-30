@@ -18,12 +18,19 @@ export default {
   hero: {
     badgeLocation: '乌克兰',
     badgeRole: '全栈工程开发',
-    badgeI18n: 'i18n: 5 大语言系统',
+    badgeI18n: 'i18n: 6 大语言系统',
     headlineMain: '追求极致卓越的代码。',
     headlineGradient: '为人们与开源社区而创造。',
     subtitle: '我是一名来自乌克兰的开发者，即使身处复杂艰难的生活环境，依然坚持打造快速可靠的软件与 Web 服务，经营专业的 YouTube 技术频道，并构建活跃的开源社区。',
     btnMonobank: '通过 Monobank 赞助',
     btnYouTube: 'YouTube 频道',
+  },
+  voice: {
+    title: '作者原声语音介绍',
+    subtitle: '聆听以所选语言录制的作者语音自述',
+    play: '播放语音介绍',
+    pause: '暂停',
+    playing: '正在播放语音',
   },
   bio: {
     sectionTag: '个人介绍与核心原则',

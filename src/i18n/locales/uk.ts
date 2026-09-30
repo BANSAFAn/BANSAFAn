@@ -18,12 +18,19 @@ export default {
   hero: {
     badgeLocation: 'Україна',
     badgeRole: 'Frontend & Backend Engineering',
-    badgeI18n: 'i18n: 5 Мовних систем',
+    badgeI18n: 'i18n: 6 Мовних систем',
     headlineMain: 'Код найвищого ґатунку.',
     headlineGradient: 'Створено для людей і спільнот.',
     subtitle: 'Я розробник з України, що створює швидкі й надійні вебсервіси, веде авторський YouTube-канал та будує відкриті цифрові спільноти навіть у найскладніших життєвих реаліях.',
     btnMonobank: 'Підтримати в Monobank',
     btnYouTube: 'YouTube Канал',
+  },
+  voice: {
+    title: 'Аудіо-візитівка автора',
+    subtitle: 'Послухайте розповідь автора поточною мовою',
+    play: 'Послухати озвучку',
+    pause: 'Пауза',
+    playing: 'Відтворюється озвучка',
   },
   bio: {
     sectionTag: 'Профіль & Принципи',

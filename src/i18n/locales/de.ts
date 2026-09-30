@@ -18,12 +18,19 @@ export default {
   hero: {
     badgeLocation: 'Ukraine',
     badgeRole: 'Frontend- & Backend-Entwicklung',
-    badgeI18n: 'i18n: 5 Sprachsysteme',
+    badgeI18n: 'i18n: 6 Sprachsysteme',
     headlineMain: 'Code auf höchstem Niveau.',
     headlineGradient: 'Geschaffen für Menschen und Gemeinschaften.',
     subtitle: 'Ich bin ein Softwareentwickler aus der Ukraine, der schnelle und zuverlässige Webdienste erstellt, einen technischen YouTube-Kanal betreibt und offene digitale Communitys aufbaut.',
     btnMonobank: 'Über Monobank spenden',
     btnYouTube: 'YouTube-Kanal',
+  },
+  voice: {
+    title: 'Audio-Vorstellung des Autors',
+    subtitle: 'Hören Sie sich die Sprachaufnahme in der ausgewählten Sprache an',
+    play: 'Sprachintro anhören',
+    pause: 'Pause',
+    playing: 'Sprachintro wird abgespielt',
   },
   bio: {
     sectionTag: 'Profil & Prinzipien',

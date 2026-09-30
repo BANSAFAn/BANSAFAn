@@ -18,12 +18,19 @@ export default {
   hero: {
     badgeLocation: 'Украина',
     badgeRole: 'Frontend & Backend Engineering',
-    badgeI18n: 'i18n: 5 Языковых систем',
+    badgeI18n: 'i18n: 6 Языковых систем',
     headlineMain: 'Код высочайшей пробы.',
     headlineGradient: 'Создан для людей и сообществ.',
     subtitle: 'Я разработчик из Украины, создающий быстрые и надёжные веб-сервисы, ведущий авторский YouTube-канал и строящий открытые цифровые сообщества даже в самых непростых жизненных реалиях.',
     btnMonobank: 'Поддержать в Monobank',
     btnYouTube: 'YouTube Канал',
+  },
+  voice: {
+    title: 'Аудио-визитка автора',
+    subtitle: 'Послушайте рассказ автора на выбранном языке',
+    play: 'Послушать озвучку',
+    pause: 'Пауза',
+    playing: 'Воспроизводится озвучка',
   },
   bio: {
     sectionTag: 'Профиль & Принципы',

@@ -15,16 +15,15 @@
           class="w-8 h-8 rounded-full overflow-hidden border border-black/10 dark:border-white/15 shadow-apple-sm transition-transform duration-300 group-hover:scale-105 shrink-0 relative bg-neutral-900 flex items-center justify-center"
         >
           <img
-            src="https://github.com/BANSAFAn.png"
+            v-if="!avatarFallback"
+            :src="avatarSrc"
             alt="Baneronetwo"
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
             class="w-full h-full object-cover"
             loading="eager"
             @error="handleAvatarError"
           />
           <div
-            v-if="avatarFallback"
+            v-else
             class="absolute inset-0 bg-gradient-to-br from-neutral-900 to-neutral-700 text-white flex items-center justify-center font-bold text-xs"
           >
             B
@@ -172,12 +171,28 @@ import IconCode from './icons/IconCode.vue';
 import IconGlobe from './icons/IconGlobe.vue';
 import IconYouTube from './icons/IconYouTube.vue';
 import IconHeartHand from './icons/IconHeartHand.vue';
+import localAvatar from '../assets/avatar.png';
 import { activeTab, setTab, tabsList, isValidTab, setPatrioticMode, type TabId } from '../stores/tabs';
 import { t, currentLocale, type Locale } from '../i18n';
 
+const localAvatarUrl = typeof localAvatar === 'string' ? localAvatar : (localAvatar as any)?.src || '/avatar.png';
+
+const avatarSources = [
+  localAvatarUrl,
+  '/avatar.png',
+  'https://avatars.githubusercontent.com/BANSAFAn',
+  'https://github.com/BANSAFAn.png',
+];
+const currentAvatarIndex = ref(0);
 const avatarFallback = ref(false);
+const avatarSrc = computed(() => avatarSources[currentAvatarIndex.value]);
+
 const handleAvatarError = () => {
-  avatarFallback.value = true;
+  if (currentAvatarIndex.value < avatarSources.length - 1) {
+    currentAvatarIndex.value++;
+  } else {
+    avatarFallback.value = true;
+  }
 };
 
 const getTabIcon = (id: TabId) => {
@@ -214,6 +229,16 @@ const anthems: Record<Locale, AnthemConfig> = {
     glowColor: 'shadow-[0_8px_32px_rgba(255,215,0,0.3)]',
     textColor: 'text-yellow-400',
     eqColors: ['bg-blue-500', 'bg-yellow-400', 'bg-blue-500', 'bg-yellow-400'],
+  },
+  be: {
+    audioSrc: '/belarusi.mp3',
+    flagCode: 'be',
+    title: 'Дзяржаўны гімн Беларусі',
+    subtitle: '«Мы, беларусы»',
+    borderColor: 'border-emerald-500/50',
+    glowColor: 'shadow-[0_8px_32px_rgba(0,125,70,0.3)]',
+    textColor: 'text-emerald-400',
+    eqColors: ['bg-red-500', 'bg-emerald-500', 'bg-red-500', 'bg-emerald-500'],
   },
   en: {
     audioSrc: '/british.mp3',
@@ -297,6 +322,9 @@ const triggerAnthemEasterEgg = () => {
 
   const anthem = activeAnthemMeta.value;
   isAnthemPlaying.value = true;
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('stop-voice-player'));
+  }
 
   // Ukrainian Flag mode triggers ONLY during Russian anthem playback
   if (currentLocale.value === 'ru') {
@@ -437,11 +465,16 @@ onMounted(() => {
         activeTab.value = h;
       }
     });
+
+    window.addEventListener('stop-anthem', stopAnthem);
   }
 });
 
 onUnmounted(() => {
   stopAnthem();
+  if (typeof window !== 'undefined') {
+    window.removeEventListener('stop-anthem', stopAnthem);
+  }
   if (clickResetTimer) clearTimeout(clickResetTimer);
 });
 </script>

@@ -18,12 +18,19 @@ export default {
   hero: {
     badgeLocation: 'Ukraine',
     badgeRole: 'Frontend & Backend Engineering',
-    badgeI18n: 'i18n: 5 Language Systems',
+    badgeI18n: 'i18n: 6 Language Systems',
     headlineMain: 'Highest caliber code.',
     headlineGradient: 'Built for people and communities.',
     subtitle: 'I am a software engineer from Ukraine creating swift and dependable web services, running an analytical YouTube channel, and fostering open-source digital communities even under challenging circumstances.',
     btnMonobank: 'Support via Monobank',
     btnYouTube: 'YouTube Channel',
+  },
+  voice: {
+    title: 'Author Audio Introduction',
+    subtitle: 'Listen to the author narration in your selected language',
+    play: 'Listen to voice intro',
+    pause: 'Pause',
+    playing: 'Playing voice narration',
   },
   bio: {
     sectionTag: 'Profile & Principles',

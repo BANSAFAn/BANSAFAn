@@ -94,15 +94,14 @@
           <!-- Channel Avatar -->
           <div class="w-12 h-12 rounded-2xl overflow-hidden shrink-0 border border-black/[0.08] dark:border-white/[0.12] shadow-apple-sm relative bg-red-600/10 flex items-center justify-center">
             <img
+              v-if="!avatarFallback"
               :src="avatarSrc"
               alt="Baneronetwo"
-              crossorigin="anonymous"
-              referrerpolicy="no-referrer"
               loading="eager"
               @error="handleAvatarError"
               class="w-full h-full object-cover"
             />
-            <div v-if="avatarFallback" class="absolute inset-0 bg-gradient-to-br from-red-600 to-amber-600 text-white flex items-center justify-center font-bold text-lg select-none">
+            <div v-else class="absolute inset-0 bg-gradient-to-br from-red-600 to-amber-600 text-white flex items-center justify-center font-bold text-lg select-none">
               B
             </div>
           </div>
@@ -476,10 +475,8 @@
               <!-- Small user avatar -->
               <div class="w-5 h-5 rounded-full overflow-hidden shrink-0 border border-black/10 dark:border-white/10">
                 <img
-                  src="https://github.com/BANSAFAn.png"
+                  :src="avatarSrc"
                   alt="BanerBansa"
-                  crossorigin="anonymous"
-                  referrerpolicy="no-referrer"
                   class="w-full h-full object-cover"
                 />
               </div>
@@ -569,6 +566,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { t } from '../i18n';
+import localAvatar from '../assets/avatar.png';
 
 type TabKey = 'youtube' | 'reddit';
 const activeTab = ref<TabKey>('youtube');
@@ -578,8 +576,13 @@ const channelUrl = 'https://www.youtube.com/@Baneronetwo';
 const sponsorUrl = 'https://www.youtube.com/@Baneronetwo/join';
 const redditUserUrl = 'https://www.reddit.com/user/Banerbansa/';
 
+const localAvatarUrl = typeof localAvatar === 'string' ? localAvatar : (localAvatar as any)?.src || '/avatar.png';
+
 // Avatar sources with fallback
 const avatarSources = [
+  localAvatarUrl,
+  '/avatar.png',
+  'https://avatars.githubusercontent.com/BANSAFAn',
   'https://github.com/BANSAFAn.png',
   'https://yt3.googleusercontent.com/NGLdV1Qz0zKFt3gbDE3EGLb1A2i0wow71ips4j2kD9JZzgBIozbSkANNywUQeRFjvBKWNhD6Nw=s120-c-k-c0x00ffffff-no-rj',
 ];

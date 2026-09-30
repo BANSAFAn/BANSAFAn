@@ -1,0 +1,172 @@
+---
+import AppleCursor from '../components/AppleCursor.vue';
+import ApplePreloader from '../components/ApplePreloader.vue';
+import AppleAnimatedBackground from '../components/AppleAnimatedBackground.vue';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Baneronetwo — Developer & Creator",
+  description = "Frontend & Backend Developer з України. Створення цифрових продуктів, локалізація та підтримка інтернет-спільнот.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="uk" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <!-- ТАКОЖ МОЖЕТЕ ЙОПТА БРАТИ САЙТ ЯК ПРИКЛАД....АЛЕ СУЧКИ НЕ ЧИПАЙ КОМЕНТИ, БО НІХУЯ НЕ ЗРОЗУМІЮ-->
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Google Fonts Inter & SF-like metrics -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Theme inline script to prevent flash of light/dark mode -->
+    <script is:inline>
+      (function () {
+        const storedTheme = localStorage.getItem('theme');
+        const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (storedTheme === 'dark' || (!storedTheme && userPrefersDark)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body
+    class="min-h-screen bg-[#fbfbfd] dark:bg-[#000000] text-[#1d1d1f] dark:text-[#f5f5f7] font-sans antialiased selection:bg-[#0071e3]/20 selection:text-[#0071e3] transition-colors duration-700 relative overflow-x-clip"
+  >
+    <!-- Apple Keynote Preloader (5 seconds, no logos) -->
+    <ApplePreloader client:load />
+
+    <!-- Custom Apple Smooth Magnetic Cursor -->
+    <AppleCursor client:load />
+
+    <!-- Real-time Animated Liquid Fluid Mesh Background for each Tab -->
+    <AppleAnimatedBackground client:load />
+
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  ::selection {
+    background-color: rgba(0, 113, 227, 0.25);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.011em;
+  }
+
+  /* Custom Cursor Active Rule (Only on desktop fine pointer) */
+  @media (hover: hover) and (pointer: fine) {
+    .custom-cursor-active,
+    .custom-cursor-active *,
+    .custom-cursor-active *::before,
+    .custom-cursor-active *::after {
+      cursor: none !important;
+    }
+  }
+
+  /* Apple-grade minimalist scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(120, 120, 128, 0.25);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(120, 120, 128, 0.45);
+  }
+
+  /* -------------------------------------------------------------
+     UKRAINIAN FLAG THEME OVERTAKE (TRIGGERED ON 'RU' LOCALE)
+     "якщо на РУ увімкнулось - то усюди кнопки, фон змінився на прапора україни !"
+     ------------------------------------------------------------- */
+  html[data-patriotic="ua"] ::selection {
+    background-color: #ffd700 !important;
+    color: #0057b7 !important;
+  }
+
+  /* All Primary, Secondary & CTA Buttons turn into Ukrainian Flag */
+  html[data-patriotic="ua"] .apple-btn-primary,
+  html[data-patriotic="ua"] .apple-btn-secondary,
+  html[data-patriotic="ua"] a.apple-btn-primary,
+  html[data-patriotic="ua"] a.apple-btn-secondary,
+  html[data-patriotic="ua"] button.apple-btn-primary,
+  html[data-patriotic="ua"] button.apple-btn-secondary,
+  html[data-patriotic="ua"] .apple-card button:not([aria-label="Change language"]):not([title="Stop Anthem"]),
+  html[data-patriotic="ua"] .apple-card a[target="_blank"] {
+    position: relative;
+    background: linear-gradient(180deg, #0057b7 0%, #0057b7 50%, #ffd700 50%, #ffd700 100%) !important;
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+    border: 1.5px solid rgba(255, 215, 0, 0.8) !important;
+    box-shadow: 0 4px 20px rgba(0, 87, 183, 0.45), 0 2px 12px rgba(255, 215, 0, 0.4) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  html[data-patriotic="ua"] .apple-btn-primary:hover,
+  html[data-patriotic="ua"] .apple-btn-secondary:hover,
+  html[data-patriotic="ua"] a.apple-btn-primary:hover,
+  html[data-patriotic="ua"] a.apple-btn-secondary:hover,
+  html[data-patriotic="ua"] .apple-card button:hover {
+    box-shadow: 0 8px 30px rgba(0, 87, 183, 0.7), 0 4px 20px rgba(255, 215, 0, 0.7) !important;
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  /* All Apple Status Pills & Badges become Ukrainian Gold & Azure */
+  html[data-patriotic="ua"] .apple-pill {
+    background: linear-gradient(180deg, rgba(0, 87, 183, 0.25) 0%, rgba(0, 87, 183, 0.25) 50%, rgba(255, 215, 0, 0.25) 50%, rgba(255, 215, 0, 0.25) 100%) !important;
+    border-color: rgba(255, 215, 0, 0.6) !important;
+    color: #ffd700 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Navbar active tab button turns into Ukrainian Flag pill */
+  html[data-patriotic="ua"] nav[role="tablist"] button[aria-selected="true"] {
+    background: linear-gradient(180deg, #0057b7 0%, #0057b7 50%, #ffd700 50%, #ffd700 100%) !important;
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(255, 215, 0, 0.8) !important;
+    box-shadow: 0 2px 14px rgba(0, 87, 183, 0.5) !important;
+  }
+
+  /* Cards get glowing Ukrainian dual-halo border */
+  html[data-patriotic="ua"] .apple-card {
+    border-color: rgba(0, 87, 183, 0.3) !important;
+    box-shadow: 0 8px 32px rgba(0, 87, 183, 0.12), 0 16px 48px rgba(255, 215, 0, 0.08) !important;
+  }
+
+  html[data-patriotic="ua"] .apple-card:hover {
+    border-color: rgba(255, 215, 0, 0.5) !important;
+    box-shadow: 0 12px 40px rgba(0, 87, 183, 0.2), 0 24px 60px rgba(255, 215, 0, 0.16) !important;
+  }
+</style>

@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.vue';
+import AppTabs from '../components/AppTabs.vue';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Baneronetwo — Developer, Creator & Community Builder"
+  description="Персональний профіль розробника Baneronetwo. Frontend & Backend стек, YouTube канал, локалізація, Discord спільнота та Monobank банка."
+>
+  <Navbar client:load />
+  <main class="relative" id="main-content">
+    <div id="tabs-container">
+      <AppTabs client:load />
+    </div>
+  </main>
+  <Footer />
+</Layout>

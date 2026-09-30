@@ -1,0 +1,90 @@
+---
+import ThemeToggle from './ThemeToggle.vue';
+---
+
+<header class="sticky top-3 z-50 w-full px-4 sm:px-6 pointer-events-none">
+  <div
+    class="max-w-5xl mx-auto h-14 sm:h-16 px-3.5 sm:px-5 flex items-center justify-between rounded-full bg-white/75 dark:bg-[#161617]/75 backdrop-blur-2xl border border-black/[0.08] dark:border-white/[0.12] shadow-[0_8px_32px_rgba(0,0,0,0.06)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.5)] shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.7)] dark:shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.12)] pointer-events-auto transition-all duration-500"
+  >
+    <!-- Brand -->
+    <a
+      href="#profile"
+      onclick="window.dispatchEvent(new CustomEvent('switch-tab', { detail: 'profile' }))"
+      class="flex items-center gap-2.5 group focus:outline-none rounded-full py-1 pl-1 pr-3"
+      title="Baneronetwo Головна"
+    >
+      <div
+        class="w-8 h-8 rounded-full bg-gradient-to-br from-neutral-900 to-neutral-700 dark:from-white dark:to-neutral-300 text-white dark:text-black flex items-center justify-center font-bold text-xs tracking-tight shadow-apple-sm transition-transform duration-300 group-hover:scale-105"
+      >
+        B
+      </div>
+      <div class="flex flex-col text-left">
+        <span class="text-xs font-semibold tracking-tight text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+          Baneronetwo
+        </span>
+        <span class="text-[10px] text-neutral-500 dark:text-neutral-400 -mt-0.5 hidden sm:inline">
+          Studio Profile
+        </span>
+      </div>
+    </a>
+
+    <!-- Center Links (Desktop Apple Segmented Navigation) -->
+    <nav class="hidden md:flex items-center gap-1 p-1 rounded-full bg-black/[0.03] dark:bg-white/[0.05] border border-black/[0.04] dark:border-white/[0.06] text-xs font-medium">
+      <button
+        type="button"
+        onclick="window.dispatchEvent(new CustomEvent('switch-tab', { detail: 'profile' }))"
+        class="nav-tab-btn px-3.5 py-1.5 rounded-full text-neutral-600 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white hover:bg-white dark:hover:bg-white/[0.12] hover:shadow-apple-sm transition-all duration-200 cursor-pointer"
+        data-tab="profile"
+      >
+        Профіль
+      </button>
+      <button
+        type="button"
+        onclick="window.dispatchEvent(new CustomEvent('switch-tab', { detail: 'tech' }))"
+        class="nav-tab-btn px-3.5 py-1.5 rounded-full text-neutral-600 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white hover:bg-white dark:hover:bg-white/[0.12] hover:shadow-apple-sm transition-all duration-200 cursor-pointer"
+        data-tab="tech"
+      >
+        GitHub & Стек
+      </button>
+      <button
+        type="button"
+        onclick="window.dispatchEvent(new CustomEvent('switch-tab', { detail: 'i18n' }))"
+        class="nav-tab-btn px-3.5 py-1.5 rounded-full text-neutral-600 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white hover:bg-white dark:hover:bg-white/[0.12] hover:shadow-apple-sm transition-all duration-200 cursor-pointer"
+        data-tab="i18n"
+      >
+        Локалізація
+      </button>
+      <button
+        type="button"
+        onclick="window.dispatchEvent(new CustomEvent('switch-tab', { detail: 'media' }))"
+        class="nav-tab-btn px-3.5 py-1.5 rounded-full text-neutral-600 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white hover:bg-white dark:hover:bg-white/[0.12] hover:shadow-apple-sm transition-all duration-200 cursor-pointer"
+        data-tab="media"
+      >
+        Медіа & YouTube
+      </button>
+      <button
+        type="button"
+        onclick="window.dispatchEvent(new CustomEvent('switch-tab', { detail: 'support' }))"
+        class="nav-tab-btn px-3.5 py-1.5 rounded-full text-neutral-600 dark:text-neutral-300 hover:text-neutral-950 dark:hover:text-white hover:bg-white dark:hover:bg-white/[0.12] hover:shadow-apple-sm transition-all duration-200 cursor-pointer"
+        data-tab="support"
+      >
+        Підтримка
+      </button>
+    </nav>
+
+    <!-- Right Controls -->
+    <div class="flex items-center gap-2.5">
+      <!-- Apple Live Indicator Badge -->
+      <div class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-medium border border-emerald-500/20 bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 select-none">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span>Online</span>
+      </div>
+
+      <!-- Theme Switcher -->
+      <ThemeToggle client:load />
+    </div>
+  </div>
+</header>

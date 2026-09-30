@@ -1,0 +1,69 @@
+---
+import IconMapPin from './icons/IconMapPin.vue';
+import IconCode from './icons/IconCode.vue';
+import IconGlobe from './icons/IconGlobe.vue';
+import IconYouTube from './icons/IconYouTube.vue';
+import IconArrowUpRight from './icons/IconArrowUpRight.vue';
+import IconMonobank from './icons/IconMonobank.vue';
+import MacStudioWindow from './MacStudioWindow.vue';
+---
+
+<section class="pt-16 pb-14 sm:pt-24 sm:pb-20 px-4 sm:px-6 max-w-6xl mx-auto">
+  <div class="flex flex-col items-center text-center">
+    <!-- Top Apple Status Pill Badges -->
+    <div class="flex flex-wrap items-center justify-center gap-2 mb-8">
+      <div class="apple-pill">
+        <IconMapPin class="w-3.5 h-3.5 text-blue-500" />
+        <span>Україна</span>
+      </div>
+      <div class="apple-pill">
+        <IconCode class="w-3.5 h-3.5 text-indigo-500" />
+        <span>Frontend & Backend Engineering</span>
+      </div>
+      <div class="apple-pill">
+        <IconGlobe class="w-3.5 h-3.5 text-cyan-500" />
+        <span>i18n: 5 Мовних систем</span>
+      </div>
+    </div>
+
+    <!-- Apple Keynote Headline -->
+    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 max-w-4xl leading-[1.05] mb-6">
+      Код найвищого ґатунку.
+      <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 dark:from-blue-400 dark:via-indigo-300 dark:to-cyan-300">
+        Створено для людей і спільнот.
+      </span>
+    </h1>
+
+    <!-- Apple Subtitle -->
+    <p class="text-base sm:text-xl text-neutral-600 dark:text-neutral-400 max-w-2xl font-normal leading-relaxed mb-10">
+      Я розробник з України, що створює швидкі й надійні вебсервіси, веде авторський YouTube-канал та будує відкриті цифрові спільноти навіть у найскладніших життєвих реаліях.
+    </p>
+
+    <!-- Apple-style Primary & Secondary Actions -->
+    <div class="flex flex-wrap items-center justify-center gap-3.5 w-full max-w-md mb-12">
+      <!-- Monobank CTA -->
+      <a
+        href="https://send.monobank.ua/jar/7cQ5hJtFDy"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="apple-btn-primary w-full sm:w-auto"
+      >
+        <IconMonobank class="w-4 h-4" />
+        <span>Підтримати в Monobank</span>
+        <IconArrowUpRight class="w-3.5 h-3.5 opacity-80" />
+      </a>
+
+      <!-- YouTube CTA -->
+      <a
+        href="https://www.youtube.com/@Baneronetwo"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="apple-btn-secondary w-full sm:w-auto"
+      >
+        <IconYouTube class="w-4 h-4 text-red-500" />
+        <span>YouTube Канал</span>
+        <IconArrowUpRight class="w-3.5 h-3.5 opacity-70" />
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,161 @@
+---
+import IconDiscord from './icons/IconDiscord.vue';
+import IconReddit from './icons/IconReddit.vue';
+import IconX from './icons/IconX.vue';
+import IconHeartHand from './icons/IconHeartHand.vue';
+import IconArrowUpRight from './icons/IconArrowUpRight.vue';
+import TechMatrix from './TechMatrix.vue';
+import LocalizationLab from './LocalizationLab.vue';
+import AppleCardSupport from './AppleCardSupport.vue';
+import YouTubeShowcase from './YouTubeShowcase.vue';
+
+const discordUrl = "https://rebrand.ly/liveone";
+const redditUrl = "https://www.reddit.com/user/Banerbansa/";
+const xUrl = "https://x.com/Baneronetwonya";
+---
+
+<div class="space-y-12 sm:space-y-16 max-w-6xl mx-auto px-4 sm:px-6 pb-20">
+  
+  <!-- SECTION 1: ABOUT & PHILOSOPHY -->
+  <section id="about" class="scroll-mt-24">
+    <div class="apple-card p-7 sm:p-10 relative overflow-hidden group">
+      <div class="absolute -right-20 -top-20 w-72 h-72 bg-blue-500/10 dark:bg-blue-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-8">
+        <div class="max-w-2xl">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-2xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-sm shadow-apple-sm">
+              <IconHeartHand class="w-5 h-5" />
+            </div>
+            <div>
+              <span class="text-[11px] font-semibold tracking-wider uppercase text-neutral-400">Профіль & Принципи</span>
+              <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900 dark:text-white">
+                Шлях крізь виклики та фокус на якості
+              </h2>
+            </div>
+          </div>
+
+          <div class="space-y-4 text-neutral-600 dark:text-neutral-300 text-sm sm:text-base leading-relaxed font-normal">
+            <p>
+              Мене звати Володимир Шамін (<strong class="text-neutral-900 dark:text-white font-semibold">Baneronetwo</strong> / <strong class="text-neutral-900 dark:text-white font-semibold">BANSAFAn</strong>). Я створюю швидкі, ергономічні десктопні та веб-інтерфейси, а також проєктую відкрите системне програмне забезпечення.
+            </p>
+            <p>
+              Я перебуваю в Україні у непростих життєвих реаліях, але понад усе вірю в силу наполегливої праці, знань та технологій. Працюю над десктопними продуктами на базі Tauri v2, Rust, Flutter, Vue 3, є активним контрибʼютором організації Voxelum (x-minecraft-launcher), контрибʼютором вебсайту Prismlinux та ділюся чесними технічними оглядами на власному YouTube-каналі.
+            </p>
+          </div>
+        </div>
+
+        <!-- Apple-grade Spec Badges Column -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3.5 w-full lg:w-72 shrink-0">
+          <div class="p-4 rounded-2xl bg-black/[0.02] dark:bg-white/[0.04] border border-black/[0.04] dark:border-white/[0.06] flex items-center justify-between">
+            <div>
+              <span class="text-[11px] font-mono text-neutral-400 block mb-0.5">Focus</span>
+              <span class="text-sm font-semibold text-neutral-900 dark:text-white">Desktop & UI</span>
+            </div>
+            <span class="text-xs font-mono text-blue-500 font-medium">Tauri • Vue 3</span>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-black/[0.02] dark:bg-white/[0.04] border border-black/[0.04] dark:border-white/[0.06] flex items-center justify-between">
+            <div>
+              <span class="text-[11px] font-mono text-neutral-400 block mb-0.5">Systems</span>
+              <span class="text-sm font-semibold text-neutral-900 dark:text-white">Rust & Cross-platform</span>
+            </div>
+            <span class="text-xs font-mono text-indigo-500 font-medium">Core Architecture</span>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-black/[0.02] dark:bg-white/[0.04] border border-black/[0.04] dark:border-white/[0.06] flex items-center justify-between">
+            <div>
+              <span class="text-[11px] font-mono text-neutral-400 block mb-0.5">Community</span>
+              <span class="text-sm font-semibold text-neutral-900 dark:text-white">Voxelum & Prismlinux</span>
+            </div>
+            <span class="text-xs font-mono text-emerald-500 font-medium">Open Source</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: TECH MATRIX & LOCALIZATION LAB (Apple Pro Specs) -->
+  <section id="experience" class="space-y-8 scroll-mt-24">
+    <!-- Tech Matrix Specs -->
+    <TechMatrix client:load />
+
+    <!-- Interactive Localization Lab -->
+    <LocalizationLab client:load />
+  </section>
+
+  <!-- SECTION 3: CREATOR STUDIO & MEDIA ECOSYSTEM -->
+  <section id="media" class="space-y-6 scroll-mt-24">
+    <!-- YouTube Pro Studio Showcase -->
+    <YouTubeShowcase client:load />
+
+    <!-- Communities Grid (Discord, Reddit, X) -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      
+      <!-- Discord -->
+      <a
+        href={discordUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="apple-card p-5 flex items-center justify-between hover:border-[#5865F2]/40 transition-all duration-300 group/comm"
+      >
+        <div class="flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-2xl bg-[#5865F2]/10 text-[#5865F2] flex items-center justify-center font-bold shadow-apple-sm transition-transform group-hover/comm:scale-105">
+            <IconDiscord class="w-5 h-5" />
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-neutral-900 dark:text-white">Discord • Liveone</h4>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400">Спільний хаб для дискусій</p>
+          </div>
+        </div>
+        <IconArrowUpRight class="w-4 h-4 text-neutral-400 group-hover/comm:text-[#5865F2] group-hover/comm:translate-x-0.5 group-hover/comm:-translate-y-0.5 transition-all" />
+      </a>
+
+      <!-- Reddit -->
+      <a
+        href="https://www.reddit.com/user/Banerbansa/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="apple-card p-5 flex items-center justify-between hover:border-[#FF4500]/40 transition-all duration-300 group/comm"
+      >
+        <div class="flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-2xl bg-[#FF4500]/10 text-[#FF4500] flex items-center justify-center font-bold shadow-apple-sm transition-transform group-hover/comm:scale-105">
+            <IconReddit class="w-5 h-5" />
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-neutral-900 dark:text-white">Reddit • u/Banerbansa</h4>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400">Пости, розробка та спільнота</p>
+          </div>
+        </div>
+        <IconArrowUpRight class="w-4 h-4 text-neutral-400 group-hover/comm:text-[#FF4500] group-hover/comm:translate-x-0.5 group-hover/comm:-translate-y-0.5 transition-all" />
+      </a>
+
+      <!-- X (Twitter) -->
+      <a
+        href={xUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="apple-card p-5 flex items-center justify-between hover:border-black/[0.2] dark:hover:border-white/[0.25] transition-all duration-300 group/comm"
+      >
+        <div class="flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-2xl bg-neutral-900/[0.05] dark:bg-white/[0.08] text-neutral-900 dark:text-white flex items-center justify-center font-bold shadow-apple-sm transition-transform group-hover/comm:scale-105">
+            <IconX class="w-4.5 h-4.5" />
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-neutral-900 dark:text-white">X • @Baneronetwonya</h4>
+            <p class="text-xs text-neutral-500 dark:text-neutral-400">Анонси та нотатки</p>
+          </div>
+        </div>
+        <IconArrowUpRight class="w-4 h-4 text-neutral-400 group-hover/comm:text-neutral-900 dark:group-hover/comm:text-white group-hover/comm:translate-x-0.5 group-hover/comm:-translate-y-0.5 transition-all" />
+      </a>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: MONOBANK SUPPORT (Apple Wallet Card Experience) -->
+  <section id="support" class="scroll-mt-24">
+    <AppleCardSupport client:load />
+  </section>
+
+</div>
+

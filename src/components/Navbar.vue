@@ -163,7 +163,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
+import { ref, computed, watch, onMounted, onUnmounted, nextTick } from 'vue';
 import ThemeToggle from './ThemeToggle.vue';
 import LanguageSwitcher from './LanguageSwitcher.vue';
 import SvgFlag from './SvgFlag.vue';
@@ -173,7 +173,7 @@ import IconYouTube from './icons/IconYouTube.vue';
 import IconHeartHand from './icons/IconHeartHand.vue';
 import localAvatar from '../assets/avatar.png';
 import { activeTab, setTab, tabsList, isValidTab, setPatrioticMode, type TabId } from '../stores/tabs';
-import { t, currentLocale, type Locale } from '../i18n';
+import { t, currentLocale, initClientLocale, type Locale } from '../i18n';
 
 const localAvatarUrl = typeof localAvatar === 'string' ? localAvatar : (localAvatar as any)?.src || '/avatar.png';
 
@@ -452,12 +452,156 @@ const playSynthAnthem = () => {
   }
 };
 
+// -------------------------------------------------------------
+// DYNAMIC BROWSER TAB TITLES & 20s SLEEPING CAT ANIMATION
+// -------------------------------------------------------------
+const titleDict: Record<Locale, {
+  awake: string;
+  sleep: string;
+  away: string;
+  tech: [string, string];
+  i18n: [string, string];
+  media: [string, string];
+  support: [string, string];
+}> = {
+  uk: {
+    awake: '🐱 Baneronetwo — Котик активний 🐾',
+    sleep: '😴 Baneronetwo — Котик спить... zZz',
+    away: '🐾 Повернутися до котика? — Baneronetwo',
+    tech: ['⚡ Baneronetwo — GitHub & Стек', '💻 Baneronetwo — Open Source Core'],
+    i18n: ['🌐 Baneronetwo — Лабораторія i18n', '🗺️ Baneronetwo — 6 Мовних систем'],
+    media: ['🎬 Baneronetwo — YouTube & Медіа', '🔴 Baneronetwo — Огляди та розбори'],
+    support: ['💳 Baneronetwo — Банка Monobank', '❤️ Baneronetwo — Дякую за підтримку!'],
+  },
+  be: {
+    awake: '🐱 Baneronetwo — Коцік актыўны 🐾',
+    sleep: '😴 Baneronetwo — Коцік спіць... zZz',
+    away: '🐾 Вярнуцца да коціка? — Baneronetwo',
+    tech: ['⚡ Baneronetwo — GitHub & Стэк', '💻 Baneronetwo — Open Source Праекты'],
+    i18n: ['🌐 Baneronetwo — Лабараторыя i18n', '🗺️ Baneronetwo — 6 Моўных сістэм'],
+    media: ['🎬 Baneronetwo — YouTube & Медыя', '🔴 Baneronetwo — Агляды і стрымы'],
+    support: ['💳 Baneronetwo — Банка Monobank', '❤️ Baneronetwo — Дзякуй за падтрымку!'],
+  },
+  en: {
+    awake: '🐱 Baneronetwo — Kitty is Awake 🐾',
+    sleep: '😴 Baneronetwo — Kitty is Sleeping... zZz',
+    away: '🐾 Come back to kitty! — Baneronetwo',
+    tech: ['⚡ Baneronetwo — GitHub & Tech Stack', '💻 Baneronetwo — Open Source Core'],
+    i18nA: ['🌐 Baneronetwo — i18n Laboratory', '🗺️ Baneronetwo — 6 Language Systems'] as any,
+    i18n: ['🌐 Baneronetwo — i18n Laboratory', '🗺️ Baneronetwo — 6 Language Systems'],
+    media: ['🎬 Baneronetwo — YouTube & Media', '🔴 Baneronetwo — Tech Breakdowns'],
+    support: ['💳 Baneronetwo — Monobank Support', '❤️ Baneronetwo — Thank You!'],
+  },
+  de: {
+    awake: '🐱 Baneronetwo — Kätzchen ist wach 🐾',
+    sleep: '😴 Baneronetwo — Kätzchen schläft... zZz',
+    away: '🐾 Zurück zum Kätzchen! — Baneronetwo',
+    tech: ['⚡ Baneronetwo — GitHub & Stack', '💻 Baneronetwo — Open Source Architektur'],
+    i18n: ['🌐 Baneronetwo — i18n-Labor', '🗺️ Baneronetwo — 6 Sprachsysteme'],
+    media: ['🎬 Baneronetwo — YouTube & Medien', '🔴 Baneronetwo — Video-Analysen'],
+    support: ['💳 Baneronetwo — Monobank Spenden', '❤️ Baneronetwo — Danke!'],
+  },
+  zh: {
+    awake: '🐱 Baneronetwo — 猫咪清醒活跃 🐾',
+    sleep: '😴 Baneronetwo — 猫咪睡觉中... zZz',
+    away: '🐾 回来找猫咪吧！— Baneronetwo',
+    tech: ['⚡ Baneronetwo — GitHub 与技术栈', '💻 Baneronetwo — 开源核心贡献'],
+    i18n: ['🌐 Baneronetwo — 国际化实验室', '🗺️ Baneronetwo — 6 大语言系统'],
+    media: ['🎬 Baneronetwo — YouTube 与媒体', '🔴 Baneronetwo — 深度软件解析'],
+    support: ['💳 Baneronetwo — Monobank 赞助', '❤️ Baneronetwo — 感谢支持！'],
+  },
+  ru: {
+    awake: '🐱 Baneronetwo — Котик активен 🐾',
+    sleep: '😴 Baneronetwo — Котик спит... zZz',
+    away: '🐾 Вернуться к котику? — Baneronetwo',
+    tech: ['⚡ Baneronetwo — GitHub & Стек', '💻 Baneronetwo — Open Source Проекты'],
+    i18n: ['🌐 Baneronetwo — Лаборатория i18n', '🗺️ Baneronetwo — 6 Языковых систем'],
+    media: ['🎬 Baneronetwo — YouTube & Медиа', '🔴 Baneronetwo — Обзоры и стримы'],
+    support: ['💳 Baneronetwo — Банка Monobank', '❤️ Baneronetwo — Спасибо за поддержку!'],
+  },
+};
+
+const isCatSleeping = ref(false);
+const subPhase = ref(false);
+let catInterval: any = null;
+let tabInterval: any = null;
+
+const updateFavicon = (sleeping: boolean) => {
+  if (typeof document === 'undefined') return;
+  const link = document.querySelector("link[rel*='icon']") as HTMLLinkElement | null;
+  if (!link) return;
+  const href = sleeping ? '/favicon-sleep.svg?v=sleep' : '/favicon.svg?v=cat';
+  if (link.getAttribute('href') !== href) {
+    link.setAttribute('href', href);
+  }
+};
+
+const updateBrowserTabTitle = () => {
+  if (typeof document === 'undefined') return;
+
+  if (document.visibilityState === 'hidden') {
+    const pack = titleDict[currentLocale.value] || titleDict.uk;
+    document.title = pack.away;
+    return;
+  }
+
+  const pack = titleDict[currentLocale.value] || titleDict.uk;
+  const tab = activeTab.value;
+
+  if (tab === 'profile') {
+    if (isCatSleeping.value) {
+      document.title = pack.sleep;
+      updateFavicon(true);
+    } else {
+      document.title = pack.awake;
+      updateFavicon(false);
+    }
+  } else {
+    updateFavicon(false);
+    const subIdx = subPhase.value ? 1 : 0;
+    if (tab === 'tech') document.title = pack.tech[subIdx];
+    else if (tab === 'i18n') document.title = pack.i18n[subIdx];
+    else if (tab === 'media') document.title = pack.media[subIdx];
+    else if (tab === 'support') document.title = pack.support[subIdx];
+  }
+};
+
+const startTitleTimers = () => {
+  if (catInterval) clearInterval(catInterval);
+  if (tabInterval) clearInterval(tabInterval);
+
+  if (activeTab.value === 'profile') {
+    // 20-second interval for cat awake / sleep cycle!
+    catInterval = setInterval(() => {
+      isCatSleeping.value = !isCatSleeping.value;
+      updateBrowserTabTitle();
+    }, 20000);
+  } else {
+    // 4-second interval for other tabs
+    tabInterval = setInterval(() => {
+      subPhase.value = !subPhase.value;
+      updateBrowserTabTitle();
+    }, 4000);
+  }
+};
+
+watch([activeTab, currentLocale], () => {
+  isCatSleeping.value = false;
+  subPhase.value = false;
+  updateBrowserTabTitle();
+  startTitleTimers();
+});
+
 onMounted(() => {
   if (typeof window !== 'undefined') {
-    const hash = window.location.hash.replace('#', '') as TabId;
-    if (isValidTab(hash)) {
-      activeTab.value = hash;
-    }
+    nextTick(() => {
+      initClientLocale();
+
+      const hash = window.location.hash.replace('#', '') as TabId;
+      if (isValidTab(hash)) {
+        activeTab.value = hash;
+      }
+    });
 
     window.addEventListener('hashchange', () => {
       const h = window.location.hash.replace('#', '') as TabId;
@@ -467,13 +611,20 @@ onMounted(() => {
     });
 
     window.addEventListener('stop-anthem', stopAnthem);
+    document.addEventListener('visibilitychange', updateBrowserTabTitle);
+
+    updateBrowserTabTitle();
+    startTitleTimers();
   }
 });
 
 onUnmounted(() => {
   stopAnthem();
+  if (catInterval) clearInterval(catInterval);
+  if (tabInterval) clearInterval(tabInterval);
   if (typeof window !== 'undefined') {
     window.removeEventListener('stop-anthem', stopAnthem);
+    document.removeEventListener('visibilitychange', updateBrowserTabTitle);
   }
   if (clickResetTimer) clearTimeout(clickResetTimer);
 });

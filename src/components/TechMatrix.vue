@@ -60,15 +60,14 @@
           <div class="p-5 rounded-2xl bg-neutral-900/[0.02] dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.08] flex items-start gap-4">
             <div class="w-11 h-11 rounded-2xl overflow-hidden shrink-0 shadow-apple-sm bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center relative">
               <img
-                src="https://github.com/Voxelum.png"
+                v-if="!voxelumFallback"
+                :src="voxelumLogo"
                 alt="Voxelum"
                 class="w-full h-full object-cover"
-                crossorigin="anonymous"
-                referrerpolicy="no-referrer"
                 loading="lazy"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                @error="handleVoxelumError"
               />
-              <div class="w-full h-full hidden items-center justify-center bg-cyan-500/15 text-cyan-500">
+              <div v-else class="w-full h-full flex items-center justify-center bg-cyan-500/15 text-cyan-500">
                 <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                 </svg>
@@ -107,14 +106,14 @@
           <div class="p-5 rounded-2xl bg-neutral-900/[0.02] dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.08] flex items-start gap-4">
             <div class="w-11 h-11 rounded-2xl overflow-hidden shrink-0 shadow-apple-sm bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center relative p-1">
               <img
-                src="https://prismlinux.org/favicon.ico"
+                v-if="!prismlinuxFallback"
+                :src="prismlinuxLogo"
                 alt="Prismlinux"
                 class="w-full h-full object-contain"
-                referrerpolicy="no-referrer"
                 loading="lazy"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                @error="handlePrismlinuxError"
               />
-              <div class="w-full h-full hidden items-center justify-center bg-indigo-500/15 text-indigo-400">
+              <div v-else class="w-full h-full flex items-center justify-center bg-indigo-500/15 text-indigo-400">
                 <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polygon points="12 3 22 21 2 21"/>
                   <line x1="2" y1="14" x2="10" y2="12" stroke="currentColor"/>
@@ -448,6 +447,47 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
+import voxelumAsset from '../assets/voxelum.png';
+import prismlinuxAsset from '../assets/prismlinux.png';
+
+// Organization avatars from GitHub with cascade fallbacks
+const voxelumLogoUrl = typeof voxelumAsset === 'string' ? voxelumAsset : (voxelumAsset as any)?.src || '/voxelum.png';
+const voxelumSources = [
+  voxelumLogoUrl,
+  '/voxelum.png',
+  'https://avatars.githubusercontent.com/Voxelum',
+  'https://github.com/Voxelum.png',
+];
+const voxelumIndex = ref(0);
+const voxelumFallback = ref(false);
+const voxelumLogo = computed(() => voxelumSources[voxelumIndex.value]);
+
+const handleVoxelumError = () => {
+  if (voxelumIndex.value < voxelumSources.length - 1) {
+    voxelumIndex.value++;
+  } else {
+    voxelumFallback.value = true;
+  }
+};
+
+const prismlinuxLogoUrl = typeof prismlinuxAsset === 'string' ? prismlinuxAsset : (prismlinuxAsset as any)?.src || '/prismlinux.png';
+const prismlinuxSources = [
+  prismlinuxLogoUrl,
+  '/prismlinux.png',
+  'https://avatars.githubusercontent.com/Prismlinux',
+  'https://prismlinux.org/favicon.ico',
+];
+const prismlinuxIndex = ref(0);
+const prismlinuxFallback = ref(false);
+const prismlinuxLogo = computed(() => prismlinuxSources[prismlinuxIndex.value]);
+
+const handlePrismlinuxError = () => {
+  if (prismlinuxIndex.value < prismlinuxSources.length - 1) {
+    prismlinuxIndex.value++;
+  } else {
+    prismlinuxFallback.value = true;
+  }
+};
 
 interface CommitRepo {
   name: string;

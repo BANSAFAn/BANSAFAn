@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <!-- Dark Cozy Night Gradient -->
+    <linearGradient id="sleepCatBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181824" />
+      <stop offset="50%" stop-color="#0d0d16" />
+      <stop offset="100%" stop-color="#06060c" />
+    </linearGradient>
+
+    <!-- Sleep Aura -->
+    <radialGradient id="sleepAura" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.3" />
+      <stop offset="70%" stop-color="#6366f1" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#4338ca" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Ear Inner Gradient -->
+    <linearGradient id="sleepEarPink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#fbcfe8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle Container -->
+  <rect width="128" height="128" rx="30" fill="url(#sleepCatBg)" />
+  <rect width="128" height="128" rx="30" fill="url(#sleepAura)" />
+  <rect width="126" height="126" x="1" y="1" rx="29" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
+
+  <!-- CAT EARS -->
+  <path d="M28 62 L22 22 L60 40 Z" fill="#ffffff" />
+  <path d="M32 54 L27 28 L54 41 Z" fill="url(#sleepEarPink)" />
+
+  <path d="M100 62 L106 22 L68 40 Z" fill="#ffffff" />
+  <path d="M96 54 L101 28 L74 41 Z" fill="url(#sleepEarPink)" />
+
+  <!-- Cat Head -->
+  <ellipse cx="64" cy="74" rx="44" ry="38" fill="#ffffff" />
+
+  <!-- Sleeping Closed Eyes (^ ^ style curved arcs) -->
+  <path d="M38 72 Q46 78 54 72" fill="none" stroke="#27272a" stroke-width="3" stroke-linecap="round" />
+  <path d="M74 72 Q82 78 90 72" fill="none" stroke="#27272a" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Cheeks Blush -->
+  <ellipse cx="34" cy="79" rx="6.5" ry="4" fill="#fda4af" opacity="0.7" />
+  <ellipse cx="94" cy="79" rx="6.5" ry="4" fill="#fda4af" opacity="0.7" />
+
+  <!-- Nose -->
+  <path d="M60.5 78.5 C62 77, 66 77, 67.5 78.5 C65.5 82, 62.5 82, 60.5 78.5 Z" fill="#f43f5e" />
+
+  <!-- Peaceful Sleep Smile -->
+  <path d="M57 82 Q64 85 64 82 Q64 85 71 82" fill="none" stroke="#52525b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Whiskers -->
+  <path d="M14 74 L32 76 M16 82 L33 80" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" opacity="0.85" />
+  <path d="M114 74 L96 76 M112 82 L95 80" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" opacity="0.85" />
+
+  <!-- Sleeping Paws -->
+  <ellipse cx="44" cy="110" rx="13" ry="9" fill="#ffffff" />
+  <ellipse cx="84" cy="110" rx="13" ry="9" fill="#ffffff" />
+
+  <!-- Floating z Z Z Animation motif -->
+  <g opacity="0.95">
+    <text x="94" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="14" fill="#38bdf8">z</text>
+    <text x="103" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="12" fill="#60a5fa">z</text>
+    <text x="111" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="10" fill="#a5b4fc">Z</text>
+  </g>
+</svg>

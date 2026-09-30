@@ -219,7 +219,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, nextTick } from 'vue';
 import MacStudioWindow from './MacStudioWindow.vue';
 import TechMatrix from './TechMatrix.vue';
 import LocalizationLab from './LocalizationLab.vue';
@@ -227,14 +227,18 @@ import YouTubeShowcase from './YouTubeShowcase.vue';
 import AppleCardSupport from './AppleCardSupport.vue';
 import AppleVoicePlayer from './AppleVoicePlayer.vue';
 import { activeTab, setTab, tabsList, isValidTab, type TabId } from '../stores/tabs';
-import { t } from '../i18n';
+import { t, initClientLocale } from '../i18n';
 
 onMounted(() => {
   if (typeof window !== 'undefined') {
-    const hash = window.location.hash.replace('#', '') as TabId;
-    if (isValidTab(hash)) {
-      activeTab.value = hash;
-    }
+    nextTick(() => {
+      initClientLocale();
+
+      const hash = window.location.hash.replace('#', '') as TabId;
+      if (isValidTab(hash)) {
+        activeTab.value = hash;
+      }
+    });
 
     window.addEventListener('hashchange', () => {
       const h = window.location.hash.replace('#', '') as TabId;

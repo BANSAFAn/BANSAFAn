@@ -17,6 +17,7 @@
       @pause="handlePause"
       @timeupdate="handleTimeUpdate"
       @loadedmetadata="handleLoadedMetadata"
+      @canplay="handleCanPlay"
       @ended="handleEnded"
       @error="handleAudioError"
     ></audio>
@@ -309,23 +310,47 @@ const formatTime = (secs: number) => {
 // -------------------------------------------------------------
 // PLAYBACK CONTROLS
 // -------------------------------------------------------------
+let shouldResumeAfterLocaleChange = false;
+let activePlayPromise: Promise<void> | null = null;
+
+const safePlay = async () => {
+  const audio = audioRef.value;
+  if (!audio) return;
+  try {
+    const p = audio.play();
+    activePlayPromise = p;
+    await p;
+    activePlayPromise = null;
+    isPlaying.value = true;
+  } catch (err: any) {
+    activePlayPromise = null;
+    if (err?.name !== 'AbortError') {
+      console.warn('Playback blocked or failed:', err);
+      isPlaying.value = false;
+    }
+  }
+};
+
 const togglePlay = () => {
-  if (!audioRef.value) return;
+  const audio = audioRef.value;
+  if (!audio) return;
 
   if (isPlaying.value) {
-    audioRef.value.pause();
+    shouldResumeAfterLocaleChange = false;
+    audio.pause();
+    isPlaying.value = false;
   } else {
+    shouldResumeAfterLocaleChange = false;
     // Stop anthem easter egg so audio does not overlap
     if (typeof window !== 'undefined') {
       window.dispatchEvent(new CustomEvent('stop-anthem'));
     }
-    audioRef.value.play().catch((err) => {
-      console.warn('Playback blocked or failed:', err);
-    });
+    safePlay();
   }
 };
 
 const pauseVoice = () => {
+  shouldResumeAfterLocaleChange = false;
   if (audioRef.value && !audioRef.value.paused) {
     audioRef.value.pause();
   }
@@ -477,16 +502,27 @@ const handleAudioError = (e: Event) => {
   isPlaying.value = false;
 };
 
-// When locale changes, smoothly swap audio source to that language
-watch(currentLocale, (newLoc) => {
-  if (audioRef.value) {
-    const wasPlaying = isPlaying.value;
-    audioRef.value.src = encodeURI(voiceMap[newLoc]?.file || voiceMap.uk.file);
-    audioRef.value.load();
-    currentTime.value = 0;
-    if (wasPlaying) {
-      audioRef.value.play().catch(() => {});
-    }
+const handleCanPlay = () => {
+  if (shouldResumeAfterLocaleChange) {
+    shouldResumeAfterLocaleChange = false;
+    safePlay();
+  }
+};
+
+// When locale changes, smoothly swap audio source to that language without crashing
+watch(currentLocale, () => {
+  const audio = audioRef.value;
+  const wasPlaying = isPlaying.value || shouldResumeAfterLocaleChange;
+
+  if (audio) {
+    audio.pause();
+  }
+  isPlaying.value = false;
+  currentTime.value = 0;
+  isDraggingProgress.value = false;
+
+  if (wasPlaying) {
+    shouldResumeAfterLocaleChange = true;
   }
 });
 

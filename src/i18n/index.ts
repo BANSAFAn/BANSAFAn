@@ -19,28 +19,31 @@ const dictionaries: Record<Locale, any> = {
 
 const STORAGE_KEY = 'bansafan_locale_pref';
 
-function getInitialLocale(): Locale {
-  if (typeof window !== 'undefined') {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY) as Locale;
-      if (stored && ['uk', 'be', 'en', 'de', 'zh', 'ru'].includes(stored)) {
-        return stored;
-      }
-      const navLang = navigator.language.toLowerCase();
-      if (navLang.startsWith('uk')) return 'uk';
-      if (navLang.startsWith('be')) return 'be';
-      if (navLang.startsWith('ru')) return 'ru';
-      if (navLang.startsWith('de')) return 'de';
-      if (navLang.startsWith('zh')) return 'zh';
-      if (navLang.startsWith('en')) return 'en';
-    } catch (e) {
-      // ignore
-    }
-  }
-  return 'uk';
-}
+export const currentLocale = ref<Locale>('uk');
 
-export const currentLocale = ref<Locale>(getInitialLocale());
+export function initClientLocale() {
+  if (typeof window === 'undefined') return;
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY) as Locale;
+    if (stored && ['uk', 'be', 'en', 'de', 'zh', 'ru'].includes(stored)) {
+      if (currentLocale.value !== stored) {
+        setLocale(stored);
+      }
+      return;
+    }
+    const navLang = navigator.language.toLowerCase();
+    let detected: Locale = 'uk';
+    if (navLang.startsWith('be')) detected = 'be';
+    else if (navLang.startsWith('ru')) detected = 'ru';
+    else if (navLang.startsWith('de')) detected = 'de';
+    else if (navLang.startsWith('zh')) detected = 'zh';
+    else if (navLang.startsWith('en')) detected = 'en';
+
+    if (currentLocale.value !== detected) {
+      setLocale(detected);
+    }
+  } catch (e) {}
+}
 
 export function setLocale(locale: Locale) {
   if (!['uk', 'be', 'en', 'de', 'zh', 'ru'].includes(locale)) return;

@@ -286,7 +286,7 @@ const onMouseLeave = () => {
 
 onMounted(() => {
   if (typeof window !== 'undefined') {
-    const isTouch = window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
+    const isTouch = window.innerWidth < 768 || window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window;
     if (!isTouch) {
       isEnabled.value = true;
       document.documentElement.classList.add('custom-cursor-active');

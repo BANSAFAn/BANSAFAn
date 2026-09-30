@@ -41,9 +41,9 @@
         </div>
       </button>
 
-      <!-- Center Links (Apple Segmented Tabs Navigation) -->
+      <!-- Center Links (Apple Segmented Tabs Navigation - Desktop Only) -->
       <nav
-        class="flex items-center gap-1 p-1 rounded-full bg-black/[0.03] dark:bg-white/[0.05] border border-black/[0.04] dark:border-white/[0.06] text-xs font-medium overflow-x-auto no-scrollbar max-w-[50%] sm:max-w-none"
+        class="hidden md:flex items-center gap-1 p-1 rounded-full bg-black/[0.03] dark:bg-white/[0.05] border border-black/[0.04] dark:border-white/[0.06] text-xs font-medium overflow-x-auto no-scrollbar"
         role="tablist"
       >
         <button
@@ -70,11 +70,46 @@
       </nav>
 
       <!-- Right Controls: SVG Flag Language Switcher + Theme Toggle -->
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
         <LanguageSwitcher />
         <ThemeToggle />
       </div>
     </div>
+
+    <!-- Apple Mobile Floating Dock Tab Bar (Only on mobile < md) -->
+    <nav
+      class="fixed bottom-3 inset-x-3 max-w-sm sm:max-w-md mx-auto z-40 md:hidden pointer-events-auto flex items-center justify-around p-1 rounded-full bg-white/85 dark:bg-[#161617]/90 backdrop-blur-2xl border border-black/[0.08] dark:border-white/[0.14] shadow-[0_12px_36px_rgba(0,0,0,0.16)] dark:shadow-[0_16px_44px_rgba(0,0,0,0.7)] transition-all duration-300"
+      role="tablist"
+      aria-label="Mobile Navigation"
+    >
+      <button
+        v-for="tab in tabsList"
+        :key="tab.id"
+        type="button"
+        role="tab"
+        :aria-selected="activeTab === tab.id"
+        @click="setTab(tab.id, true)"
+        class="flex-1 flex flex-col items-center justify-center py-1.5 px-0.5 rounded-full transition-all duration-200 cursor-pointer select-none active:scale-95 relative"
+        :class="[
+          activeTab === tab.id
+            ? 'text-blue-600 dark:text-white font-semibold'
+            : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200'
+        ]"
+      >
+        <div
+          v-if="activeTab === tab.id"
+          class="absolute inset-0 rounded-full bg-blue-500/10 dark:bg-white/[0.14] border border-blue-500/20 dark:border-white/[0.1] -z-10 shadow-apple-sm"
+        ></div>
+
+        <!-- Dynamic Icon based on tab -->
+        <svg v-if="tab.id === 'profile'" class="w-4 h-4 mb-0.5 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <component v-else :is="getTabIcon(tab.id)" class="w-4 h-4 mb-0.5" />
+        <span class="text-[9px] tracking-tight leading-none truncate max-w-[54px]">{{ tab.label }}</span>
+      </button>
+    </nav>
 
     <!-- Apple Dynamic Island Floating Player for Anthem Easter Egg -->
     <Transition name="anthem-island">
@@ -133,12 +168,26 @@ import { ref, computed, watch, onMounted, onUnmounted } from 'vue';
 import ThemeToggle from './ThemeToggle.vue';
 import LanguageSwitcher from './LanguageSwitcher.vue';
 import SvgFlag from './SvgFlag.vue';
+import IconCode from './icons/IconCode.vue';
+import IconGlobe from './icons/IconGlobe.vue';
+import IconYouTube from './icons/IconYouTube.vue';
+import IconHeartHand from './icons/IconHeartHand.vue';
 import { activeTab, setTab, tabsList, isValidTab, setPatrioticMode, type TabId } from '../stores/tabs';
 import { t, currentLocale, type Locale } from '../i18n';
 
 const avatarFallback = ref(false);
 const handleAvatarError = () => {
   avatarFallback.value = true;
+};
+
+const getTabIcon = (id: TabId) => {
+  switch (id) {
+    case 'tech': return IconCode;
+    case 'i18n': return IconGlobe;
+    case 'media': return IconYouTube;
+    case 'support': return IconHeartHand;
+    default: return null;
+  }
 };
 
 // -------------------------------------------------------------

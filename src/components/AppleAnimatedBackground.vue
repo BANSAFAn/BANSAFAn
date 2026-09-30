@@ -12,7 +12,7 @@
 
     <!-- ORB 1: Main Floating Fluid Aura (Top Center / Left) -->
     <div
-      class="absolute w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] rounded-full blur-[45px] sm:blur-[60px] orb-blur opacity-75 sm:opacity-85 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform animate-float-1"
+      class="absolute w-[320px] sm:w-[500px] md:w-[700px] h-[320px] sm:h-[500px] md:h-[700px] rounded-full blur-[30px] sm:blur-[45px] md:blur-[60px] orb-blur opacity-75 sm:opacity-85 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform animate-float-1"
       :style="{
         background: `radial-gradient(circle, ${palette.orb1} 0%, ${palette.orb1} 20%, transparent 65%)`
       }"
@@ -20,7 +20,7 @@
 
     <!-- ORB 2: Secondary Pulsing Fluid Aura (Top Right) -->
     <div
-      class="absolute -top-[10%] -right-[15%] w-[450px] sm:w-[650px] h-[450px] sm:h-[650px] rounded-full blur-[50px] sm:blur-[65px] orb-blur opacity-70 sm:opacity-80 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform animate-float-2"
+      class="absolute -top-[10%] -right-[15%] w-[300px] sm:w-[450px] md:w-[650px] h-[300px] sm:h-[450px] md:h-[650px] rounded-full blur-[35px] sm:blur-[50px] md:blur-[65px] orb-blur opacity-70 sm:opacity-80 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform animate-float-2"
       :style="{
         background: `radial-gradient(circle, ${palette.orb2} 0%, ${palette.orb2} 20%, transparent 65%)`
       }"
@@ -28,7 +28,7 @@
 
     <!-- ORB 3: Drifting Ambient Aura (Middle / Bottom Left) -->
     <div
-      class="absolute top-[35%] -left-[20%] w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] rounded-full blur-[50px] sm:blur-[65px] orb-blur opacity-65 sm:opacity-75 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform animate-float-3"
+      class="absolute top-[35%] -left-[20%] w-[320px] sm:w-[500px] md:w-[700px] h-[320px] sm:h-[500px] md:h-[700px] rounded-full blur-[35px] sm:blur-[50px] md:blur-[65px] orb-blur opacity-65 sm:opacity-75 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform animate-float-3"
       :style="{
         background: `radial-gradient(circle, ${palette.orb3} 0%, ${palette.orb3} 20%, transparent 65%)`
       }"
@@ -36,7 +36,7 @@
 
     <!-- ORB 4: Accent Breathing Aura (Bottom Right) -->
     <div
-      class="absolute bottom-[5%] -right-[15%] w-[450px] sm:w-[650px] h-[450px] sm:h-[650px] rounded-full blur-[50px] sm:blur-[65px] orb-blur opacity-60 sm:opacity-70 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform animate-float-4"
+      class="absolute bottom-[5%] -right-[15%] w-[300px] sm:w-[450px] md:w-[650px] h-[300px] sm:h-[450px] md:h-[650px] rounded-full blur-[35px] sm:blur-[50px] md:blur-[65px] orb-blur opacity-60 sm:opacity-70 transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform animate-float-4"
       :style="{
         background: `radial-gradient(circle, ${palette.orb4} 0%, ${palette.orb4} 20%, transparent 65%)`
       }"

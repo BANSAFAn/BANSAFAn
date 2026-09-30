@@ -34,7 +34,7 @@
           </div>
 
           <!-- Apple Keynote Headline -->
-          <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 leading-[1.08] mb-5">
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 leading-[1.08] mb-5">
             {{ t('hero.headlineMain') }}
             <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-500 dark:from-blue-400 dark:via-indigo-300 dark:to-cyan-300">
               {{ t('hero.headlineGradient') }}

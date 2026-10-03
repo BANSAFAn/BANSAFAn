@@ -71,6 +71,21 @@ export default {
     ytCardVerified: 'YouTube Partner',
     btnJoinYt: 'Стаць спонсарам на YouTube',
     btnVisitChannel: 'Перайсці на канал',
+
+    // Crypto Wallet (USDT / TRX)
+    tagCrypto: 'Крыптавалюта • Web3',
+    titleCrypto: 'USDT / TRX (TRC-20)',
+    badgeCrypto: 'TRC-20 • TRON',
+    descCrypto: 'Міжнародны і прамы спосаб падтрымкі без банкаўскіх пасярэднікаў. Прымаюцца пераводы ў сетцы TRON (USDT TRC-20 або TRX) з любога кашалька або біржы з мінімальнай камісіяй.',
+    cryptoCardLabel: 'TRON Wallet (TRC-20)',
+    cryptoCardAddress: 'Адрас для пераводу (USDT TRC-20)',
+    cryptoCardOwner: 'Сетка: TRON (TRC-20)',
+    cryptoCardVerified: 'USDT & TRX Supported',
+    btnCopyCrypto: 'Капіяваць адрас',
+    btnCopiedCrypto: 'Скапіявана!',
+    btnExplorer: 'Tronscan Explorer',
+    btnShowQr: 'QR-код',
+    btnHideQr: 'Схаваць QR',
   },
   media: {
     syncNotice: 'Абнаўленне кожныя 4-5 гадз',

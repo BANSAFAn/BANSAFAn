@@ -71,6 +71,21 @@ export default {
     ytCardVerified: 'YouTube Partner',
     btnJoinYt: '在 YouTube 加入赞助会员',
     btnVisitChannel: '访问频道',
+
+    // Crypto Wallet (USDT / TRX)
+    tagCrypto: '加密货币 • Web3 赞助',
+    titleCrypto: 'USDT / TRX (TRC-20)',
+    badgeCrypto: 'TRC-20 • TRON',
+    descCrypto: '去中心化无国界的直接支持渠道，免除传统银行限制。支持通过 TRON 波场网络（USDT TRC-20 或 TRX）从全球任意加密钱包及交易所即时转账。',
+    cryptoCardLabel: '波场 TRON 钱包 (TRC-20)',
+    cryptoCardAddress: '充值收款地址 (USDT TRC-20)',
+    cryptoCardOwner: '网络协议: TRON (TRC-20)',
+    cryptoCardVerified: '支持 USDT 与 TRX',
+    btnCopyCrypto: '复制钱包地址',
+    btnCopiedCrypto: '已复制！',
+    btnExplorer: 'Tronscan 区块链浏览器',
+    btnShowQr: '二维码',
+    btnHideQr: '隐藏二维码',
   },
   media: {
     syncNotice: '每 4-5 小时自动同步',

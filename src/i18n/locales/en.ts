@@ -71,6 +71,21 @@ export default {
     ytCardVerified: 'YouTube Partner',
     btnJoinYt: 'Join as Sponsor on YouTube',
     btnVisitChannel: 'Visit Channel',
+
+    // Crypto Wallet (USDT / TRX)
+    tagCrypto: 'Cryptocurrency • Web3',
+    titleCrypto: 'USDT / TRX (TRC-20)',
+    badgeCrypto: 'TRC-20 • TRON',
+    descCrypto: 'Decentralized and borderless direct support without banking intermediaries. Transfers in the TRON network (USDT TRC-20 or TRX) accepted from any crypto wallet or exchange.',
+    cryptoCardLabel: 'TRON Wallet (TRC-20)',
+    cryptoCardAddress: 'Deposit Address (USDT TRC-20)',
+    cryptoCardOwner: 'Network: TRON (TRC-20)',
+    cryptoCardVerified: 'USDT & TRX Supported',
+    btnCopyCrypto: 'Copy Address',
+    btnCopiedCrypto: 'Copied!',
+    btnExplorer: 'Tronscan Explorer',
+    btnShowQr: 'QR Code',
+    btnHideQr: 'Hide QR',
   },
   media: {
     syncNotice: 'Sync every 4-5 hours',

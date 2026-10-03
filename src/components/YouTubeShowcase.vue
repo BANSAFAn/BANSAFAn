@@ -51,7 +51,7 @@
         </button>
       </div>
 
-      <!-- Reddit Quick Counter & Refresh -->
+      <!-- Reddit Quick Counter & Link -->
       <div v-if="activeTab === 'reddit'" class="flex items-center gap-2 self-end sm:self-center">
         <span class="text-[11px] font-mono text-neutral-500 dark:text-neutral-400">
           {{ t('media.redditSub') }}
@@ -64,23 +64,6 @@
         >
           reddit.com/user/Banerbansa ↗
         </a>
-        <button
-          type="button"
-          @click="refreshReddit(true)"
-          :disabled="isRefreshingReddit"
-          class="p-1.5 rounded-xl bg-black/[0.04] dark:bg-white/[0.06] hover:bg-black/[0.08] dark:hover:bg-white/[0.1] text-neutral-600 dark:text-neutral-300 transition-all cursor-pointer active:scale-95 disabled:opacity-50"
-          title="Refresh Reddit"
-        >
-          <svg
-            :class="['w-3.5 h-3.5', isRefreshingReddit ? 'animate-spin text-[#FF4500]' : '']"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
-          </svg>
-        </button>
       </div>
     </div>
 

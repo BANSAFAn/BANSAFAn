@@ -3,6 +3,7 @@ export default {
     home: '首页',
     profile: '个人资料',
     tech: 'GitHub & 技术栈',
+    cert: '专业证书',
     i18n: '本地化',
     media: '媒体与社区',
     support: '赞助支持',
@@ -11,6 +12,7 @@ export default {
   tabs: {
     profile: '个人资料',
     tech: 'GitHub & 技术栈',
+    cert: '专业证书',
     i18n: '本地化',
     media: '媒体 & YouTube',
     support: '赞助支持',

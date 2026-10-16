@@ -1,7 +1,7 @@
 import { ref, computed } from 'vue';
 import { t, currentLocale } from '../i18n';
 
-export type TabId = 'profile' | 'tech' | 'i18n' | 'media' | 'support';
+export type TabId = 'profile' | 'tech' | 'cert' | 'i18n' | 'media' | 'support';
 
 export interface TabItem {
   id: TabId;
@@ -14,13 +14,14 @@ export const tabsList = computed<TabItem[]>(() => {
   return [
     { id: 'profile', label: t('tabs.profile') },
     { id: 'tech', label: t('tabs.tech') },
+    { id: 'cert', label: t('tabs.cert') },
     { id: 'i18n', label: t('tabs.i18n') },
     { id: 'media', label: t('tabs.media') },
     { id: 'support', label: t('tabs.support') },
   ];
 });
 
-export const validTabIds: TabId[] = ['profile', 'tech', 'i18n', 'media', 'support'];
+export const validTabIds: TabId[] = ['profile', 'tech', 'cert', 'i18n', 'media', 'support'];
 
 export function isValidTab(id: string): id is TabId {
   return validTabIds.includes(id as TabId);

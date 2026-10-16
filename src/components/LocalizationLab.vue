@@ -1,41 +1,36 @@
 <template>
-  <div class="apple-card p-6 sm:p-8 flex flex-col justify-between h-full relative overflow-hidden">
-    <!-- Ambient back light -->
-    <div
-      class="absolute -right-12 -top-12 w-48 h-48 bg-cyan-500/10 dark:bg-cyan-400/15 rounded-full blur-3xl pointer-events-none"
-    ></div>
-
+  <div class="paper-card p-6 sm:p-8 flex flex-col justify-between h-full relative overflow-hidden border-2 border-slate-900 dark:border-slate-700 shadow-[6px_6px_0px_0px_rgba(15,23,42,0.9)] dark:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.8)] hover:border-blue-600 dark:hover:border-blue-500 hover:shadow-[8px_8px_0px_0px_rgba(37,99,235,0.25)] transition-all duration-200">
     <div>
       <!-- Header -->
       <div class="flex items-center justify-between mb-6">
         <div class="flex items-center gap-3">
           <div
-            class="w-10 h-10 rounded-2xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 flex items-center justify-center font-bold text-sm shadow-apple-sm"
+            class="w-10 h-10 rounded-none bg-slate-900 dark:bg-white text-white dark:text-slate-950 flex items-center justify-center font-bold text-sm shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border border-slate-900"
           >
             <span class="text-base">🌐</span>
           </div>
           <div>
-            <span class="text-[11px] font-semibold tracking-wider uppercase text-cyan-600 dark:text-cyan-400">
+            <span class="text-[11px] font-mono tracking-wider uppercase text-blue-600 dark:text-blue-400 font-bold">
               Interactive Lab
             </span>
-            <h3 class="text-lg sm:text-xl font-semibold tracking-tight text-neutral-900 dark:text-white">
+            <h3 class="text-lg sm:text-xl font-black tracking-tight text-slate-900 dark:text-slate-100 uppercase">
               Мовна локалізація (i18n)
             </h3>
           </div>
         </div>
 
-        <span class="apple-pill border border-cyan-500/20 bg-cyan-500/10 text-cyan-600 dark:text-cyan-400">
+        <span class="paper-pill border border-blue-500 bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold">
           {{ languages.length }} напрямків
         </span>
       </div>
 
-      <p class="text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm leading-relaxed mb-6">
+      <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed mb-6 font-normal">
         Перемикайте мови нижче, щоб наживо побачити результати адаптації інтерфейсів та контенту:
       </p>
 
-      <!-- Apple Segmented Control -->
+      <!-- Paper Segmented Control (Cubic) -->
       <div
-        class="p-1 rounded-2xl bg-neutral-900/[0.04] dark:bg-white/[0.06] border border-black/[0.04] dark:border-white/[0.06] flex items-center justify-between gap-1 mb-6 overflow-x-auto no-scrollbar"
+        class="p-1 rounded-none bg-slate-100 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 flex items-center justify-between gap-1 mb-6 overflow-x-auto no-scrollbar font-mono"
       >
         <button
           v-for="item in languages"
@@ -43,10 +38,10 @@
           type="button"
           @click="selectedCode = item.code"
           :class="[
-            'flex-1 py-1.5 px-2 rounded-xl text-xs font-medium transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer select-none whitespace-nowrap',
+            'flex-1 py-1.5 px-2 rounded-none text-xs font-bold transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer select-none whitespace-nowrap uppercase hover:-translate-y-0.5',
             selectedCode === item.code
-              ? 'bg-white dark:bg-white/[0.16] text-neutral-950 dark:text-white shadow-apple-sm font-semibold'
-              : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-white/40 dark:hover:bg-white/[0.05]'
+              ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-950 shadow-[2px_2px_0px_0px_rgba(37,99,235,0.4)]'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
           ]"
         >
           <span><SvgFlag :code="item.flag" size="sm" /></span>
@@ -54,16 +49,16 @@
         </button>
       </div>
 
-      <!-- Live Localized Preview Screen -->
+      <!-- Live Localized Preview Screen (Cubic Box) -->
       <div
-        class="relative rounded-2xl p-5 bg-neutral-900/[0.02] dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.08] transition-all duration-300 min-h-[140px] flex flex-col justify-between"
+        class="relative rounded-none p-5 bg-slate-50 dark:bg-slate-900 border-2 border-slate-900 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-400 hover:-translate-y-0.5 hover:shadow-[5px_5px_0px_0px_rgba(37,99,235,0.25)] transition-all duration-200 min-h-[140px] flex flex-col justify-between shadow-[3px_3px_0px_0px_rgba(0,0,0,0.06)] dark:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)]"
       >
         <div>
-          <div class="flex items-center justify-between text-xs text-neutral-400 mb-2">
-            <span class="font-medium text-neutral-900 dark:text-neutral-200">
+          <div class="flex items-center justify-between text-xs text-slate-500 mb-2 font-mono">
+            <span class="font-bold text-slate-900 dark:text-slate-200 uppercase">
               {{ currentLang.name }} ({{ currentLang.code }})
             </span>
-            <span class="text-[11px] font-mono text-cyan-600 dark:text-cyan-400">
+            <span class="text-[11px] font-mono text-cyan-600 dark:text-cyan-400 uppercase font-bold">
               {{ currentLang.level }}
             </span>
           </div>
@@ -72,7 +67,7 @@
           <Transition name="fade-slide" mode="out-in">
             <p
               :key="currentLang.code"
-              class="text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 font-normal leading-relaxed italic"
+              class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-normal leading-relaxed italic"
             >
               “{{ currentLang.quote }}”
             </p>
@@ -80,12 +75,12 @@
         </div>
 
         <!-- Metric tags -->
-        <div class="flex flex-wrap items-center gap-2 mt-4 pt-3 border-t border-black/[0.04] dark:border-white/[0.06]">
-          <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-md bg-black/[0.03] dark:bg-white/[0.05] text-neutral-500 dark:text-neutral-400">
+        <div class="flex flex-wrap items-center gap-2 mt-4 pt-3 border-t border-slate-200 dark:border-slate-800 font-mono">
+          <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-none bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700">
             Scope: {{ currentLang.scope }}
           </span>
-          <span class="text-[10px] font-medium text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1 uppercase">
+            <span class="w-1.5 h-1.5 rounded-none bg-emerald-500"></span>
             Повна адаптація
           </span>
         </div>

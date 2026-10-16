@@ -3,6 +3,7 @@ export default {
     home: 'Startseite',
     profile: 'Profil',
     tech: 'GitHub & Stack',
+    cert: 'Zertifikate',
     i18n: 'Lokalisierung',
     media: 'Medien & Community',
     support: 'Unterstützung',
@@ -11,6 +12,7 @@ export default {
   tabs: {
     profile: 'Profil',
     tech: 'GitHub & Stack',
+    cert: 'Zertifikate',
     i18n: 'Lokalisierung',
     media: 'Medien & YouTube',
     support: 'Unterstützung',

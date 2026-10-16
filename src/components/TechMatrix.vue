@@ -1,29 +1,29 @@
 <template>
   <div class="space-y-6">
     <!-- GITHUB PROFILE & ORGANIZATIONS PRO CARD -->
-    <div class="apple-card p-6 sm:p-9 relative overflow-hidden">
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-black/[0.06] dark:border-white/[0.08]">
+    <div class="paper-card p-6 sm:p-9 relative overflow-hidden border-2 border-slate-900 dark:border-slate-700 shadow-[6px_6px_0px_0px_rgba(15,23,42,0.9)] dark:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.8)] hover:border-blue-600 dark:hover:border-blue-500 hover:shadow-[8px_8px_0px_0px_rgba(37,99,235,0.25)] transition-all duration-200">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b-2 border-slate-900/15 dark:border-slate-800">
         <div class="flex items-start sm:items-center gap-3.5">
-          <div class="w-12 h-12 rounded-2xl bg-neutral-900/[0.05] dark:bg-white/[0.08] text-neutral-900 dark:text-white flex items-center justify-center font-bold shadow-apple-sm">
+          <div class="w-12 h-12 rounded-none bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white flex items-center justify-center font-bold border-2 border-slate-900 dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
             <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
             </svg>
           </div>
           <div>
             <div class="flex items-center gap-2">
-              <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-white">
+              <h3 class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white uppercase">
                 GitHub Ecosystem • BANSAFAn
               </h3>
               <a
                 href="https://github.com/BANSAFAn"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="apple-pill border-black/[0.08] dark:border-white/[0.12] text-xs hover:bg-black/[0.08] dark:hover:bg-white/[0.1] transition-colors"
+                class="paper-pill border-slate-900 dark:border-white text-xs hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors uppercase font-bold"
               >
                 @BANSAFAn
               </a>
             </div>
-            <p class="text-xs text-neutral-500 dark:text-neutral-400 font-mono mt-0.5">
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-mono mt-0.5">
               🌴 "No rest yet, time has not set for how long" • 35 Repositories • 66+ Stars
             </p>
           </div>
@@ -31,13 +31,13 @@
 
         <!-- Badges & Highlights -->
         <div class="flex flex-wrap items-center gap-2">
-          <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">
+          <span class="px-3 py-1 rounded-none text-xs font-bold uppercase bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/30">
             Developer Program Member
           </span>
-          <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
+          <span class="px-3 py-1 rounded-none text-xs font-bold uppercase bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/30">
             Pull Shark x2
           </span>
-          <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+          <span class="px-3 py-1 rounded-none text-xs font-bold uppercase bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
             Pair Extraordinaire
           </span>
         </div>
@@ -57,20 +57,18 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <!-- Voxelum Organization -->
-          <div class="p-5 rounded-2xl bg-neutral-900/[0.02] dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.08] flex items-start gap-4">
-            <div class="w-11 h-11 rounded-2xl overflow-hidden shrink-0 shadow-apple-sm bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center relative">
+          <div class="p-5 rounded-none bg-slate-50 dark:bg-slate-900 border-2 border-slate-900 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-400 hover:-translate-y-0.5 hover:shadow-[5px_5px_0px_0px_rgba(37,99,235,0.3)] shadow-[3px_3px_0px_0px_rgba(0,0,0,0.06)] dark:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)] flex items-start gap-4 transition-all duration-200">
+            <div class="w-11 h-11 rounded-none overflow-hidden shrink-0 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] bg-cyan-500/10 border-2 border-slate-900 dark:border-white flex items-center justify-center relative">
               <img
                 v-if="!voxelumFallback"
                 :src="voxelumLogo"
                 alt="Voxelum"
-                class="w-full h-full object-cover"
+                class="w-full h-full object-cover rounded-none"
                 loading="lazy"
                 @error="handleVoxelumError"
               />
-              <div v-else class="w-full h-full flex items-center justify-center bg-cyan-500/15 text-cyan-500">
-                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
+              <div v-else class="w-full h-full flex items-center justify-center bg-cyan-500/15 text-cyan-500 font-bold">
+                V
               </div>
             </div>
             <div class="flex-1">
@@ -79,19 +77,19 @@
                   href="https://github.com/Voxelum"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-sm font-bold text-neutral-900 dark:text-white hover:text-blue-500 transition-colors"
+                  class="text-sm font-black text-slate-900 dark:text-white hover:text-blue-500 transition-colors uppercase"
                 >
                   Voxelum (x-minecraft-launcher)
                 </a>
-                <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-semibold">
+                <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-none bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-bold border border-cyan-500/30">
                   Core Contributor
                 </span>
               </div>
-              <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-1.5 leading-relaxed">
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed font-normal">
                 Активний контриб'ютор у розробці <strong>XMCL</strong> (Vue 3, Electron, TypeScript) та <strong>xmcl-page</strong>. Реалізація синхронізації мовних пакетів (<code class="text-[11px] font-mono">feat/sync-minecraft-language</code>), оновлення документації, тріаж і вирішення багів.
               </p>
-              <div class="mt-2.5 flex items-center gap-3 text-[11px] text-neutral-400 font-mono">
-                <a href="https://github.com/Voxelum/x-minecraft-launcher" target="_blank" class="hover:underline text-blue-500">
+              <div class="mt-2.5 flex items-center gap-3 text-[11px] text-slate-400 font-mono">
+                <a href="https://github.com/Voxelum/x-minecraft-launcher" target="_blank" class="hover:underline text-blue-500 font-bold">
                   x-minecraft-launcher
                 </a>
                 <span>•</span>
@@ -103,21 +101,18 @@
           </div>
 
           <!-- Prismlinux Organization / Ecosystem -->
-          <div class="p-5 rounded-2xl bg-neutral-900/[0.02] dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.08] flex items-start gap-4">
-            <div class="w-11 h-11 rounded-2xl overflow-hidden shrink-0 shadow-apple-sm bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center relative p-1">
+          <div class="p-5 rounded-none bg-slate-50 dark:bg-slate-900 border-2 border-slate-900 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-400 hover:-translate-y-0.5 hover:shadow-[5px_5px_0px_0px_rgba(37,99,235,0.3)] shadow-[3px_3px_0px_0px_rgba(0,0,0,0.06)] dark:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)] flex items-start gap-4 transition-all duration-200">
+            <div class="w-11 h-11 rounded-none overflow-hidden shrink-0 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] bg-indigo-500/10 border-2 border-slate-900 dark:border-white flex items-center justify-center relative p-1">
               <img
                 v-if="!prismlinuxFallback"
                 :src="prismlinuxLogo"
                 alt="Prismlinux"
-                class="w-full h-full object-contain"
+                class="w-full h-full object-contain rounded-none"
                 loading="lazy"
                 @error="handlePrismlinuxError"
               />
-              <div v-else class="w-full h-full flex items-center justify-center bg-indigo-500/15 text-indigo-400">
-                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="12 3 22 21 2 21"/>
-                  <line x1="2" y1="14" x2="10" y2="12" stroke="currentColor"/>
-                </svg>
+              <div v-else class="w-full h-full flex items-center justify-center bg-indigo-500/15 text-indigo-400 font-bold">
+                P
               </div>
             </div>
             <div class="flex-1">
@@ -126,19 +121,19 @@
                   href="https://prismlinux.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-sm font-bold text-neutral-900 dark:text-white hover:text-indigo-500 transition-colors"
+                  class="text-sm font-black text-slate-900 dark:text-white hover:text-indigo-500 transition-colors uppercase"
                 >
                   Prismlinux
                 </a>
-                <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold">
+                <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-none bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold border border-indigo-500/30">
                   Website Contributor
                 </span>
               </div>
-              <p class="text-xs text-neutral-600 dark:text-neutral-400 mt-1.5 leading-relaxed">
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed font-normal">
                 Участь у розробці та покращенні офіційного вебсайту проєкту (<strong>prismlinux.org</strong>), локалізація інтерфейсу та підтримка спільноти.
               </p>
-              <div class="mt-2.5 flex items-center gap-3 text-[11px] text-neutral-400 font-mono">
-                <a href="https://prismlinux.org" target="_blank" class="hover:underline text-indigo-500">
+              <div class="mt-2.5 flex items-center gap-3 text-[11px] text-slate-400 font-mono">
+                <a href="https://prismlinux.org" target="_blank" class="hover:underline text-indigo-500 font-bold">
                   prismlinux.org
                 </a>
               </div>
@@ -159,24 +154,24 @@
             href="https://github.com/BANSAFAn/timiGS-"
             target="_blank"
             rel="noopener noreferrer"
-            class="p-4 rounded-2xl bg-black/[0.02] dark:bg-white/[0.03] border border-black/[0.05] dark:border-white/[0.07] hover:border-black/[0.12] dark:hover:border-white/[0.15] transition-all duration-300 flex flex-col justify-between group/repo"
+            class="p-4 rounded-none bg-slate-50 dark:bg-slate-900 border-2 border-slate-900 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-400 hover:-translate-y-1 hover:shadow-[5px_5px_0px_0px_rgba(37,99,235,0.35)] dark:hover:shadow-[5px_5px_0px_0px_rgba(59,130,246,0.3)] shadow-[3px_3px_0px_0px_rgba(0,0,0,0.06)] dark:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)] transition-all duration-200 flex flex-col justify-between group/repo"
           >
             <div>
               <div class="flex items-center justify-between mb-2">
-                <span class="text-sm font-bold text-neutral-900 dark:text-white group-hover/repo:text-blue-500 transition-colors">
+                <span class="text-sm font-black text-slate-900 dark:text-white group-hover/repo:text-blue-600 dark:group-hover:text-blue-400 transition-colors uppercase">
                   timiGS-
                 </span>
-                <span class="text-xs font-mono text-emerald-500 flex items-center gap-1">
+                <span class="text-xs font-mono text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
                   ★ 11
                 </span>
               </div>
-              <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
                 Сучасний десктопний трекер активності, аналітика та тайм-менеджмент. Built with <strong>Tauri v2, Rust & Vue 3</strong>. P2P sync.
               </p>
             </div>
-            <div class="mt-3 pt-2.5 border-t border-black/[0.04] dark:border-white/[0.06] flex items-center justify-between text-[11px] text-neutral-400 font-mono">
+            <div class="mt-3 pt-2.5 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-400 font-mono">
               <span>Vue • Rust • Tauri</span>
-              <span class="text-blue-500">timi-gs.vercel.app</span>
+              <span class="text-blue-600 dark:text-blue-400 font-bold">timi-gs.vercel.app</span>
             </div>
           </a>
 
@@ -185,24 +180,24 @@
             href="https://github.com/BANSAFAn/POS-OpenPOS-"
             target="_blank"
             rel="noopener noreferrer"
-            class="p-4 rounded-2xl bg-black/[0.02] dark:bg-white/[0.03] border border-black/[0.05] dark:border-white/[0.07] hover:border-black/[0.12] dark:hover:border-white/[0.15] transition-all duration-300 flex flex-col justify-between group/repo"
+            class="p-4 rounded-none bg-slate-50 dark:bg-slate-900 border-2 border-slate-900 dark:border-slate-700 hover:border-cyan-600 dark:hover:border-cyan-400 hover:-translate-y-1 hover:shadow-[5px_5px_0px_0px_rgba(6,182,212,0.35)] dark:hover:shadow-[5px_5px_0px_0px_rgba(6,182,212,0.3)] shadow-[3px_3px_0px_0px_rgba(0,0,0,0.06)] dark:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)] transition-all duration-200 flex flex-col justify-between group/repo"
           >
             <div>
               <div class="flex items-center justify-between mb-2">
-                <span class="text-sm font-bold text-neutral-900 dark:text-white group-hover/repo:text-blue-500 transition-colors">
+                <span class="text-sm font-black text-slate-900 dark:text-white group-hover/repo:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors uppercase">
                   POS-OpenPOS-
                 </span>
-                <span class="text-xs font-mono text-cyan-500 flex items-center gap-1">
+                <span class="text-xs font-mono text-cyan-600 dark:text-cyan-400 font-bold flex items-center gap-1">
                   Flutter POS
                 </span>
               </div>
-              <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
                 Offline-first каса для торгівлі на <strong>Flutter & SQLite</strong>. Локалізація на 7 мов, мультивалютний рушій, робота з POS-терміналами.
               </p>
             </div>
-            <div class="mt-3 pt-2.5 border-t border-black/[0.04] dark:border-white/[0.06] flex items-center justify-between text-[11px] text-neutral-400 font-mono">
+            <div class="mt-3 pt-2.5 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-400 font-mono">
               <span>Flutter • Dart • SQLite</span>
-              <span class="text-cyan-500">Cross-Platform</span>
+              <span class="text-cyan-600 dark:text-cyan-400 font-bold">Cross-Platform</span>
             </div>
           </a>
 
@@ -211,24 +206,24 @@
             href="https://github.com/BANSAFAn/XMCL-DEV-Version-Baneronetwo-"
             target="_blank"
             rel="noopener noreferrer"
-            class="p-4 rounded-2xl bg-black/[0.02] dark:bg-white/[0.03] border border-black/[0.05] dark:border-white/[0.07] hover:border-black/[0.12] dark:hover:border-white/[0.15] transition-all duration-300 flex flex-col justify-between group/repo"
+            class="p-4 rounded-none bg-slate-50 dark:bg-slate-900 border-2 border-slate-900 dark:border-slate-700 hover:border-purple-600 dark:hover:border-purple-400 hover:-translate-y-1 hover:shadow-[5px_5px_0px_0px_rgba(168,85,247,0.35)] dark:hover:shadow-[5px_5px_0px_0px_rgba(168,85,247,0.3)] shadow-[3px_3px_0px_0px_rgba(0,0,0,0.06)] dark:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)] transition-all duration-200 flex flex-col justify-between group/repo"
           >
             <div>
               <div class="flex items-center justify-between mb-2">
-                <span class="text-sm font-bold text-neutral-900 dark:text-white group-hover/repo:text-blue-500 transition-colors">
+                <span class="text-sm font-black text-slate-900 dark:text-white group-hover/repo:text-purple-600 dark:group-hover:text-purple-400 transition-colors uppercase">
                   XMCL DEV Baneronetwo
                 </span>
-                <span class="text-xs font-mono text-purple-500 flex items-center gap-1">
+                <span class="text-xs font-mono text-purple-600 dark:text-purple-400 font-bold flex items-center gap-1">
                   Open Source
                 </span>
               </div>
-              <p class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal">
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
                 Експериментальна гілка та розширення для лаунчера нового покоління. Розширений функціонал та оптимізація.
               </p>
             </div>
-            <div class="mt-3 pt-2.5 border-t border-black/[0.04] dark:border-white/[0.06] flex items-center justify-between text-[11px] text-neutral-400 font-mono">
+            <div class="mt-3 pt-2.5 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-400 font-mono">
               <span>TypeScript • Vue 3</span>
-              <span class="text-purple-500">Voxelum Ecosystem</span>
+              <span class="text-purple-600 dark:text-purple-400 font-bold">Voxelum Ecosystem</span>
             </div>
           </a>
         </div>

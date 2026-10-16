@@ -2,14 +2,14 @@
   <button
     type="button"
     @click="toggleTheme"
-    class="relative p-2 rounded-full border border-black/[0.08] dark:border-white/[0.12] bg-white/70 dark:bg-white/[0.06] backdrop-blur-xl text-neutral-700 dark:text-neutral-200 hover:bg-white/90 dark:hover:bg-white/[0.12] transition-all duration-300 shadow-apple-sm dark:shadow-apple-dark-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50"
+    class="h-9 w-9 flex items-center justify-center rounded-none border-2 border-slate-900 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-400 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-200 shadow-[2px_2px_0px_0px_rgba(15,23,42,0.8)] dark:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)] hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(37,99,235,0.35)] focus:outline-none active:translate-x-0.5 active:translate-y-0.5 cursor-pointer shrink-0"
     :aria-label="isDark ? 'Перемкнути на світлу тему' : 'Перемкнути на темну тему'"
     title="Змінити тему"
   >
-    <div class="relative w-5 h-5 flex items-center justify-center">
+    <div class="relative w-4 h-4 flex items-center justify-center">
       <Transition name="fade-rotate" mode="out-in">
-        <IconSun v-if="isDark" class="w-4.5 h-4.5 text-amber-300" />
-        <IconMoon v-else class="w-4.5 h-4.5 text-neutral-800" />
+        <IconSun v-if="isDark" class="w-4 h-4 text-amber-500" />
+        <IconMoon v-else class="w-4 h-4 text-zinc-700" />
       </Transition>
     </div>
   </button>

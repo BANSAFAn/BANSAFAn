@@ -3,6 +3,7 @@ export default {
     home: 'Главная',
     profile: 'Профиль',
     tech: 'GitHub & Стек',
+    cert: 'Сертификаты',
     i18n: 'Локализация',
     media: 'Медиа & Соцсети',
     support: 'Поддержка',
@@ -11,6 +12,7 @@ export default {
   tabs: {
     profile: 'Профиль',
     tech: 'GitHub & Стек',
+    cert: 'Сертификаты',
     i18n: 'Локализация',
     media: 'Медиа & YouTube',
     support: 'Поддержка',

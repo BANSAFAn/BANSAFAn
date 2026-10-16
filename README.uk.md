@@ -2,6 +2,12 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=Володимир%20Шамін&fontSize=90&fontAlignY=38&fontColor=auto&descAlignY=51&desc=Простий%20програміст%20%7C%20Учасник%20відкритого%20коду&descAlign=62"/>
   
   <p align="center">
+    <a href="https://baneronetwo.pp.ua" target="_blank">
+      <img src="https://img.shields.io/badge/Сайт-baneronetwo.pp.ua-blue?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=2b3038&color=2563eb&logoWidth=20" alt="Сайт"/>
+    </a>
+  </p>
+
+  <p align="center">
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.md">
       <img src="https://img.shields.io/badge/Мова-Англійська-blue?style=for-the-badge&logo=googletranslate&logoColor=white&labelColor=2b3038&color=2781c6&logoWidth=20" alt="Англійська"/>
     </a>
@@ -16,4 +22,10 @@
     </a>
   </p>
 </div>
+
+<h1 align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com/?lines=Привіт!;Baneronetwo;Програмування+та+Open+Source&center=true&size=30">
+  </a>
+</h1>
 

@@ -4,6 +4,7 @@ import UnoCSS from 'unocss/astro';
 
 // ААААААААААААААААААААААААААААА ТУТ ПІД"РАААААААААААААААААААААААААААААААААААААААААС
 export default defineConfig({
+  site: 'https://baneronetwo.pp.ua',
   integrations: [
     vue(),
     UnoCSS({

@@ -1,36 +1,24 @@
 <template>
-  <div class="apple-card p-6 sm:p-9 relative overflow-hidden group">
-    <!-- Ambient Glow based on active tab -->
-    <div
-      :class="[
-        'absolute -right-16 -top-16 w-72 h-72 rounded-full blur-3xl pointer-events-none transition-colors duration-700',
-        activeTab === 'youtube'
-          ? 'bg-red-500/10 dark:bg-red-500/15'
-          : activeTab === 'reddit'
-            ? 'bg-[#FF4500]/10 dark:bg-[#FF4500]/15'
-            : 'bg-neutral-500/10 dark:bg-white/10'
-      ]"
-    ></div>
-
-    <!-- Apple Top Segmented Tabs: YouTube, Reddit, X -->
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-6 border-b border-black/[0.06] dark:border-white/[0.08]">
-      <div class="p-1 rounded-2xl bg-black/[0.04] dark:bg-white/[0.06] border border-black/[0.04] dark:border-white/[0.06] flex items-center gap-1 overflow-x-auto no-scrollbar">
+  <div class="paper-card p-6 sm:p-9 relative overflow-hidden group border-2 border-slate-900 dark:border-slate-700 shadow-[6px_6px_0px_0px_rgba(15,23,42,0.9)] dark:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.8)] hover:border-red-600 dark:hover:border-red-500 hover:shadow-[8px_8px_0px_0px_rgba(239,68,68,0.25)] transition-all duration-200">
+    <!-- Paper Top Tabs: YouTube, Reddit, X -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 mb-6 border-b-2 border-slate-900/20 dark:border-slate-800">
+      <div class="p-1 rounded-none bg-slate-100 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-700 flex items-center gap-1 overflow-x-auto no-scrollbar font-mono">
         <!-- YouTube Tab Button -->
         <button
           type="button"
           @click="activeTab = 'youtube'"
           :class="[
-            'px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 flex items-center gap-2 cursor-pointer select-none whitespace-nowrap',
+            'px-3.5 sm:px-4 py-2 rounded-none text-xs sm:text-sm font-bold transition-all duration-150 flex items-center gap-2 cursor-pointer select-none whitespace-nowrap uppercase hover:-translate-y-0.5',
             activeTab === 'youtube'
-              ? 'bg-white dark:bg-white/[0.16] text-neutral-950 dark:text-white shadow-apple-sm font-semibold'
-              : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+              ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-950 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)]'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
           ]"
         >
           <svg class="w-4 h-4 text-red-500 fill-current" viewBox="0 0 24 24">
             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
           </svg>
           <span>YouTube</span>
-          <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+          <span class="w-1.5 h-1.5 rounded-none bg-red-500"></span>
         </button>
 
         <!-- Reddit Tab Button -->
@@ -38,10 +26,10 @@
           type="button"
           @click="activeTab = 'reddit'"
           :class="[
-            'px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 flex items-center gap-2 cursor-pointer select-none whitespace-nowrap',
+            'px-3.5 sm:px-4 py-2 rounded-none text-xs sm:text-sm font-bold transition-all duration-150 flex items-center gap-2 cursor-pointer select-none whitespace-nowrap uppercase hover:-translate-y-0.5',
             activeTab === 'reddit'
-              ? 'bg-white dark:bg-white/[0.16] text-neutral-950 dark:text-white shadow-apple-sm font-semibold'
-              : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+              ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-950 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)]'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
           ]"
         >
           <svg class="w-4 h-4 text-[#FF4500] fill-current" viewBox="0 0 24 24">
@@ -75,29 +63,29 @@
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <div class="flex items-start sm:items-center gap-3.5">
           <!-- Channel Avatar -->
-          <div class="w-12 h-12 rounded-2xl overflow-hidden shrink-0 border border-black/[0.08] dark:border-white/[0.12] shadow-apple-sm relative bg-red-600/10 flex items-center justify-center">
+          <div class="w-12 h-12 rounded-none overflow-hidden shrink-0 border-2 border-slate-900 dark:border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] relative bg-red-600/10 flex items-center justify-center">
             <img
               v-if="!avatarFallback"
               :src="avatarSrc"
               alt="Baneronetwo"
               loading="eager"
               @error="handleAvatarError"
-              class="w-full h-full object-cover"
+              class="w-full h-full object-cover rounded-none"
             />
-            <div v-else class="absolute inset-0 bg-gradient-to-br from-red-600 to-amber-600 text-white flex items-center justify-center font-bold text-lg select-none">
+            <div v-else class="absolute inset-0 bg-red-600 text-white flex items-center justify-center font-black text-lg select-none">
               B
             </div>
           </div>
           <div>
             <div class="flex items-center gap-2">
-              <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-white">
+              <h3 class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white uppercase">
                 Baneronetwo
               </h3>
-              <span class="apple-pill border-red-500/20 bg-red-500/10 text-red-600 dark:text-red-400 font-medium text-[11px]">
+              <span class="paper-pill border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 font-bold text-[11px]">
                 {{ t('media.channelRole') }}
               </span>
             </div>
-            <span class="text-xs text-neutral-500 dark:text-neutral-400 font-mono">
+            <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">
               {{ t('media.channelSub') }}
             </span>
           </div>
@@ -110,7 +98,7 @@
             :href="sponsorUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-neutral-950 shadow-apple-sm active:scale-95 transition-all duration-300 select-none"
+            class="paper-btn-primary bg-amber-400 hover:bg-amber-300 text-slate-950 border-slate-900 text-xs px-4 py-2"
             :title="t('media.btnBecomeSponsor')"
           >
             <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
@@ -124,7 +112,7 @@
             :href="channelUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="apple-btn-secondary px-4 py-2 text-xs"
+            class="paper-btn-secondary px-4 py-2 text-xs"
           >
             <svg class="w-3.5 h-3.5 text-red-500 fill-current" viewBox="0 0 24 24">
               <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
@@ -142,17 +130,17 @@
       <!-- Latest Video Spotlight (Dynamic from YouTube Feed) -->
       <div class="mb-8">
         <div class="flex items-center justify-between mb-3.5">
-          <span class="text-xs font-semibold tracking-wider uppercase text-red-500 flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+          <span class="text-xs font-bold tracking-wider uppercase text-red-600 dark:text-red-400 flex items-center gap-1.5 font-mono">
+            <span class="w-2 h-2 rounded-none bg-red-600 animate-pulse"></span>
             {{ t('media.latestVideoBadge') }}
           </span>
-          <span class="text-[11px] font-mono text-neutral-400">
+          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400">
             {{ latestVideo.published }}
           </span>
         </div>
 
         <div
-          class="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-neutral-950 border border-black/[0.08] dark:border-white/[0.12] shadow-apple-md group/video"
+          class="relative rounded-none overflow-hidden bg-neutral-950 border-2 border-slate-900 dark:border-slate-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] group/video transition-all duration-200 hover:shadow-[6px_6px_0px_0px_rgba(239,68,68,0.35)]"
         >
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
             <!-- Thumbnail with Play Hover Overlay -->
@@ -167,13 +155,13 @@
                 :alt="latestVideo.title"
                 referrerpolicy="no-referrer"
                 loading="lazy"
-                class="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/video:scale-105"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover/video:scale-105"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
 
               <!-- Big Play Button Center -->
               <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div class="w-14 h-14 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-lg transition-transform duration-300 group-hover/video:scale-110">
+                <div class="w-14 h-14 rounded-none bg-red-600 text-white flex items-center justify-center border-2 border-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-transform duration-200 group-hover/video:scale-110">
                   <svg class="w-6 h-6 fill-current ml-0.5" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                   </svg>
@@ -182,7 +170,7 @@
 
               <!-- Video badge -->
               <div class="absolute bottom-3 left-3 flex items-center gap-2">
-                <span class="px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md text-[11px] font-mono text-white">
+                <span class="px-2.5 py-1 rounded-none bg-black/90 border border-white/20 text-[11px] font-mono text-white">
                   YouTube • {{ t('media.latestVideoRelease') }}
                 </span>
               </div>
@@ -191,26 +179,26 @@
             <!-- Video Details Side -->
             <div class="lg:col-span-5 p-5 sm:p-7 flex flex-col justify-between text-left bg-[#141416] text-white">
               <div>
-                <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-red-500/20 text-red-400 font-semibold mb-2.5 inline-block">
+                <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-none bg-red-500/20 text-red-400 font-bold border border-red-500/30 mb-2.5 inline-block">
                   {{ t('media.latestVideoRelease') }}
                 </span>
-                <h4 class="text-base sm:text-lg font-semibold tracking-tight text-white mb-3 line-clamp-2">
+                <h4 class="text-base sm:text-lg font-bold tracking-tight text-white mb-3 line-clamp-2 uppercase">
                   {{ latestVideo.title }}
                 </h4>
-                <p class="text-xs text-neutral-400 leading-relaxed line-clamp-4 font-normal">
+                <p class="text-xs text-slate-300 leading-relaxed line-clamp-4 font-normal">
                   {{ latestVideo.desc }}
                 </p>
               </div>
 
               <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between">
-                <span class="text-xs font-mono text-neutral-400">
+                <span class="text-xs font-mono text-slate-400 font-bold">
                   HD 1080p
                 </span>
                 <a
                   :href="latestVideo.url"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="apple-btn-primary px-4 py-2 text-xs"
+                  class="paper-btn-primary px-4 py-2 text-xs"
                 >
                   <span>{{ t('media.btnWatchNow') }}</span>
                   <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -225,7 +213,7 @@
 
       <!-- Other Recent Videos Grid -->
       <div>
-        <h4 class="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-4">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-4 font-mono">
           {{ t('media.otherVideosHeading') }}
         </h4>
 
@@ -236,36 +224,36 @@
             :href="video.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="rounded-2xl bg-neutral-900/[0.02] dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.08] hover:border-black/[0.12] dark:hover:border-white/[0.18] p-3.5 flex flex-col justify-between group/subvideo transition-all duration-300 hover:-translate-y-1"
+            class="rounded-none bg-slate-50 dark:bg-slate-900 border-2 border-slate-900 dark:border-slate-700 hover:border-red-600 dark:hover:border-red-500 p-3.5 flex flex-col justify-between group/subvideo transition-all duration-200 hover:-translate-y-1 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.06)] dark:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[5px_5px_0px_0px_rgba(239,68,68,0.3)]"
           >
             <div>
               <!-- Thumbnail -->
-              <div class="relative rounded-xl overflow-hidden aspect-video mb-3 bg-neutral-950">
+              <div class="relative rounded-none overflow-hidden aspect-video mb-3 bg-neutral-950 border border-slate-300 dark:border-slate-700">
                 <img
                   :src="video.thumbnail"
                   :alt="video.title"
                   referrerpolicy="no-referrer"
                   loading="lazy"
-                  class="w-full h-full object-cover transition-transform duration-500 group-hover/subvideo:scale-105"
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover/subvideo:scale-105"
                 />
                 <div class="absolute inset-0 bg-black/20 group-hover/subvideo:bg-transparent transition-colors"></div>
-                <div class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded bg-black/80 backdrop-blur-md text-[10px] font-mono text-white">
+                <div class="absolute bottom-2 right-2 px-1.5 py-0.5 rounded-none bg-black/90 border border-white/20 text-[10px] font-mono text-white">
                   YouTube
                 </div>
               </div>
 
               <!-- Title -->
-              <h5 class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white tracking-tight line-clamp-2 group-hover/subvideo:text-red-500 transition-colors mb-2">
+              <h5 class="text-xs sm:text-sm font-bold text-slate-900 dark:text-white tracking-tight line-clamp-2 group-hover/subvideo:text-red-600 dark:group-hover:text-red-400 transition-colors mb-2 uppercase">
                 {{ video.title }}
               </h5>
-              <p class="text-[11px] text-neutral-500 dark:text-neutral-400 line-clamp-2 font-normal">
+              <p class="text-[11px] text-slate-600 dark:text-slate-400 line-clamp-2 font-normal">
                 {{ video.desc }}
               </p>
             </div>
 
-            <div class="mt-3 pt-2.5 border-t border-black/[0.04] dark:border-white/[0.06] flex items-center justify-between text-[11px] text-neutral-400">
+            <div class="mt-3 pt-2.5 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-400 font-mono">
               <span>{{ video.date }}</span>
-              <span class="text-red-500 font-medium flex items-center gap-1 group-hover/subvideo:translate-x-0.5 transition-transform">
+              <span class="text-red-600 dark:text-red-400 font-bold flex items-center gap-1 group-hover/subvideo:translate-x-0.5 transition-transform">
                 {{ t('media.btnWatch') }}
                 <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -284,21 +272,21 @@
       <!-- Reddit Profile Header -->
       <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
         <div class="flex items-start sm:items-center gap-3.5">
-          <div class="w-12 h-12 rounded-2xl bg-[#FF4500]/10 text-[#FF4500] flex items-center justify-center font-bold shadow-apple-sm shrink-0 border border-[#FF4500]/20">
+          <div class="w-12 h-12 rounded-none bg-[#FF4500]/10 text-[#FF4500] flex items-center justify-center font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] shrink-0 border-2 border-slate-900 dark:border-white">
             <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
               <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.703zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.688-.562-1.249-1.25-1.249zm-4.723 4.25c-.12 0-.24.048-.33.138-.18.18-.18.48 0 .66.97.97 2.45.97 3.42 0 .18-.18.18-.48 0-.66-.18-.18-.48-.18-.66 0-.61.61-1.49.61-2.1 0-.09-.09-.21-.138-.33-.138z"/>
             </svg>
           </div>
           <div>
             <div class="flex items-center gap-2">
-              <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-neutral-900 dark:text-white">
+              <h3 class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white uppercase">
                 Baneronetwo
               </h3>
-              <span class="apple-pill border-[#FF4500]/20 bg-[#FF4500]/10 text-[#FF4500] font-medium text-[11px]">
+              <span class="paper-pill border-[#FF4500]/30 bg-[#FF4500]/10 text-[#FF4500] font-bold text-[11px]">
                 u/Banerbansa
               </span>
             </div>
-            <span class="text-xs text-neutral-500 dark:text-neutral-400 font-mono">
+            <span class="text-xs text-slate-500 dark:text-slate-400 font-mono">
               {{ t('media.redditSub') }}
             </span>
           </div>
@@ -310,7 +298,7 @@
             :href="redditUserUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="apple-btn-primary px-4 py-2 text-xs bg-[#FF4500] hover:bg-[#e03d00]"
+            class="paper-btn-primary px-4 py-2 text-xs bg-[#FF4500] hover:bg-[#e03d00] border-slate-900 dark:border-white"
           >
             <span>{{ t('media.btnOpenReddit') }}</span>
             <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -322,7 +310,7 @@
             href="https://www.reddit.com/r/banlive/"
             target="_blank"
             rel="noopener noreferrer"
-            class="apple-btn-secondary px-4 py-2 text-xs"
+            class="paper-btn-secondary px-4 py-2 text-xs"
           >
             <span>{{ t('media.btnBanlive') }}</span>
             <svg class="w-3.5 h-3.5 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -332,26 +320,26 @@
         </div>
       </div>
 
-      <p class="text-neutral-600 dark:text-neutral-300 text-sm sm:text-base leading-relaxed mb-6 max-w-3xl font-normal">
+      <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed mb-6 max-w-3xl font-normal">
         {{ t('media.redditDesc') }}
       </p>
 
       <!-- Reddit Sub-navigation & Activity Filters -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-2 rounded-2xl bg-neutral-900/[0.03] dark:bg-white/[0.04] border border-black/[0.06] dark:border-white/[0.08] mb-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-2 rounded-none bg-slate-100 dark:bg-slate-800 border-2 border-slate-900 dark:border-slate-700 mb-6 font-mono">
         <!-- Filter Tabs: Overview | Posts | Comments/Replies -->
         <div class="flex items-center gap-1 overflow-x-auto no-scrollbar">
           <button
             type="button"
             @click="redditTypeFilter = 'all'"
             :class="[
-              'px-3 py-1.5 rounded-xl text-xs font-medium transition-all duration-200 cursor-pointer whitespace-nowrap flex items-center gap-1.5',
+              'px-3 py-1.5 rounded-none text-xs font-bold uppercase transition-all duration-150 cursor-pointer whitespace-nowrap flex items-center gap-1.5 hover:-translate-y-0.5',
               redditTypeFilter === 'all'
-                ? 'bg-white dark:bg-white/[0.16] text-[#FF4500] dark:text-[#FF4500] font-semibold shadow-apple-sm'
-                : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+                ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-950 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)]'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             ]"
           >
             <span>{{ t('media.filterAll') }}</span>
-            <span class="px-1.5 py-0.2 rounded-md bg-neutral-200 dark:bg-white/10 text-[10px]">
+            <span class="px-1.5 py-0.2 rounded-none bg-slate-200 dark:bg-slate-700 text-[10px] font-mono">
               {{ allRedditActivities.length }}
             </span>
           </button>
@@ -360,14 +348,14 @@
             type="button"
             @click="redditTypeFilter = 'posts'"
             :class="[
-              'px-3 py-1.5 rounded-xl text-xs font-medium transition-all duration-200 cursor-pointer whitespace-nowrap flex items-center gap-1.5',
+              'px-3 py-1.5 rounded-none text-xs font-bold uppercase transition-all duration-150 cursor-pointer whitespace-nowrap flex items-center gap-1.5 hover:-translate-y-0.5',
               redditTypeFilter === 'posts'
-                ? 'bg-white dark:bg-white/[0.16] text-[#FF4500] dark:text-[#FF4500] font-semibold shadow-apple-sm'
-                : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+                ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-950 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)]'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             ]"
           >
             <span>{{ t('media.filterPosts') }}</span>
-            <span class="px-1.5 py-0.2 rounded-md bg-neutral-200 dark:bg-white/10 text-[10px]">
+            <span class="px-1.5 py-0.2 rounded-none bg-slate-200 dark:bg-slate-700 text-[10px] font-mono">
               {{ postCount }}
             </span>
           </button>
@@ -376,14 +364,14 @@
             type="button"
             @click="redditTypeFilter = 'comments'"
             :class="[
-              'px-3 py-1.5 rounded-xl text-xs font-medium transition-all duration-200 cursor-pointer whitespace-nowrap flex items-center gap-1.5',
+              'px-3 py-1.5 rounded-none text-xs font-bold uppercase transition-all duration-150 cursor-pointer whitespace-nowrap flex items-center gap-1.5 hover:-translate-y-0.5',
               redditTypeFilter === 'comments'
-                ? 'bg-white dark:bg-white/[0.16] text-[#FF4500] dark:text-[#FF4500] font-semibold shadow-apple-sm'
-                : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+                ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-950 shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)]'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             ]"
           >
             <span>{{ t('media.filterComments') }}</span>
-            <span class="px-1.5 py-0.2 rounded-md bg-neutral-200 dark:bg-white/10 text-[10px]">
+            <span class="px-1.5 py-0.2 rounded-none bg-slate-200 dark:bg-slate-700 text-[10px] font-mono">
               {{ commentCount }}
             </span>
           </button>
@@ -397,10 +385,10 @@
             type="button"
             @click="redditSubFilter = sub"
             :class="[
-              'px-2.5 py-1 rounded-lg text-[11px] font-mono transition-all cursor-pointer whitespace-nowrap',
+              'px-2.5 py-1 rounded-none text-[11px] font-mono uppercase transition-all cursor-pointer whitespace-nowrap hover:-translate-y-0.5',
               redditSubFilter === sub
-                ? 'bg-[#FF4500]/15 text-[#FF4500] font-semibold border border-[#FF4500]/30'
-                : 'bg-black/[0.03] dark:bg-white/[0.04] text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white'
+                ? 'bg-[#FF4500]/20 text-[#FF4500] font-bold border-2 border-[#FF4500]'
+                : 'bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
             ]"
           >
             {{ sub === 'all' ? t('media.subFilterAll') : sub }}
@@ -413,13 +401,13 @@
         <div
           v-for="item in filteredRedditActivities"
           :key="item.id"
-          class="rounded-2xl bg-neutral-900/[0.02] dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.08] hover:border-[#FF4500]/30 p-5 transition-all duration-300"
+          class="rounded-none bg-slate-50 dark:bg-slate-900 border-2 border-slate-900 dark:border-slate-700 hover:border-[#FF4500] dark:hover:border-[#FF4500] p-5 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[5px_5px_0px_0px_rgba(255,69,0,0.3)] shadow-[3px_3px_0px_0px_rgba(0,0,0,0.06)] dark:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)]"
         >
           <!-- 1. Header Row: Subreddit, Context / Post title, and Date -->
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-black/[0.04] dark:border-white/[0.06]">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-200 dark:border-slate-800">
             <div class="flex items-center gap-2 flex-wrap text-xs">
               <!-- Subreddit Pill -->
-              <span class="px-2 py-0.5 rounded-full text-[11px] font-mono font-bold bg-[#FF4500]/10 text-[#FF4500] border border-[#FF4500]/20 flex items-center gap-1">
+              <span class="px-2 py-0.5 rounded-none text-[11px] font-mono font-bold bg-[#FF4500]/10 text-[#FF4500] border border-[#FF4500]/30 flex items-center gap-1 uppercase">
                 <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24">
                   <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.703zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.688-.562-1.249-1.25-1.249zm-4.723 4.25c-.12 0-.24.048-.33.138-.18.18-.18.48 0 .66.97.97 2.45.97 3.42 0 .18-.18.18-.48 0-.66-.18-.18-.48-.18-.66 0-.61.61-1.49.61-2.1 0-.09-.09-.21-.138-.33-.138z"/>
                 </svg>

@@ -1,18 +1,19 @@
 <template>
-  <div class="w-full max-w-4xl mx-auto mt-12 group perspective-1000">
-    <!-- Window Frame -->
+  <div class="w-full max-w-4xl mx-auto text-left">
+    <!-- Paper Blueprint Code Sheet Frame (Cubic Box Style) -->
     <div
-      class="relative rounded-2xl sm:rounded-3xl bg-[#1e1e20]/90 dark:bg-[#121214]/90 backdrop-blur-3xl border border-white/[0.12] shadow-[0_25px_70px_rgba(0,0,0,0.35)] dark:shadow-[0_30px_90px_rgba(0,0,0,0.85)] overflow-hidden transition-all duration-500 hover:border-white/[0.2] hover:shadow-[0_35px_90px_rgba(0,0,0,0.45)] text-left"
+      class="relative rounded-none bg-[#0d1117] text-slate-100 border-2 border-slate-900 dark:border-slate-700 shadow-[6px_6px_0px_0px_rgba(15,23,42,0.9)] dark:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.8)] hover:border-blue-500 hover:shadow-[8px_8px_0px_0px_rgba(37,99,235,0.3)] overflow-hidden transition-all duration-200"
     >
-      <!-- macOS Window Header Bar -->
+      <!-- Technical Notebook Header Bar -->
       <div
-        class="h-11 sm:h-12 px-4 flex items-center justify-between border-b border-white/[0.08] bg-white/[0.03] select-none"
+        class="h-11 sm:h-12 px-4 flex items-center justify-between border-b-2 border-slate-800 bg-slate-900 select-none"
       >
-        <!-- Traffic lights -->
-        <div class="flex items-center gap-2">
-          <span class="w-3 h-3 rounded-full bg-[#ff5f56] border border-[#e0443e] inline-block shadow-sm"></span>
-          <span class="w-3 h-3 rounded-full bg-[#ffbd2e] border border-[#dea123] inline-block shadow-sm"></span>
-          <span class="w-3 h-3 rounded-full bg-[#27c93f] border border-[#1aab29] inline-block shadow-sm"></span>
+        <!-- Technical File Stamp / Index -->
+        <div class="flex items-center gap-2.5">
+          <div class="flex items-center gap-1.5 px-2 py-0.5 rounded-none bg-slate-800 border border-slate-700 text-[10px] font-mono text-slate-400 uppercase font-bold">
+            <span class="w-1.5 h-1.5 rounded-none bg-blue-500 animate-pulse"></span>
+            <span>SRC // NOTEBOOK</span>
+          </div>
         </div>
 
         <!-- Interactive File Tabs -->
@@ -23,62 +24,68 @@
             type="button"
             @click="activeTab = key"
             :class="[
-              'px-3 py-1 text-xs font-mono rounded-lg transition-all duration-300 flex items-center gap-1.5 cursor-pointer',
+              'px-3 py-1.5 text-xs font-mono rounded-none transition-all duration-100 flex items-center gap-1.5 cursor-pointer uppercase',
               activeTab === key
-                ? 'bg-white/[0.12] text-white shadow-inner font-medium'
-                : 'text-neutral-400 hover:text-neutral-200 hover:bg-white/[0.05]'
+                ? 'bg-blue-600 text-white border border-blue-400 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] font-bold'
+                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'
             ]"
           >
-            <span :class="file.dotClass" class="w-1.5 h-1.5 rounded-full"></span>
+            <span :class="file.dotClass" class="w-1.5 h-1.5 rounded-none"></span>
             <span>{{ file.name }}</span>
           </button>
         </div>
 
-        <!-- Window Action Pill -->
+        <!-- Window Action: Copy Code -->
         <div class="flex items-center gap-2">
           <button
             type="button"
             @click="copyCode"
-            class="px-2.5 py-1 text-[11px] font-mono rounded-md bg-white/[0.06] hover:bg-white/[0.12] text-neutral-300 border border-white/[0.08] transition-all duration-200 active:scale-95 flex items-center gap-1 cursor-pointer"
+            class="px-2.5 py-1 text-[11px] font-mono rounded-none bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-600 transition-all duration-100 active:translate-x-0.5 active:translate-y-0.5 flex items-center gap-1.5 cursor-pointer font-bold uppercase"
             :title="copied ? 'Скопійовано!' : 'Копіювати код'"
           >
             <span v-if="copied" class="text-emerald-400">✓ copied</span>
-            <span v-else>copy</span>
+            <span v-else class="flex items-center gap-1">
+              <svg class="w-3 h-3 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="0" ry="0" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg>
+              <span>copy</span>
+            </span>
           </button>
         </div>
       </div>
 
       <!-- Code Area with Line Numbers -->
-      <div class="p-4 sm:p-6 font-mono text-xs sm:text-sm leading-relaxed overflow-x-auto max-h-[380px] select-text">
+      <div class="p-4 sm:p-6 font-mono text-xs sm:text-sm leading-relaxed overflow-x-auto max-h-[380px] select-text bg-[#0b0e14]">
         <div
           v-for="(line, idx) in currentContent"
           :key="idx"
           class="flex items-start hover:bg-white/[0.03] rounded px-1 transition-colors"
         >
-          <span class="w-8 select-none text-neutral-600 text-right pr-4 text-[11px] sm:text-xs pt-0.5">
+          <span class="w-8 select-none text-slate-600 text-right pr-4 text-[11px] sm:text-xs pt-0.5">
             {{ idx + 1 }}
           </span>
           <span class="flex-1 whitespace-pre" v-html="line"></span>
         </div>
       </div>
 
-      <!-- macOS Status Bar -->
+      <!-- Blueprint Technical Status Bar -->
       <div
-        class="h-8 px-4 border-t border-white/[0.08] bg-black/40 flex items-center justify-between text-[11px] font-mono text-neutral-400 select-none"
+        class="h-8 px-4 border-t border-slate-800 bg-slate-900/90 flex items-center justify-between text-[11px] font-mono text-slate-400 select-none"
       >
         <div class="flex items-center gap-3">
-          <span class="flex items-center gap-1 text-emerald-400">
+          <span class="flex items-center gap-1.5 text-emerald-400">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            ready
+            <span>ready</span>
           </span>
-          <span class="hidden sm:inline text-neutral-500">•</span>
-          <span class="hidden sm:inline text-neutral-400">git:(main)</span>
+          <span class="hidden sm:inline text-slate-600">•</span>
+          <span class="hidden sm:inline text-slate-400">git:(main)</span>
         </div>
-        <div class="flex items-center gap-3 text-neutral-400">
+        <div class="flex items-center gap-3 text-slate-400">
           <span>{{ files[activeTab].language }}</span>
-          <span class="hidden sm:inline text-neutral-500">•</span>
+          <span class="hidden sm:inline text-slate-600">•</span>
           <span class="hidden sm:inline">UTF-8</span>
-          <span class="text-blue-400 font-medium">Baneronetwo Studio</span>
+          <span class="text-blue-400 font-medium">Baneronetwo Folio</span>
         </div>
       </div>
     </div>

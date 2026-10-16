@@ -1,17 +1,17 @@
 <template>
   <div class="relative inline-block text-left" ref="dropdownRef">
-    <!-- Trigger Button -->
+    <!-- Trigger Button (Cubic) -->
     <button
       type="button"
       @click="toggleDropdown"
-      class="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full bg-black/[0.04] dark:bg-white/[0.06] hover:bg-black/[0.08] dark:hover:bg-white/[0.1] border border-black/[0.04] dark:border-white/[0.08] text-xs font-semibold text-neutral-800 dark:text-neutral-200 transition-all duration-200 cursor-pointer select-none active:scale-95"
+      class="h-9 flex items-center gap-1.5 px-2.5 sm:px-3 rounded-none bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border-2 border-slate-900 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-400 text-xs font-bold text-slate-900 dark:text-slate-100 transition-all duration-200 cursor-pointer select-none hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_rgba(37,99,235,0.35)] active:translate-x-0.5 active:translate-y-0.5 shadow-[2px_2px_0px_0px_rgba(15,23,42,0.8)] dark:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)] uppercase font-mono"
       :aria-expanded="isOpen"
       aria-label="Change language"
     >
       <SvgFlag :code="activeLocaleInfo.code" size="sm" />
-      <span class="text-[11px] font-mono tracking-tight uppercase">{{ activeLocaleInfo.label }}</span>
+      <span class="text-[11px] font-mono tracking-tight uppercase font-bold">{{ activeLocaleInfo.label }}</span>
       <svg
-        class="w-3 h-3 text-neutral-400 transition-transform duration-200"
+        class="w-3 h-3 text-slate-600 dark:text-slate-400 transition-transform duration-200"
         :class="{ 'rotate-180': isOpen }"
         viewBox="0 0 24 24"
         fill="none"
@@ -22,11 +22,11 @@
       </svg>
     </button>
 
-    <!-- Dropdown Menu -->
+    <!-- Dropdown Menu (Cubic Box) -->
     <Transition name="apple-dropdown">
       <div
         v-if="isOpen"
-        class="absolute right-0 mt-2 w-48 rounded-2xl bg-white/90 dark:bg-[#1c1c1e]/90 backdrop-blur-2xl border border-black/[0.08] dark:border-white/[0.12] shadow-apple-md p-1.5 z-50 focus:outline-none"
+        class="absolute right-0 mt-2 w-48 rounded-none bg-white dark:bg-[#11141c] border-2 border-slate-900 dark:border-slate-700 shadow-[4px_4px_0px_0px_rgba(15,23,42,0.9)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] p-1 z-50 focus:outline-none"
         role="menu"
       >
         <button
@@ -35,25 +35,25 @@
           type="button"
           @click="selectLocale(loc.code)"
           role="menuitem"
-          class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs transition-all duration-150 cursor-pointer select-none"
+          class="w-full flex items-center justify-between px-3 py-2 rounded-none text-xs transition-all duration-150 cursor-pointer select-none uppercase font-mono"
           :class="[
             currentLocale === loc.code
-              ? 'bg-blue-500/10 dark:bg-blue-400/15 text-blue-600 dark:text-blue-400 font-semibold'
-              : 'text-neutral-700 dark:text-neutral-300 hover:bg-black/[0.04] dark:hover:bg-white/[0.06]'
+              ? 'bg-slate-900 text-white dark:bg-white dark:text-slate-950 font-bold shadow-[2px_2px_0px_0px_rgba(0,0,0,0.5)]'
+              : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400'
           ]"
         >
           <div class="flex items-center gap-2.5">
             <SvgFlag :code="loc.code" size="md" />
             <div class="flex flex-col text-left">
               <span class="text-xs font-medium">{{ loc.nativeName }}</span>
-              <span class="text-[10px] text-neutral-400 font-mono">{{ loc.label }}</span>
+              <span class="text-[10px] opacity-75 font-mono">{{ loc.label }}</span>
             </div>
           </div>
 
           <!-- Active Checkmark -->
           <svg
             v-if="currentLocale === loc.code"
-            class="w-4 h-4 text-blue-500 fill-current"
+            class="w-4 h-4 fill-current opacity-90"
             viewBox="0 0 20 20"
           >
             <path

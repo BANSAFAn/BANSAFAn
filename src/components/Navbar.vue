@@ -1,48 +1,48 @@
 <template>
-  <header class="sticky top-3 z-50 w-full px-4 sm:px-6 pointer-events-none">
+  <header class="sticky top-0 z-50 w-full border-b-2 border-slate-900 dark:border-slate-800 bg-white/95 dark:bg-[#0b0e14]/95 backdrop-blur-md transition-colors duration-200">
     <div
-      class="max-w-5xl mx-auto h-14 sm:h-16 px-3.5 sm:px-5 flex items-center justify-between rounded-full bg-white/75 dark:bg-[#161617]/75 backdrop-blur-2xl border border-black/[0.08] dark:border-white/[0.12] shadow-[0_8px_32px_rgba(0,0,0,0.06)] dark:shadow-[0_12px_40px_rgba(0,0,0,0.5)] shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.7)] dark:shadow-[inset_0_1px_1px_0_rgba(255,255,255,0.12)] pointer-events-auto transition-all duration-500"
+      class="max-w-6xl mx-auto h-16 px-4 sm:px-6 flex items-center justify-between"
     >
       <!-- НУ НАХ"Я ТИ ТУТ БЛ"ДЬ, ЦЕ ТУПО КОМЕНТАРІЇ ЯКІ НІКОЛИ НЕ ЧИТАЄШ !! -->
       <button
         type="button"
         @click="handleBrandClick"
-        class="flex items-center gap-2.5 group focus:outline-none rounded-full py-1 pl-1 pr-3 text-left cursor-pointer transition-transform active:scale-95 select-none"
+        class="flex items-center gap-2.5 sm:gap-3 group focus:outline-none py-1 pl-1 pr-3 text-left cursor-pointer transition-transform duration-200 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 select-none"
         title="Baneronetwo Головна"
       >
         <!-- GitHub Avatar -->
         <div
-          class="w-8 h-8 rounded-full overflow-hidden border border-black/10 dark:border-white/15 shadow-apple-sm transition-transform duration-300 group-hover:scale-105 shrink-0 relative bg-neutral-900 flex items-center justify-center"
+          class="w-9 h-9 rounded-none overflow-hidden border-2 border-slate-900 dark:border-slate-600 group-hover:border-blue-600 dark:group-hover:border-blue-400 shadow-[2px_2px_0px_0px_rgba(15,23,42,0.9)] dark:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)] group-hover:shadow-[3px_3px_0px_0px_rgba(37,99,235,0.4)] shrink-0 relative bg-slate-900 flex items-center justify-center transition-all duration-200"
         >
           <img
             v-if="!avatarFallback"
             :src="avatarSrc"
             alt="Baneronetwo"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover rounded-none transition-transform duration-200 group-hover:scale-105"
             loading="eager"
             @error="handleAvatarError"
           />
           <div
             v-else
-            class="absolute inset-0 bg-gradient-to-br from-neutral-900 to-neutral-700 text-white flex items-center justify-center font-bold text-xs"
+            class="absolute inset-0 bg-slate-900 text-white flex items-center justify-center font-bold text-xs"
           >
             B
           </div>
         </div>
 
         <div class="flex flex-col text-left">
-          <span class="text-xs font-semibold tracking-tight text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+          <span class="text-xs sm:text-sm font-black tracking-tight text-slate-900 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors uppercase">
             Baneronetwo
           </span>
-          <span class="text-[10px] text-neutral-500 dark:text-neutral-400 -mt-0.5 hidden sm:inline">
+          <span class="text-[10px] text-slate-500 dark:text-slate-400 -mt-0.5 hidden sm:inline font-mono uppercase tracking-wider">
             {{ t('nav.subtitle') }}
           </span>
         </div>
       </button>
 
-      <!-- Center Links (Apple Segmented Tabs Navigation - Desktop Only) -->
+      <!-- Center Links (Technical Cubic Tabs - Desktop Only) -->
       <nav
-        class="hidden md:flex items-center gap-1 p-1 rounded-full bg-black/[0.03] dark:bg-white/[0.05] border border-black/[0.04] dark:border-white/[0.06] text-xs font-medium overflow-x-auto no-scrollbar"
+        class="hidden md:flex items-center gap-1 p-1 rounded-none bg-slate-100 dark:bg-slate-900 border-2 border-slate-900 dark:border-slate-700 text-xs font-mono shadow-[2px_2px_0px_0px_rgba(15,23,42,0.8)] dark:shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)]"
         role="tablist"
       >
         <button
@@ -52,32 +52,27 @@
           role="tab"
           :aria-selected="activeTab === tab.id"
           @click="setTab(tab.id, true)"
-          class="relative px-3 sm:px-3.5 py-1.5 rounded-full transition-all duration-200 cursor-pointer shrink-0 select-none focus:outline-none"
+          class="relative px-3.5 py-1.5 rounded-none transition-all duration-200 cursor-pointer shrink-0 select-none focus:outline-none font-bold text-xs uppercase tracking-wider hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5"
           :class="[
             activeTab === tab.id
-              ? 'text-neutral-950 dark:text-white font-semibold'
-              : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-white hover:bg-white/50 dark:hover:bg-white/[0.08]'
+              ? 'text-white dark:text-slate-950 bg-slate-900 dark:bg-white shadow-[2px_2px_0px_0px_rgba(37,99,235,0.4)]'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-200 dark:hover:bg-slate-800'
           ]"
         >
-          <!-- Active Pill Background Indicator -->
-          <div
-            v-if="activeTab === tab.id"
-            class="absolute inset-0 rounded-full bg-white dark:bg-white/[0.14] shadow-apple-sm border border-black/[0.04] dark:border-white/[0.1] -z-10 transition-all duration-300"
-          ></div>
           <span>{{ tab.label }}</span>
         </button>
       </nav>
 
       <!-- Right Controls: SVG Flag Language Switcher + Theme Toggle -->
-      <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+      <div class="flex items-center gap-2 shrink-0">
         <LanguageSwitcher />
         <ThemeToggle />
       </div>
     </div>
 
-    <!-- Apple Mobile Floating Dock Tab Bar (Only on mobile < md) -->
+    <!-- Technical Mobile Dock Tab Bar (Only on mobile < md) -->
     <nav
-      class="fixed bottom-3 inset-x-3 max-w-sm sm:max-w-md mx-auto z-40 md:hidden pointer-events-auto flex items-center justify-around p-1 rounded-full bg-white/85 dark:bg-[#161617]/90 backdrop-blur-2xl border border-black/[0.08] dark:border-white/[0.14] shadow-[0_12px_36px_rgba(0,0,0,0.16)] dark:shadow-[0_16px_44px_rgba(0,0,0,0.7)] transition-all duration-300"
+      class="fixed bottom-3 inset-x-3 max-w-sm sm:max-w-md mx-auto z-40 md:hidden pointer-events-auto flex items-center justify-around p-1 rounded-none bg-white/95 dark:bg-[#11141c]/95 backdrop-blur-md border-2 border-slate-900 dark:border-slate-700 shadow-[4px_4px_0px_0px_rgba(15,23,42,0.9)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] transition-all duration-200"
       role="tablist"
       aria-label="Mobile Navigation"
     >
@@ -88,25 +83,20 @@
         role="tab"
         :aria-selected="activeTab === tab.id"
         @click="setTab(tab.id, true)"
-        class="flex-1 flex flex-col items-center justify-center py-1.5 px-0.5 rounded-full transition-all duration-200 cursor-pointer select-none active:scale-95 relative"
+        class="flex-1 flex flex-col items-center justify-center py-1.5 px-0.5 rounded-none transition-all duration-150 cursor-pointer select-none active:translate-x-0.5 active:translate-y-0.5 relative font-mono hover:text-blue-600 dark:hover:text-blue-400"
         :class="[
           activeTab === tab.id
-            ? 'text-blue-600 dark:text-white font-semibold'
-            : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200'
+            ? 'text-white dark:text-slate-950 bg-slate-900 dark:bg-white shadow-[2px_2px_0px_0px_rgba(0,0,0,0.8)] font-bold'
+            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100'
         ]"
       >
-        <div
-          v-if="activeTab === tab.id"
-          class="absolute inset-0 rounded-full bg-blue-500/10 dark:bg-white/[0.14] border border-blue-500/20 dark:border-white/[0.1] -z-10 shadow-apple-sm"
-        ></div>
-
         <!-- Dynamic Icon based on tab -->
         <svg v-if="tab.id === 'profile'" class="w-4 h-4 mb-0.5 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2">
           <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
           <circle cx="12" cy="7" r="4" />
         </svg>
         <component v-else :is="getTabIcon(tab.id)" class="w-4 h-4 mb-0.5" />
-        <span class="text-[9px] tracking-tight leading-none truncate max-w-[54px]">{{ tab.label }}</span>
+        <span class="text-[9px] tracking-tight leading-none truncate max-w-[54px] uppercase">{{ tab.label }}</span>
       </button>
     </nav>
 
@@ -168,6 +158,7 @@ import ThemeToggle from './ThemeToggle.vue';
 import LanguageSwitcher from './LanguageSwitcher.vue';
 import SvgFlag from './SvgFlag.vue';
 import IconCode from './icons/IconCode.vue';
+import IconAward from './icons/IconAward.vue';
 import IconGlobe from './icons/IconGlobe.vue';
 import IconYouTube from './icons/IconYouTube.vue';
 import IconHeartHand from './icons/IconHeartHand.vue';
@@ -198,6 +189,7 @@ const handleAvatarError = () => {
 const getTabIcon = (id: TabId) => {
   switch (id) {
     case 'tech': return IconCode;
+    case 'cert': return IconAward;
     case 'i18n': return IconGlobe;
     case 'media': return IconYouTube;
     case 'support': return IconHeartHand;
@@ -460,6 +452,7 @@ const titleDict: Record<Locale, {
   sleep: string;
   away: string;
   tech: [string, string];
+  cert: [string, string];
   i18n: [string, string];
   media: [string, string];
   support: [string, string];
@@ -469,6 +462,7 @@ const titleDict: Record<Locale, {
     sleep: '😴 Baneronetwo — Котик спить... zZz',
     away: '🐾 Повернутися до котика? — Baneronetwo',
     tech: ['⚡ Baneronetwo — GitHub & Стек', '💻 Baneronetwo — Open Source Core'],
+    cert: ['📜 Baneronetwo — Сертифікати LF', '🛡️ Baneronetwo — Rust & Web Security'],
     i18n: ['🌐 Baneronetwo — Лабораторія i18n', '🗺️ Baneronetwo — 6 Мовних систем'],
     media: ['🎬 Baneronetwo — YouTube & Медіа', '🔴 Baneronetwo — Огляди та розбори'],
     support: ['💳 Baneronetwo — Банка Monobank', '❤️ Baneronetwo — Дякую за підтримку!'],
@@ -478,6 +472,7 @@ const titleDict: Record<Locale, {
     sleep: '😴 Baneronetwo — Коцік спіць... zZz',
     away: '🐾 Вярнуцца да коціка? — Baneronetwo',
     tech: ['⚡ Baneronetwo — GitHub & Стэк', '💻 Baneronetwo — Open Source Праекты'],
+    cert: ['📜 Baneronetwo — Сертыфікаты LF', '🛡️ Baneronetwo — Rust & Web Security'],
     i18n: ['🌐 Baneronetwo — Лабараторыя i18n', '🗺️ Baneronetwo — 6 Моўных сістэм'],
     media: ['🎬 Baneronetwo — YouTube & Медыя', '🔴 Baneronetwo — Агляды і стрымы'],
     support: ['💳 Baneronetwo — Банка Monobank', '❤️ Baneronetwo — Дзякуй за падтрымку!'],
@@ -487,7 +482,7 @@ const titleDict: Record<Locale, {
     sleep: '😴 Baneronetwo — Kitty is Sleeping... zZz',
     away: '🐾 Come back to kitty! — Baneronetwo',
     tech: ['⚡ Baneronetwo — GitHub & Tech Stack', '💻 Baneronetwo — Open Source Core'],
-    i18nA: ['🌐 Baneronetwo — i18n Laboratory', '🗺️ Baneronetwo — 6 Language Systems'] as any,
+    cert: ['📜 Baneronetwo — LF Certificates', '🛡️ Baneronetwo — Rust & Web Security'],
     i18n: ['🌐 Baneronetwo — i18n Laboratory', '🗺️ Baneronetwo — 6 Language Systems'],
     media: ['🎬 Baneronetwo — YouTube & Media', '🔴 Baneronetwo — Tech Breakdowns'],
     support: ['💳 Baneronetwo — Monobank Support', '❤️ Baneronetwo — Thank You!'],
@@ -497,6 +492,7 @@ const titleDict: Record<Locale, {
     sleep: '😴 Baneronetwo — Kätzchen schläft... zZz',
     away: '🐾 Zurück zum Kätzchen! — Baneronetwo',
     tech: ['⚡ Baneronetwo — GitHub & Stack', '💻 Baneronetwo — Open Source Architektur'],
+    cert: ['📜 Baneronetwo — LF Zertifikate', '🛡️ Baneronetwo — Rust & Web Security'],
     i18n: ['🌐 Baneronetwo — i18n-Labor', '🗺️ Baneronetwo — 6 Sprachsysteme'],
     media: ['🎬 Baneronetwo — YouTube & Medien', '🔴 Baneronetwo — Video-Analysen'],
     support: ['💳 Baneronetwo — Monobank Spenden', '❤️ Baneronetwo — Danke!'],
@@ -506,6 +502,7 @@ const titleDict: Record<Locale, {
     sleep: '😴 Baneronetwo — 猫咪睡觉中... zZz',
     away: '🐾 回来找猫咪吧！— Baneronetwo',
     tech: ['⚡ Baneronetwo — GitHub 与技术栈', '💻 Baneronetwo — 开源核心贡献'],
+    cert: ['📜 Baneronetwo — Linux 基金会证书', '🛡️ Baneronetwo — Rust 与 Web 安全'],
     i18n: ['🌐 Baneronetwo — 国际化实验室', '🗺️ Baneronetwo — 6 大语言系统'],
     media: ['🎬 Baneronetwo — YouTube 与媒体', '🔴 Baneronetwo — 深度软件解析'],
     support: ['💳 Baneronetwo — Monobank 赞助', '❤️ Baneronetwo — 感谢支持！'],
@@ -515,6 +512,7 @@ const titleDict: Record<Locale, {
     sleep: '😴 Baneronetwo — Котик спит... zZz',
     away: '🐾 Вернуться к котику? — Baneronetwo',
     tech: ['⚡ Baneronetwo — GitHub & Стек', '💻 Baneronetwo — Open Source Проекты'],
+    cert: ['📜 Baneronetwo — Сертификаты LF', '🛡️ Baneronetwo — Rust & Web Security'],
     i18n: ['🌐 Baneronetwo — Лаборатория i18n', '🗺️ Baneronetwo — 6 Языковых систем'],
     media: ['🎬 Baneronetwo — YouTube & Медиа', '🔴 Baneronetwo — Обзоры и стримы'],
     support: ['💳 Baneronetwo — Банка Monobank', '❤️ Baneronetwo — Спасибо за поддержку!'],
@@ -560,6 +558,7 @@ const updateBrowserTabTitle = () => {
     updateFavicon(false);
     const subIdx = subPhase.value ? 1 : 0;
     if (tab === 'tech') document.title = pack.tech[subIdx];
+    else if (tab === 'cert') document.title = pack.cert[subIdx];
     else if (tab === 'i18n') document.title = pack.i18n[subIdx];
     else if (tab === 'media') document.title = pack.media[subIdx];
     else if (tab === 'support') document.title = pack.support[subIdx];

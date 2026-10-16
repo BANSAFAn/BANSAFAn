@@ -1,13 +1,7 @@
 <template>
   <div
-    class="w-full max-w-2xl mx-auto rounded-3xl p-5 sm:p-6 bg-white/75 dark:bg-[#1c1c1e]/80 backdrop-blur-2xl border border-black/[0.08] dark:border-white/[0.12] shadow-apple-md hover:shadow-apple-lg transition-all duration-300 relative overflow-hidden group select-none"
+    class="w-full max-w-2xl mx-auto rounded-none p-5 sm:p-6 bg-white dark:bg-[#11141c] border-2 border-slate-900 dark:border-slate-700 shadow-[4px_4px_0px_0px_rgba(15,23,42,0.8)] dark:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] hover:border-blue-600 dark:hover:border-blue-500 hover:shadow-[6px_6px_0px_0px_rgba(37,99,235,0.3)] transition-all duration-200 relative select-none"
   >
-    <!-- Subtle Ambient Glow -->
-    <div
-      class="absolute -right-16 -top-16 w-48 h-48 bg-blue-500/10 dark:bg-blue-400/15 rounded-full blur-3xl pointer-events-none transition-all duration-500"
-      :class="{ 'opacity-100 scale-125 bg-emerald-500/15': isPlaying }"
-    ></div>
-
     <!-- Hidden HTML5 Audio Element -->
     <audio
       ref="audioRef"
@@ -27,15 +21,15 @@
       <div class="flex items-center justify-between gap-3">
         <div class="flex items-center gap-2.5 min-w-0">
           <div
-            class="w-9 h-9 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-300 shadow-apple-sm"
-            :class="isPlaying ? 'bg-blue-600 dark:bg-blue-500 text-white' : 'bg-black/[0.04] dark:bg-white/[0.08] text-neutral-700 dark:text-neutral-200'"
+            class="w-9 h-9 rounded-none flex items-center justify-center shrink-0 transition-all duration-100 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border border-slate-900"
+            :class="isPlaying ? 'bg-slate-900 dark:bg-white text-white dark:text-slate-950' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-300 dark:border-slate-700'"
           >
             <!-- Equalizer waves when playing, or headphone icon when paused -->
             <div v-if="isPlaying" class="flex items-end justify-center gap-0.5 h-3.5">
-              <span class="w-0.5 bg-current rounded-full animate-voice-wave-1 h-3"></span>
-              <span class="w-0.5 bg-current rounded-full animate-voice-wave-2 h-1.5"></span>
-              <span class="w-0.5 bg-current rounded-full animate-voice-wave-3 h-3.5"></span>
-              <span class="w-0.5 bg-current rounded-full animate-voice-wave-4 h-2"></span>
+              <span class="w-0.5 bg-current rounded-none animate-voice-wave-1 h-3"></span>
+              <span class="w-0.5 bg-current rounded-none animate-voice-wave-2 h-1.5"></span>
+              <span class="w-0.5 bg-current rounded-none animate-voice-wave-3 h-3.5"></span>
+              <span class="w-0.5 bg-current rounded-none animate-voice-wave-4 h-2"></span>
             </div>
             <svg v-else class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2">
               <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
@@ -45,27 +39,27 @@
 
           <div class="min-w-0 text-left">
             <div class="flex items-center gap-2">
-              <h3 class="text-sm font-semibold tracking-tight text-neutral-900 dark:text-white truncate">
+              <h3 class="text-sm font-black tracking-tight text-slate-900 dark:text-white uppercase truncate">
                 {{ t('voice.title') }}
               </h3>
               <span
                 v-if="isPlaying"
-                class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20"
+                class="inline-flex items-center gap-1 px-1.5 py-0.2 rounded-none text-[10px] font-mono font-bold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500 uppercase"
               >
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="w-1.5 h-1.5 rounded-none bg-emerald-500 animate-pulse"></span>
                 LIVE
               </span>
             </div>
-            <p class="text-[11px] text-neutral-500 dark:text-neutral-400 truncate">
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 uppercase font-mono truncate">
               {{ t('voice.subtitle') }}
             </p>
           </div>
         </div>
 
         <!-- Current Language Badge with Flag (Only the user's active locale) -->
-        <div class="apple-pill border border-black/[0.06] dark:border-white/[0.1] bg-black/[0.02] dark:bg-white/[0.04] shrink-0">
+        <div class="paper-pill shrink-0">
           <SvgFlag :code="currentLocale" size="sm" />
-          <span class="text-[11px] font-mono font-medium">{{ activeLocaleLabel }}</span>
+          <span class="text-[11px] font-mono font-bold uppercase">{{ activeLocaleLabel }}</span>
         </div>
       </div>
 
@@ -76,19 +70,14 @@
           <button
             type="button"
             @click="togglePlay"
-            class="w-11 h-11 rounded-full flex items-center justify-center shrink-0 cursor-pointer transition-all duration-200 shadow-apple-sm focus:outline-none active:scale-95 select-none"
-            :class="[
-              isPlaying
-                ? 'bg-blue-600 dark:bg-blue-500 text-white hover:bg-blue-700 dark:hover:bg-blue-600 shadow-[0_4px_16px_rgba(37,99,235,0.4)]'
-                : 'bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:scale-105'
-            ]"
+            class="w-10 h-10 rounded-none flex items-center justify-center shrink-0 cursor-pointer transition-all duration-100 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] border-2 border-slate-900 dark:border-white focus:outline-none active:translate-x-0.5 active:translate-y-0.5 select-none bg-slate-900 dark:bg-white text-white dark:text-slate-950 hover:bg-slate-800"
             :title="isPlaying ? t('voice.pause') : t('voice.play')"
             :aria-label="isPlaying ? t('voice.pause') : t('voice.play')"
           >
             <!-- Pause Icon -->
             <svg v-if="isPlaying" class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-              <rect x="6" y="4" width="4" height="16" rx="1" />
-              <rect x="14" y="4" width="4" height="16" rx="1" />
+              <rect x="6" y="4" width="4" height="16" rx="0" />
+              <rect x="14" y="4" width="4" height="16" rx="0" />
             </svg>
             <!-- Play Icon -->
             <svg v-else class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 24 24">
@@ -101,7 +90,7 @@
             <button
               type="button"
               @click="toggleMute"
-              class="p-2 rounded-full text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
+              class="p-2 rounded-lg text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
               title="Гучність"
             >
               <svg v-if="effectiveVolume === 0" class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2">
@@ -121,9 +110,9 @@
               @pointerdown="handleVolumePointerDown($event, 'mobile')"
               class="relative w-16 h-5 flex items-center cursor-pointer touch-none"
             >
-              <div class="w-full h-1.5 rounded-full bg-black/10 dark:bg-white/15 overflow-hidden">
+              <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                 <div
-                  class="h-full bg-blue-500 rounded-full"
+                  class="h-full bg-blue-600 dark:bg-blue-400 rounded-full"
                   :style="{ width: `${effectiveVolume * 100}%` }"
                 ></div>
               </div>
@@ -131,36 +120,36 @@
           </div>
         </div>
 
-        <!-- Timeline Progress Bar with Smooth Cursor Dragging -->
+        <!-- Timeline Progress Bar with Smooth Dragging -->
         <div class="flex-1 min-w-0">
-          <div class="flex items-center justify-between text-[11px] font-mono text-neutral-500 dark:text-neutral-400 mb-1 select-none">
+          <div class="flex items-center justify-between text-[11px] font-mono text-zinc-500 dark:text-zinc-400 mb-1 select-none">
             <span>{{ formatTime(currentTime) }}</span>
-            <span class="text-neutral-400 dark:text-neutral-500 font-sans text-[11px] truncate mx-2">
+            <span class="text-zinc-600 dark:text-zinc-400 font-sans text-[11px] truncate mx-2 font-medium">
               {{ currentVoiceMeta.speaker }}
             </span>
             <span>{{ formatTime(duration) }}</span>
           </div>
 
-          <!-- Draggable Scrub Track (Taller hit area for comfortable cursor grabbing) -->
+          <!-- Draggable Scrub Track -->
           <div
             ref="progressTrackRef"
             @pointerdown="handleProgressPointerDown"
             class="relative w-full h-6 flex items-center cursor-pointer group/bar touch-none select-none"
-            title="Перетягуйте курсором для перемотування"
+            title="Перетягуйте для перемотування"
           >
             <!-- Background Track -->
-            <div class="w-full h-2 rounded-full bg-black/[0.08] dark:bg-white/[0.12] overflow-hidden relative">
+            <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden relative">
               <!-- Active Progress Fill -->
               <div
-                class="absolute left-0 top-0 bottom-0 bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400 rounded-full transition-all duration-75"
+                class="absolute left-0 top-0 bottom-0 bg-blue-600 dark:bg-blue-400 rounded-full transition-all duration-75"
                 :style="{ width: `${progressPercent}%` }"
               ></div>
             </div>
 
-            <!-- Apple Draggable Thumb Handle -->
+            <!-- Draggable Thumb Handle -->
             <div
-              class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-white dark:bg-neutral-100 shadow-[0_2px_8px_rgba(0,0,0,0.35)] border border-black/10 ring-2 ring-blue-500/30 transition-transform pointer-events-none"
-              :class="isDraggingProgress ? 'scale-125 ring-4 ring-blue-500/50 shadow-lg' : 'group-hover/bar:scale-110'"
+              class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-blue-600 dark:bg-blue-400 border-2 border-white dark:border-zinc-950 shadow-sm transition-transform pointer-events-none"
+              :class="isDraggingProgress ? 'scale-125 shadow-md' : 'group-hover/bar:scale-110'"
               :style="{ left: `${progressPercent}%` }"
             ></div>
           </div>
@@ -172,7 +161,7 @@
           <button
             type="button"
             @click="toggleMute"
-            class="p-2 rounded-full text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white hover:bg-black/[0.04] dark:hover:bg-white/[0.08] transition-colors cursor-pointer shrink-0"
+            class="p-2 rounded-lg text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer shrink-0"
             :title="isMuted ? 'Увімкнути звук' : 'Вимкнути звук'"
           >
             <!-- Muted -->
@@ -203,22 +192,22 @@
             title="Гучність (перетягуйте або клікайте)"
           >
             <!-- Track bar -->
-            <div class="w-full h-1.5 rounded-full bg-black/[0.08] dark:bg-white/[0.12] overflow-hidden relative">
+            <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden relative">
               <div
-                class="absolute left-0 top-0 bottom-0 bg-neutral-800 dark:bg-neutral-200 rounded-full transition-all duration-75"
+                class="absolute left-0 top-0 bottom-0 bg-zinc-800 dark:bg-zinc-200 rounded-full transition-all duration-75"
                 :style="{ width: `${effectiveVolume * 100}%` }"
               ></div>
             </div>
 
             <!-- Volume thumb -->
             <div
-              class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-white dark:bg-neutral-100 shadow-[0_1px_4px_rgba(0,0,0,0.3)] border border-black/10 transition-transform pointer-events-none"
+              class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-zinc-900 dark:bg-zinc-100 shadow-sm transition-transform pointer-events-none"
               :class="isDraggingVolume ? 'scale-125' : 'group-hover/vol:scale-110'"
               :style="{ left: `${effectiveVolume * 100}%` }"
             ></div>
           </div>
 
-          <span class="text-[10px] font-mono text-neutral-400 w-7 text-right select-none">
+          <span class="text-[10px] font-mono text-zinc-500 dark:text-zinc-400 w-7 text-right select-none">
             {{ Math.round(effectiveVolume * 100) }}%
           </span>
         </div>

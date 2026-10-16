@@ -2,6 +2,12 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=300&section=header&text=Vladimir%20Banov&fontSize=90&fontAlignY=38&fontColor=auto&descAlignY=51&desc=Simple%20Programmer%20%7C%20Open%20Source%20Contributor&descAlign=62"/>
   
   <p align="center">
+    <a href="https://baneronetwo.pp.ua" target="_blank">
+      <img src="https://img.shields.io/badge/Website-baneronetwo.pp.ua-blue?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=2b3038&color=2563eb&logoWidth=20" alt="Website"/>
+    </a>
+  </p>
+
+  <p align="center">
     <a href="https://github.com/BANSAFAn/BANSAFAn/blob/main/README.ru.md">
       <img src="https://img.shields.io/badge/Language-Russian-blue?style=for-the-badge&logo=googletranslate&logoColor=white&labelColor=2b3038&color=2781c6&logoWidth=20" alt="Russian"/>
     </a>
